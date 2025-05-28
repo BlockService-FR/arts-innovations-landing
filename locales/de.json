@@ -1,0 +1,287 @@
+{
+  "navigation": {
+    "solutions": "Lösungen",
+    "technology": "Technologie",
+    "useCases": "Anwendungsfälle",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "poweredBy": "Powered by METRA Blockchain",
+    "title": "LUFT- UND RAUMFAHRT TRANSFORMIEREN",
+    "subtitle": "Vertrauenswürdige Daten und intelligente Infrastruktur, die Standards in Compliance, Rückverfolgbarkeit und prädiktiver Leistung neu definieren",
+    "cta": "METRA Plattform entdecken",
+    "trustIndicators": {
+      "sovereign": "Souveränes Blockchain-Backbone",
+      "compliant": "EASA & FAA konform",
+      "immutable": "Unveränderliche Dokumentation"
+    }
+  },
+  "valueProposition": {
+    "title": "Warum ARTS Innovations wählen?",
+    "subtitle": "Kombination jahrzehntelanger Luft- und Raumfahrtexpertise mit modernster Blockchain- und KI-Technologie",
+    "benefits": {
+      "tamperProof": {
+        "title": "Manipulationssichere Dokumentation",
+        "description": "Blockchain-gesicherte Aufzeichnungen gewährleisten vollständige Datenintegrität"
+      },
+      "realTime": {
+        "title": "Echtzeit-Asset-Management",
+        "description": "Live-Überwachung und sofortige Updates"
+      },
+      "compliance": {
+        "title": "Sofortige Compliance-Berichterstattung",
+        "description": "Automatisierte regulatorische Compliance"
+      },
+      "experience": {
+        "title": "20+ Jahre vertrauensvolle Erfahrung",
+        "description": "Bewährte Expertise in der Luft- und Raumfahrtindustrie"
+      }
+    }
+  },
+  "solutions": {
+    "title": "Komplettes Luft- und Raumfahrt-Ökosystem",
+    "subtitle": "METRA Plattform-Lösungen",
+    "description": "Sicherheit, Rückverfolgbarkeit und regulatorisches Vertrauen für das Management von Luft- und Raumfahrt-Assets",
+    "pselion": {
+      "title": "PSELION",
+      "subtitle": "Echtzeit-Asset-Management",
+      "description": "Erhaltung des Asset-Werts durch lebenszyklus-weite Datenkontrolle und aktive Compliance",
+      "features": {
+        "lifecycle": "Lebenszyklus-Verfolgung",
+        "compliance": "Aktive Compliance",
+        "preservation": "Asset-Erhaltung",
+        "monitoring": "Echtzeit-Überwachung"
+      }
+    },
+    "metrasign": {
+      "title": "MetraSign",
+      "subtitle": "Blockchain-Dokumentenzertifizierung",
+      "description": "Vertrauensvolle, manipulationssichere und prüfbare Dokumentation für Aufzeichnungen & Verträge",
+      "features": {
+        "immutable": "Unveränderliche Aufzeichnungen",
+        "certification": "Digitale Zertifizierung",
+        "audit": "Prüfpfade",
+        "security": "Vertragssicherheit"
+      }
+    },
+    "metraseal": {
+      "title": "MetraSeal",
+      "subtitle": "Digitale Komponenten-Authentifizierung",
+      "description": "NFC/QR-Siegel verknüpft mit On-Chain-digitaler Identität für hochwertige Komponenten",
+      "features": {
+        "nfc": "NFC/QR-Integration",
+        "identity": "Digitale Identität",
+        "security": "Komponenten-Sicherheit",
+        "antiCounterfeiting": "Anti-Fälschung"
+      }
+    },
+    "metrafield": {
+      "title": "MetraField",
+      "subtitle": "Mobile Inspektionsplattform",
+      "description": "Mobile App für PPI-, Mid-Lease- und End-of-Lease-Inspektionen mit sofortigen Berichten",
+      "features": {
+        "mobile": "Mobile Inspektionen",
+        "reports": "Sofortige Berichte",
+        "blockchain": "Blockchain-Registrierung",
+        "inspections": "PPI/Lease-Inspektionen"
+      }
+    },
+    "learnMore": "Mehr erfahren"
+  },
+  "useCases": {
+    "title": "Anwendungsfälle in Aktion",
+    "subtitle": "Transformation von Abläufen im gesamten Luft- und Raumfahrt-Ökosystem",
+    "lessor": {
+      "title": "Leasinggeber-Übergänge",
+      "description": "Schnellere Übergänge, gesicherte Dokumentation, erhaltener Restwert",
+      "benefits": {
+        "handovers": "Beschleunigte Übergaben",
+        "documentation": "Sichere Dokumentation",
+        "preservation": "Werterhaltung",
+        "audit": "Prüfbereitschaft"
+      }
+    },
+    "oems": {
+      "title": "OEMs und MROs",
+      "description": "Verifizierte Teilehistorie, Betrugsverhinderung, Prüfbereitschaft",
+      "benefits": {
+        "verification": "Teileverifizierung",
+        "fraud": "Betrugsverhinderung",
+        "compliance": "Compliance-Verfolgung",
+        "supply": "Lieferketten-Sicherheit"
+      }
+    },
+    "operators": {
+      "title": "Betreiber",
+      "description": "Zentralisierte Aufzeichnungen, Echtzeit-Compliance, reduziertes regulatorisches Risiko",
+      "benefits": {
+        "centralized": "Zentralisierte Daten",
+        "compliance": "Echtzeit-Compliance",
+        "risk": "Risikoreduktion",
+        "efficiency": "Betriebseffizienz"
+      }
+    }
+  },
+  "technology": {
+    "title": "Modernster Technologie-Stack",
+    "subtitle": "Basierend auf den fortschrittlichsten und sichersten verfügbaren Technologien",
+    "blockchain": {
+      "title": "Blockchain-Sicherheit",
+      "description": "Unveränderliche Aufzeichnungen und manipulationssichere Dokumentation",
+      "features": {
+        "ledger": "Verteiltes Ledger",
+        "contracts": "Smart Contracts",
+        "security": "Kryptographische Sicherheit"
+      }
+    },
+    "ai": {
+      "title": "KI-gestützte Analytik",
+      "description": "Intelligente Einblicke und prädiktive Wartung",
+      "features": {
+        "learning": "Maschinelles Lernen",
+        "recognition": "Mustererkennung",
+        "analytics": "Prädiktive Analytik"
+      }
+    },
+    "realtime": {
+      "title": "Echtzeit-Verarbeitung",
+      "description": "Sofortige Updates und Live-Überwachungsfähigkeiten",
+      "features": {
+        "streams": "Live-Datenströme",
+        "notifications": "Sofortige Benachrichtigungen",
+        "dashboards": "Echtzeit-Dashboards"
+      }
+    },
+    "compliance": {
+      "title": "Regulatorische Compliance",
+      "description": "Automatisierte Compliance-Überwachung und -Berichterstattung",
+      "features": {
+        "tracking": "Compliance-Verfolgung",
+        "reports": "Automatisierte Berichte",
+        "trails": "Prüfpfade"
+      }
+    }
+  },
+  "impact": {
+    "title": "TRANSFORMATION DER LUFTFAHRT-OPERATIONEN",
+    "subtitle": "Messbare Auswirkungen in der gesamten Luftfahrtindustrie",
+    "stats": {
+      "integrity": {
+        "value": "99,9%",
+        "label": "Dokumentenintegrität",
+        "description": "Blockchain-gesicherte Aufzeichnungen"
+      },
+      "inspections": {
+        "value": "50%",
+        "label": "Schnellere Inspektionen",
+        "description": "Mobile-First-Ansatz"
+      },
+      "audit": {
+        "value": "100%",
+        "label": "Prüfpfad",
+        "description": "Vollständige Transparenz"
+      },
+      "monitoring": {
+        "value": "24/7",
+        "label": "Echtzeit-Überwachung",
+        "description": "Kontinuierliche Aufsicht"
+      }
+    }
+  },
+  "about": {
+    "title": "Tradition trifft Innovation",
+    "description": "ARTS Innovations repräsentiert die Evolution von über zwei Jahrzehnten Luft- und Raumfahrtexzellenz, jetzt verstärkt durch modernste Blockchain- und KI-Technologien.",
+    "stats": {
+      "experience": {
+        "label": "20+ Jahre",
+        "sublabel": "Luft- und Raumfahrterfahrung"
+      },
+      "clients": {
+        "label": "500+",
+        "sublabel": "Globale Kunden"
+      },
+      "countries": {
+        "label": "50+",
+        "sublabel": "Bediente Länder"
+      },
+      "reliability": {
+        "label": "99,9%",
+        "sublabel": "Systemzuverlässigkeit"
+      }
+    },
+    "timeline": {
+      "2000": {
+        "event": "ARTS gegründet",
+        "description": "Luft- und Raumfahrtexpertise beginnt"
+      },
+      "2020": {
+        "event": "Digitale Transformation",
+        "description": "Neue Technologien annehmen"
+      },
+      "2024": {
+        "event": "Blockchain-Integration",
+        "description": "Revolutionäre Sicherheit"
+      },
+      "2025": {
+        "event": "ARTS Innovations",
+        "description": "Die Zukunft anführen"
+      }
+    }
+  },
+  "contact": {
+    "title": "Starten Sie Ihre digitale Transformation",
+    "subtitle": "Bereit, Ihre Luftfahrtoperationen mit METRA zu revolutionieren? Lassen Sie uns besprechen, wie wir helfen können.",
+    "team": "Lernen Sie unser Team kennen",
+    "teamDescription": "Verbinden Sie sich direkt mit unseren Luft- und Raumfahrt- und Technologieexperten.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Unternehmen",
+      "message": "Nachricht",
+      "namePlaceholder": "Ihr Name",
+      "emailPlaceholder": "ihre@email.com",
+      "companyPlaceholder": "Ihr Unternehmen",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt...",
+      "required": "*",
+      "send": "Nachricht senden"
+    }
+  },
+  "footer": {
+    "description": "Revolutionierung von Luftfahrtoperationen durch modernste Blockchain- und KI-Technologie, unterstützt von über 20 Jahren Luft- und Raumfahrtexpertise.",
+    "sections": {
+      "solutions": {
+        "title": "Lösungen",
+        "links": {
+          "realtime": "Echtzeit-Asset-Management",
+          "blockchain": "Blockchain-Zertifizierung",
+          "digital": "Digitale Komponenten-Identität",
+          "mobile": "Mobile Inspektionen"
+        }
+      },
+      "company": {
+        "title": "Unternehmen",
+        "links": {
+          "about": "Über ARTS",
+          "team": "Innovations-Team",
+          "careers": "Karriere",
+          "news": "News & Updates"
+        }
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "links": {
+          "documentation": "Dokumentation",
+          "api": "API-Referenz",
+          "cases": "Fallstudien",
+          "papers": "White Papers"
+        }
+      }
+    },
+    "legal": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "cookies": "Cookie-Richtlinie",
+      "rights": "Alle Rechte vorbehalten."
+    }
+  }
+}

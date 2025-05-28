@@ -1,0 +1,287 @@
+{
+  "navigation": {
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "useCases": "Use Cases",
+    "contact": "Contact"
+  },
+  "hero": {
+    "poweredBy": "Powered by METRA Blockchain",
+    "title": "TRANSFORMING AEROSPACE",
+    "subtitle": "Trusted data and intelligent infrastructure, redefining standards in compliance, traceability, and predictive performance",
+    "cta": "Discover METRA Platform",
+    "trustIndicators": {
+      "sovereign": "Sovereign Blockchain Backbone",
+      "compliant": "EASA & FAA Compliant",
+      "immutable": "Immutable Documentation"
+    }
+  },
+  "valueProposition": {
+    "title": "Why Choose ARTS Innovations?",
+    "subtitle": "Combining decades of aerospace expertise with cutting-edge blockchain and AI technology",
+    "benefits": {
+      "tamperProof": {
+        "title": "Tamper-Proof Documentation",
+        "description": "Blockchain-secured records ensure complete data integrity"
+      },
+      "realTime": {
+        "title": "Real-Time Asset Management",
+        "description": "Live monitoring and instant updates"
+      },
+      "compliance": {
+        "title": "Instant Compliance Reporting",
+        "description": "Automated regulatory compliance"
+      },
+      "experience": {
+        "title": "20+ Years Trusted Experience",
+        "description": "Proven aerospace industry expertise"
+      }
+    }
+  },
+  "solutions": {
+    "title": "Complete Aerospace Ecosystem",
+    "subtitle": "METRA Platform Solutions",
+    "description": "Security, traceability, and regulatory trust for aerospace asset management",
+    "pselion": {
+      "title": "PSELION",
+      "subtitle": "Real-time Asset Management",
+      "description": "Preserve asset value via lifecycle-wide data control and active compliance",
+      "features": {
+        "lifecycle": "Lifecycle tracking",
+        "compliance": "Active compliance",
+        "preservation": "Asset preservation",
+        "monitoring": "Real-time monitoring"
+      }
+    },
+    "metrasign": {
+      "title": "MetraSign",
+      "subtitle": "Blockchain Document Certification",
+      "description": "Trusted, tamper-proof and auditable documentation for records & contracts",
+      "features": {
+        "immutable": "Immutable records",
+        "certification": "Digital certification",
+        "audit": "Audit trails",
+        "security": "Contract security"
+      }
+    },
+    "metraseal": {
+      "title": "MetraSeal",
+      "subtitle": "Digital Component Authentication",
+      "description": "NFC/QR seal linked to on-chain digital identity for high-value components",
+      "features": {
+        "nfc": "NFC/QR integration",
+        "identity": "Digital identity",
+        "security": "Component security",
+        "antiCounterfeiting": "Anti-counterfeiting"
+      }
+    },
+    "metrafield": {
+      "title": "MetraField",
+      "subtitle": "Mobile Inspection Platform",
+      "description": "Mobile-App for PPI, mid-lease and end-of-lease inspections with instant reports",
+      "features": {
+        "mobile": "Mobile inspections",
+        "reports": "Instant reports",
+        "blockchain": "Blockchain registration",
+        "inspections": "PPI/lease inspections"
+      }
+    },
+    "learnMore": "Learn More"
+  },
+  "useCases": {
+    "title": "Use Cases in Action",
+    "subtitle": "Transforming operations across the aerospace ecosystem",
+    "lessor": {
+      "title": "Lessor Transitions",
+      "description": "Faster transitions, secured documentation, preserved residual value",
+      "benefits": {
+        "handovers": "Accelerated handovers",
+        "documentation": "Secure documentation",
+        "preservation": "Value preservation",
+        "audit": "Audit readiness"
+      }
+    },
+    "oems": {
+      "title": "OEMs and MROs",
+      "description": "Verified part history, fraud prevention, audit readiness",
+      "benefits": {
+        "verification": "Part verification",
+        "fraud": "Fraud prevention",
+        "compliance": "Compliance tracking",
+        "supply": "Supply chain security"
+      }
+    },
+    "operators": {
+      "title": "Operators",
+      "description": "Centralized records, real-time compliance, reduced regulatory risk",
+      "benefits": {
+        "centralized": "Centralized data",
+        "compliance": "Real-time compliance",
+        "risk": "Risk reduction",
+        "efficiency": "Operational efficiency"
+      }
+    }
+  },
+  "technology": {
+    "title": "Cutting-Edge Technology Stack",
+    "subtitle": "Built on the most advanced and secure technologies available today",
+    "blockchain": {
+      "title": "Blockchain Security",
+      "description": "Immutable records and tamper-proof documentation",
+      "features": {
+        "ledger": "Distributed ledger",
+        "contracts": "Smart contracts",
+        "security": "Cryptographic security"
+      }
+    },
+    "ai": {
+      "title": "AI-Powered Analytics",
+      "description": "Intelligent insights and predictive maintenance",
+      "features": {
+        "learning": "Machine learning",
+        "recognition": "Pattern recognition",
+        "analytics": "Predictive analytics"
+      }
+    },
+    "realtime": {
+      "title": "Real-Time Processing",
+      "description": "Instant updates and live monitoring capabilities",
+      "features": {
+        "streams": "Live data streams",
+        "notifications": "Instant notifications",
+        "dashboards": "Real-time dashboards"
+      }
+    },
+    "compliance": {
+      "title": "Regulatory Compliance",
+      "description": "Automated compliance monitoring and reporting",
+      "features": {
+        "tracking": "Compliance tracking",
+        "reports": "Automated reports",
+        "trails": "Audit trails"
+      }
+    }
+  },
+  "impact": {
+    "title": "TRANSFORMING AVIATION OPERATIONS",
+    "subtitle": "Measurable impact across the aviation industry",
+    "stats": {
+      "integrity": {
+        "value": "99.9%",
+        "label": "Document Integrity",
+        "description": "Blockchain-secured records"
+      },
+      "inspections": {
+        "value": "50%",
+        "label": "Faster Inspections",
+        "description": "Mobile-first approach"
+      },
+      "audit": {
+        "value": "100%",
+        "label": "Audit Trail",
+        "description": "Complete transparency"
+      },
+      "monitoring": {
+        "value": "24/7",
+        "label": "Real-Time Monitoring",
+        "description": "Continuous oversight"
+      }
+    }
+  },
+  "about": {
+    "title": "Heritage Meets Innovation",
+    "description": "ARTS Innovations represents the evolution of over two decades of aerospace excellence, now enhanced with cutting-edge blockchain and AI technologies.",
+    "stats": {
+      "experience": {
+        "label": "20+ Years",
+        "sublabel": "Aerospace Experience"
+      },
+      "clients": {
+        "label": "500+",
+        "sublabel": "Global Clients"
+      },
+      "countries": {
+        "label": "50+",
+        "sublabel": "Countries Served"
+      },
+      "reliability": {
+        "label": "99.9%",
+        "sublabel": "System Reliability"
+      }
+    },
+    "timeline": {
+      "2000": {
+        "event": "ARTS Founded",
+        "description": "Aerospace expertise begins"
+      },
+      "2020": {
+        "event": "Digital Transformation",
+        "description": "Embracing new technologies"
+      },
+      "2024": {
+        "event": "Blockchain Integration",
+        "description": "Revolutionary security"
+      },
+      "2025": {
+        "event": "ARTS Innovations",
+        "description": "Leading the future"
+      }
+    }
+  },
+  "contact": {
+    "title": "Start Your Digital Transformation",
+    "subtitle": "Ready to revolutionize your aviation operations with METRA? Let's discuss how we can help.",
+    "team": "Meet Our Team",
+    "teamDescription": "Connect directly with our aerospace and technology experts.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "companyPlaceholder": "Your company",
+      "messagePlaceholder": "Tell us about your project...",
+      "required": "*",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "Revolutionizing aviation operations through cutting-edge blockchain and AI technology, backed by over 20 years of aerospace expertise.",
+    "sections": {
+      "solutions": {
+        "title": "Solutions",
+        "links": {
+          "realtime": "Real-Time Asset Management",
+          "blockchain": "Blockchain Certification",
+          "digital": "Digital Component Identity",
+          "mobile": "Mobile Inspections"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About ARTS",
+          "team": "Innovations Team",
+          "careers": "Careers",
+          "news": "News & Updates"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "links": {
+          "documentation": "Documentation",
+          "api": "API Reference",
+          "cases": "Case Studies",
+          "papers": "White Papers"
+        }
+      }
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "rights": "All rights reserved."
+    }
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "navigation": {
+    "solutions": "Solutions",
+    "technology": "Technologie",
+    "useCases": "Cas d'usage",
+    "contact": "Contact"
+  },
+  "hero": {
+    "poweredBy": "Propulsé par METRA Blockchain",
+    "title": "TRANSFORMER L'AÉROSPATIALE",
+    "subtitle": "Données fiables et infrastructure intelligente, redéfinissant les standards en conformité, traçabilité et performance prédictive",
+    "cta": "Découvrir la plateforme METRA",
+    "trustIndicators": {
+      "sovereign": "Backbone Blockchain Souverain",
+      "compliant": "Conforme EASA & FAA",
+      "immutable": "Documentation Immuable"
+    }
+  },
+  "valueProposition": {
+    "title": "Pourquoi choisir ARTS Innovations ?",
+    "subtitle": "Combinant des décennies d'expertise aérospatiale avec une technologie blockchain et IA de pointe",
+    "benefits": {
+      "tamperProof": {
+        "title": "Documentation Inviolable",
+        "description": "Les enregistrements sécurisés par blockchain garantissent une intégrité complète des données"
+      },
+      "realTime": {
+        "title": "Gestion d'Actifs en Temps Réel",
+        "description": "Surveillance en direct et mises à jour instantanées"
+      },
+      "compliance": {
+        "title": "Rapports de Conformité Instantanés",
+        "description": "Conformité réglementaire automatisée"
+      },
+      "experience": {
+        "title": "20+ Années d'Expérience Fiable",
+        "description": "Expertise prouvée dans l'industrie aérospatiale"
+      }
+    }
+  },
+  "solutions": {
+    "title": "Écosystème Aérospatial Complet",
+    "subtitle": "Solutions de la Plateforme METRA",
+    "description": "Sécurité, traçabilité et confiance réglementaire pour la gestion d'actifs aérospatiaux",
+    "pselion": {
+      "title": "PSELION",
+      "subtitle": "Gestion d'Actifs en Temps Réel",
+      "description": "Préserver la valeur des actifs via un contrôle des données sur tout le cycle de vie et une conformité active",
+      "features": {
+        "lifecycle": "Suivi du cycle de vie",
+        "compliance": "Conformité active",
+        "preservation": "Préservation des actifs",
+        "monitoring": "Surveillance en temps réel"
+      }
+    },
+    "metrasign": {
+      "title": "MetraSign",
+      "subtitle": "Certification de Documents Blockchain",
+      "description": "Documentation fiable, inviolable et auditable pour les enregistrements et contrats",
+      "features": {
+        "immutable": "Enregistrements immuables",
+        "certification": "Certification numérique",
+        "audit": "Pistes d'audit",
+        "security": "Sécurité des contrats"
+      }
+    },
+    "metraseal": {
+      "title": "MetraSeal",
+      "subtitle": "Authentification de Composants Numériques",
+      "description": "Sceau NFC/QR lié à une identité numérique on-chain pour les composants de haute valeur",
+      "features": {
+        "nfc": "Intégration NFC/QR",
+        "identity": "Identité numérique",
+        "security": "Sécurité des composants",
+        "antiCounterfeiting": "Anti-contrefaçon"
+      }
+    },
+    "metrafield": {
+      "title": "MetraField",
+      "subtitle": "Plateforme d'Inspection Mobile",
+      "description": "Application mobile pour les inspections PPI, mi-bail et fin de bail avec rapports instantanés",
+      "features": {
+        "mobile": "Inspections mobiles",
+        "reports": "Rapports instantanés",
+        "blockchain": "Enregistrement blockchain",
+        "inspections": "Inspections PPI/bail"
+      }
+    },
+    "learnMore": "En savoir plus"
+  },
+  "useCases": {
+    "title": "Cas d'Usage en Action",
+    "subtitle": "Transformation des opérations dans tout l'écosystème aérospatial",
+    "lessor": {
+      "title": "Transitions de Bailleur",
+      "description": "Transitions plus rapides, documentation sécurisée, valeur résiduelle préservée",
+      "benefits": {
+        "handovers": "Transferts accélérés",
+        "documentation": "Documentation sécurisée",
+        "preservation": "Préservation de la valeur",
+        "audit": "Préparation aux audits"
+      }
+    },
+    "oems": {
+      "title": "OEMs et MROs",
+      "description": "Historique des pièces vérifié, prévention de la fraude, préparation aux audits",
+      "benefits": {
+        "verification": "Vérification des pièces",
+        "fraud": "Prévention de la fraude",
+        "compliance": "Suivi de conformité",
+        "supply": "Sécurité de la chaîne d'approvisionnement"
+      }
+    },
+    "operators": {
+      "title": "Opérateurs",
+      "description": "Enregistrements centralisés, conformité en temps réel, risque réglementaire réduit",
+      "benefits": {
+        "centralized": "Données centralisées",
+        "compliance": "Conformité en temps réel",
+        "risk": "Réduction des risques",
+        "efficiency": "Efficacité opérationnelle"
+      }
+    }
+  },
+  "technology": {
+    "title": "Stack Technologique de Pointe",
+    "subtitle": "Construit sur les technologies les plus avancées et sécurisées disponibles aujourd'hui",
+    "blockchain": {
+      "title": "Sécurité Blockchain",
+      "description": "Enregistrements immuables et documentation inviolable",
+      "features": {
+        "ledger": "Ledger distribué",
+        "contracts": "Contrats intelligents",
+        "security": "Sécurité cryptographique"
+      }
+    },
+    "ai": {
+      "title": "Analytique Alimentée par l'IA",
+      "description": "Insights intelligents et maintenance prédictive",
+      "features": {
+        "learning": "Apprentissage automatique",
+        "recognition": "Reconnaissance de motifs",
+        "analytics": "Analytique prédictive"
+      }
+    },
+    "realtime": {
+      "title": "Traitement en Temps Réel",
+      "description": "Mises à jour instantanées et capacités de surveillance en direct",
+      "features": {
+        "streams": "Flux de données en direct",
+        "notifications": "Notifications instantanées",
+        "dashboards": "Tableaux de bord en temps réel"
+      }
+    },
+    "compliance": {
+      "title": "Conformité Réglementaire",
+      "description": "Surveillance et rapports de conformité automatisés",
+      "features": {
+        "tracking": "Suivi de conformité",
+        "reports": "Rapports automatisés",
+        "trails": "Pistes d'audit"
+      }
+    }
+  },
+  "impact": {
+    "title": "TRANSFORMER LES OPÉRATIONS AÉRONAUTIQUES",
+    "subtitle": "Impact mesurable dans toute l'industrie aéronautique",
+    "stats": {
+      "integrity": {
+        "value": "99,9%",
+        "label": "Intégrité des Documents",
+        "description": "Enregistrements sécurisés par blockchain"
+      },
+      "inspections": {
+        "value": "50%",
+        "label": "Inspections Plus Rapides",
+        "description": "Approche mobile-first"
+      },
+      "audit": {
+        "value": "100%",
+        "label": "Piste d'Audit",
+        "description": "Transparence complète"
+      },
+      "monitoring": {
+        "value": "24/7",
+        "label": "Surveillance en Temps Réel",
+        "description": "Supervision continue"
+      }
+    }
+  },
+  "about": {
+    "title": "L'Héritage Rencontre l'Innovation",
+    "description": "ARTS Innovations représente l'évolution de plus de deux décennies d'excellence aérospatiale, maintenant renforcée par des technologies blockchain et IA de pointe.",
+    "stats": {
+      "experience": {
+        "label": "20+ Années",
+        "sublabel": "Expérience Aérospatiale"
+      },
+      "clients": {
+        "label": "500+",
+        "sublabel": "Clients Mondiaux"
+      },
+      "countries": {
+        "label": "50+",
+        "sublabel": "Pays Desservis"
+      },
+      "reliability": {
+        "label": "99,9%",
+        "sublabel": "Fiabilité du Système"
+      }
+    },
+    "timeline": {
+      "2000": {
+        "event": "ARTS Fondé",
+        "description": "L'expertise aérospatiale commence"
+      },
+      "2020": {
+        "event": "Transformation Numérique",
+        "description": "Adoption de nouvelles technologies"
+      },
+      "2024": {
+        "event": "Intégration Blockchain",
+        "description": "Sécurité révolutionnaire"
+      },
+      "2025": {
+        "event": "ARTS Innovations",
+        "description": "Mener l'avenir"
+      }
+    }
+  },
+  "contact": {
+    "title": "Commencez Votre Transformation Numérique",
+    "subtitle": "Prêt à révolutionner vos opérations aéronautiques avec METRA ? Discutons de la façon dont nous pouvons vous aider.",
+    "team": "Rencontrez Notre Équipe",
+    "teamDescription": "Connectez-vous directement avec nos experts en aérospatiale et technologie.",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "company": "Entreprise",
+      "message": "Message",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "votre@email.com",
+      "companyPlaceholder": "Votre entreprise",
+      "messagePlaceholder": "Parlez-nous de votre projet...",
+      "required": "*",
+      "send": "Envoyer le Message"
+    }
+  },
+  "footer": {
+    "description": "Révolutionner les opérations aéronautiques grâce à une technologie blockchain et IA de pointe, soutenue par plus de 20 ans d'expertise aérospatiale.",
+    "sections": {
+      "solutions": {
+        "title": "Solutions",
+        "links": {
+          "realtime": "Gestion d'Actifs en Temps Réel",
+          "blockchain": "Certification Blockchain",
+          "digital": "Identité de Composant Numérique",
+          "mobile": "Inspections Mobiles"
+        }
+      },
+      "company": {
+        "title": "Entreprise",
+        "links": {
+          "about": "À propos d'ARTS",
+          "team": "Équipe Innovations",
+          "careers": "Carrières",
+          "news": "Actualités & Mises à jour"
+        }
+      },
+      "resources": {
+        "title": "Ressources",
+        "links": {
+          "documentation": "Documentation",
+          "api": "Référence API",
+          "cases": "Études de Cas",
+          "papers": "Livres Blancs"
+        }
+      }
+    },
+    "legal": {
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation",
+      "cookies": "Politique des Cookies",
+      "rights": "Tous droits réservés."
+    }
+  }
+}
