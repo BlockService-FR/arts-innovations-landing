@@ -52,7 +52,7 @@ export default function TechnologyStack() {
   ]
 
   return (
-    <section id="technology" className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="technology" className="py-20 bg-linear-to-br from-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -65,7 +65,7 @@ export default function TechnologyStack() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-blue-400/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-linear-to-r from-cyan-500/10 to-blue-400/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -77,7 +77,7 @@ export default function TechnologyStack() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-400/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-r from-purple-500/10 to-pink-400/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -111,7 +111,7 @@ export default function TechnologyStack() {
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center shrink-0">
                       <Icon size={24} className="text-white" />
                     </div>
                     <div className="flex-1">
@@ -150,7 +150,7 @@ export default function TechnologyStack() {
                   rotateY: { duration: 10, repeat: Infinity, ease: "linear" },
                   scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-linear-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
               >
                 <Brain size={32} className="text-white" />
               </motion.div>
@@ -171,7 +171,7 @@ export default function TechnologyStack() {
                   className="absolute top-1/2 left-1/2 w-48 h-48 transform -translate-x-1/2 -translate-y-1/2"
                   style={{ transformOrigin: 'center' }}
                 >
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                     {React.createElement(technologies[index]?.icon || Lock, { size: 20, className: "text-white" })}
                   </div>
                 </motion.div>

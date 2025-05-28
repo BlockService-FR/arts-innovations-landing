@@ -86,7 +86,7 @@ export default function ContactSection() {
                   className="p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-linear-to-r from-cyan-600 to-blue-700 rounded-lg flex items-center justify-center">
                       <User size={20} className="text-white" />
                     </div>
                     <div className="flex-1">
@@ -184,7 +184,7 @@ export default function ContactSection() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                className="w-full bg-linear-to-r from-cyan-600 to-blue-700 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 <span>{t('contact.form.send')}</span>
                 <Send size={20} />

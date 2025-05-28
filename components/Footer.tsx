@@ -51,7 +51,7 @@ export default function Footer() {
               className="mb-6"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">M</span>
                 </div>
                 <span className="font-space-grotesk font-bold text-xl">ARTS Innovations</span>

@@ -11,26 +11,22 @@ export default function ValueProposition() {
     {
       icon: Shield,
       titleKey: 'valueProposition.benefits.tamperProof.title',
-      descriptionKey: 'valueProposition.benefits.tamperProof.description',
-      size: "large"
+      descriptionKey: 'valueProposition.benefits.tamperProof.description'
     },
     {
       icon: Clock,
       titleKey: 'valueProposition.benefits.realTime.title',
-      descriptionKey: 'valueProposition.benefits.realTime.description',
-      size: "medium"
+      descriptionKey: 'valueProposition.benefits.realTime.description'
     },
     {
       icon: FileCheck,
       titleKey: 'valueProposition.benefits.compliance.title',
-      descriptionKey: 'valueProposition.benefits.compliance.description',
-      size: "medium"
+      descriptionKey: 'valueProposition.benefits.compliance.description'
     },
     {
       icon: Users,
       titleKey: 'valueProposition.benefits.experience.title',
-      descriptionKey: 'valueProposition.benefits.experience.description',
-      size: "small"
+      descriptionKey: 'valueProposition.benefits.experience.description'
     }
   ]
 
@@ -75,8 +71,6 @@ export default function ValueProposition() {
         >
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon
-            const gridClass = benefit.size === 'large' ? 'md:col-span-2 md:row-span-2' :
-                             benefit.size === 'medium' ? 'md:col-span-2' : 'md:col-span-2'
             
             return (
               <motion.div
@@ -86,37 +80,18 @@ export default function ValueProposition() {
                   scale: 1.02,
                   boxShadow: '0 20px 40px rgba(6, 182, 212, 0.1)'
                 }}
-                className={`${gridClass} bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-6 border border-slate-600 hover:border-cyan-500 transition-all duration-300`}
+                className={`md:col-span-2 bg-linear-to-br from-slate-700 to-slate-800 rounded-2xl p-6 border border-slate-600 hover:border-cyan-500 transition-all duration-300`}
               >
                 <div className="flex flex-col h-full">
                   <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                       <Icon size={24} className="text-white" />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{t(benefit.titleKey)}</h3>
                     <p className="text-gray-400">{t(benefit.descriptionKey)}</p>
                   </div>
                   
-                  {benefit.size === 'large' && (
-                    <div className="mt-auto">
-                      <div className="w-full h-32 bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-lg flex items-center justify-center">
-                        <motion.div
-                          animate={{ 
-                            scale: [1, 1.1, 1],
-                            rotate: [0, 5, -5, 0]
-                          }}
-                          transition={{ 
-                            duration: 4, 
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                          }}
-                          className="text-6xl opacity-30"
-                        >
-                          🔗
-                        </motion.div>
-                      </div>
-                    </div>
-                  )}
+
                 </div>
               </motion.div>
             )

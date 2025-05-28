@@ -82,10 +82,10 @@ export default function SolutionsShowcase() {
               {t('solutions.subtitle')}
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-balance">
             {t('solutions.title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto text-balance">
             {t('solutions.description')}
           </p>
         </motion.div>
@@ -108,12 +108,12 @@ export default function SolutionsShowcase() {
                   isActive ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20' : 'border-slate-600'
                 }`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-10`}></div>
+                <div className={`absolute inset-0 bg-linear-to-br ${solution.color} opacity-10`}></div>
                 
                 <div className="relative p-8 bg-slate-800/90 backdrop-blur-sm">
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}>
+                      <div className={`w-16 h-16 rounded-xl bg-linear-to-r ${solution.color} flex items-center justify-center mb-4`}>
                         <Icon size={32} className="text-white" />
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-1">{t(solution.titleKey)}</h3>
@@ -121,7 +121,7 @@ export default function SolutionsShowcase() {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed text-balance">
                     {t(solution.descriptionKey)}
                   </p>
 
@@ -143,7 +143,7 @@ export default function SolutionsShowcase() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-full py-3 rounded-lg bg-gradient-to-r ${solution.color} text-white font-semibold transition-all duration-300`}
+                    className={`w-full py-3 rounded-lg bg-linear-to-r ${solution.color} text-white font-semibold transition-all duration-300`}
                   >
                     {t('solutions.learnMore')}
                   </motion.button>
@@ -159,7 +159,7 @@ export default function SolutionsShowcase() {
                     rotate: { duration: 20, repeat: Infinity, ease: "linear" },
                     scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                   }}
-                  className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-r from-cyan-500/10 to-blue-400/10 rounded-full"
+                  className="absolute -top-10 -right-10 w-32 h-32 bg-linear-to-r from-cyan-500/10 to-blue-400/10 rounded-full"
                 />
               </motion.div>
             )

@@ -2,11 +2,18 @@ import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({ 
+  subsets: ['latin'], 
+  variable: '--font-inter',
+  display: 'swap',
+  preload: true,
+})
+
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'], 
   variable: '--font-space-grotesk',
-  display: 'swap'
+  display: 'swap',
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -20,8 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-inter antialiased" suppressHydrationWarning={true}>{children}</body>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   )
 }

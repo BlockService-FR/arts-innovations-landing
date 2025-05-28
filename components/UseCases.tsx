@@ -76,7 +76,7 @@ export default function UseCases() {
                 whileHover={{ scale: 1.02 }}
                 className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600 hover:border-cyan-500 transition-all duration-300"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-6`}>
+                <div className={`w-16 h-16 rounded-xl bg-linear-to-r ${useCase.color} flex items-center justify-center mb-6`}>
                   <Icon size={32} className="text-white" />
                 </div>
                 

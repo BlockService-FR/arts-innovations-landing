@@ -9,10 +9,9 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Updated gradient classes for v4 */}
+      <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
-        {/* Blockchain network visualization */}
         <div className="absolute inset-0">
           {[...Array(6)].map((_, i) => (
             <motion.div
@@ -41,10 +40,10 @@ export default function HeroSection() {
               {t('hero.poweredBy')}
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-amber-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-linear-to-r from-white via-cyan-200 to-amber-400 bg-clip-text text-transparent">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto text-balance">
             {t('hero.subtitle')}
           </p>
         </motion.div>
@@ -56,16 +55,15 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(8, 145, 178, 0.3)' }}
+            whileHover={{ scale: 1.05, boxShadow: 'var(--shadow-metra)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-cyan-600 to-blue-700 px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg"
+            className="bg-linear-to-r from-cyan-600 to-blue-700 px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg"
           >
             <span>{t('hero.cta')}</span>
             <ArrowRight size={20} />
           </motion.button>
         </motion.div>
 
-        {/* Trust indicators */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -87,7 +85,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* 3D Elements */}
+      {/* 3D Elements with updated gradient */}
       <motion.div
         animate={{ 
           rotateY: 360,
@@ -99,7 +97,7 @@ export default function HeroSection() {
         }}
         className="absolute right-10 top-1/3 w-32 h-32 opacity-20"
       >
-        <div className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg transform perspective-1000 rotateY-45"></div>
+        <div className="w-full h-full bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg transform perspective-1000 rotateY-45"></div>
       </motion.div>
     </section>
   )

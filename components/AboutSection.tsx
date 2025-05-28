@@ -73,7 +73,7 @@ export default function AboutSection() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center space-x-4"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-16 h-16 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
                     {milestone.year}
                   </div>
                   <div>
