@@ -137,7 +137,7 @@ export default function TechnologyStack() {
             })}
           </div>
           <div className="flex items-center justify-center">
-            <img src="reactor.png" alt="Reactor" style={{ 'border-radius': '20px' }}/>
+            <img src="reactor.png" alt="Reactor" style={{ borderRadius: '20px' }}/>
           </div>
         </div>
       </div>
