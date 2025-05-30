@@ -42,8 +42,9 @@
     "title": "Komplettes Luft- und Raumfahrt-Ökosystem",
     "subtitle": "METRA Plattform-Lösungen",
     "description": "Sicherheit, Rückverfolgbarkeit und regulatorisches Vertrauen für das Management von Luft- und Raumfahrt-Assets",
+    "keyFeatures": "Hauptmerkmale:",
     "pselion": {
-      "title": "Pselion",
+      "title": "PSELION",
       "subtitle": "Echtzeit-Asset-Management",
       "description": "Erhaltung des Asset-Werts durch lebenszyklus-weite Datenkontrolle und aktive Compliance",
       "features": {
@@ -86,11 +87,17 @@
         "inspections": "PPI/Lease-Inspektionen"
       }
     },
-    "learnMore": "Mehr erfahren"
+    "learnMore": "Mehr erfahren",
+    "cta": {
+      "title": "Bereit, Ihre Operationen zu transformieren?",
+      "description": "Entdecken Sie, wie METRAs Blockchain-Backbone Sicherheit, Rückverfolgbarkeit und regulatorisches Vertrauen in Ihr Luft- und Raumfahrt-Asset-Management bringen kann.",
+      "button": "Kontaktieren Sie unsere Experten"
+    }
   },
   "useCases": {
     "title": "Anwendungsfälle in Aktion",
     "subtitle": "Transformation von Abläufen im gesamten Luft- und Raumfahrt-Ökosystem",
+    "badge": "ANWENDUNGSFÄLLE IN AKTION",
     "lessor": {
       "title": "Leasinggeber-Übergänge",
       "description": "Schnellere Übergänge, gesicherte Dokumentation, erhaltener Restwert",
@@ -125,6 +132,17 @@
   "technology": {
     "title": "Modernster Technologie-Stack",
     "subtitle": "Basierend auf den fortschrittlichsten und sichersten verfügbaren Technologien",
+    "metraBackbone": "METRA BLOCKCHAIN BACKBONE",
+    "metraDescription": "Souveräne Blockchain entwickelt, um Sicherheit, Rückverfolgbarkeit und regulatorisches Vertrauen in das Luft- und Raumfahrt-Asset-Management zu bringen",
+    "labels": {
+      "aiAnalytics": "KI-Analytik",
+      "blockchain": "Blockchain",
+      "realTimeData": "Echtzeit-Daten"
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Transformation der Luft- und Raumfahrt durch vertrauenswürdige Daten und intelligente Infrastruktur, Neudefinition von Standards in Compliance, Rückverfolgbarkeit und prädiktiver Leistung."
+    },
     "blockchain": {
       "title": "Blockchain-Sicherheit",
       "description": "Unveränderliche Aufzeichnungen und manipulationssichere Dokumentation",

@@ -186,7 +186,7 @@ export default function SolutionsShowcase() {
                   {/* Features List */}
                   <div className="mb-8">
                     <h4 className={`text-lg font-semibold ${solution.textColor} mb-4`}>
-                      Key Features:
+                      {t('solutions.keyFeatures')}
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {solution.featuresKeys.map((featureKey, featureIndex) => (
@@ -255,18 +255,17 @@ export default function SolutionsShowcase() {
           <div className="bg-arts-navy rounded-3xl p-8 lg:p-12 text-white">
             {/* Using white text on dark background for excellent contrast */}
             <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-white">
-              Ready to Transform Your Operations?
+               {t('solutions.cta.title')}
             </h3>
             <p className="text-lg lg:text-xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover how METRA's blockchain backbone can bring security, traceability, 
-              and regulatory trust to your aerospace asset management.
+              {t('solutions.cta.description')}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="bg-arts-green text-arts-navy font-semibold py-4 px-8 rounded-xl text-lg hover:bg-arts-lime transition-all duration-300 shadow-lg"
             >
-              Contact Our Experts
+              {t('solutions.cta.button')}
             </motion.button>
           </div>
         </motion.div>

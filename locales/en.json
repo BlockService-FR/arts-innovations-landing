@@ -9,11 +9,11 @@
     "poweredBy": "Powered by METRA Blockchain",
     "title": "TRANSFORMING AEROSPACE",
     "subtitle": "Trusted data and intelligent infrastructure, redefining standards in compliance, traceability, and predictive performance",
-    "cta": "Discover our ecosystem",
+    "cta": "Discover METRA Platform",
     "trustIndicators": {
-      "sovereign": "Sovereign Blockchain Backbone",
+      "sovereign": "Private Blockchain",
       "compliant": "EASA & FAA Compliant",
-      "immutable": "Immutable Documentation"
+      "immutable": "Certified Documentation"
     }
   },
   "valueProposition": {
@@ -42,8 +42,9 @@
     "title": "Complete Aerospace Ecosystem",
     "subtitle": "METRA Platform Solutions",
     "description": "Security, traceability, and regulatory trust for aerospace asset management",
+    "keyFeatures": "Key Features:",
     "pselion": {
-      "title": "Pselion",
+      "title": "PSELION",
       "subtitle": "Real-time Asset Management",
       "description": "Preserve asset value via lifecycle-wide data control and active compliance",
       "features": {
@@ -86,11 +87,17 @@
         "inspections": "PPI/lease inspections"
       }
     },
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Ready to Transform Your Operations?",
+      "description": "Discover how METRA's blockchain backbone can bring security, traceability, and regulatory trust to your aerospace asset management.",
+      "button": "Contact Our Experts"
+    }
   },
   "useCases": {
     "title": "Use Cases in Action",
     "subtitle": "Transforming operations across the aerospace ecosystem",
+    "badge": "USE CASES IN ACTION",
     "lessor": {
       "title": "Lessor Transitions",
       "description": "Faster transitions, secured documentation, preserved residual value",
@@ -125,6 +132,17 @@
   "technology": {
     "title": "Cutting-Edge Technology Stack",
     "subtitle": "Built on the most advanced and secure technologies available today",
+    "metraBackbone": "METRA BLOCKCHAIN BACKBONE",
+    "metraDescription": "Sovereign blockchain designed to bring security, traceability, and regulatory trust to aerospace asset management",
+    "labels": {
+      "aiAnalytics": "AI Analytics",
+      "blockchain": "Blockchain",
+      "realTimeData": "Real-time Data"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Transforming aerospace through trusted data and intelligent infrastructure, redefining standards in compliance, traceability, and predictive performance."
+    },
     "blockchain": {
       "title": "Blockchain Security",
       "description": "Immutable records and tamper-proof documentation",

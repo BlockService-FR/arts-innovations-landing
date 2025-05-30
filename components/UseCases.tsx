@@ -54,7 +54,7 @@ export default function UseCases() {
         >
           <div className="mb-4">
             <span className="text-lg text-arts-green font-semibold tracking-wide uppercase">
-              USE CASES IN ACTION
+              {t('useCases.badge')}
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-white">

@@ -9,11 +9,11 @@
     "poweredBy": "Propulsé par METRA Blockchain",
     "title": "TRANSFORMER L'AÉROSPATIALE",
     "subtitle": "Données fiables et infrastructure intelligente, redéfinissant les standards en conformité, traçabilité et performance prédictive",
-    "cta": "Découvrir nos solutions",
+    "cta": "Découvrir la plateforme METRA",
     "trustIndicators": {
-      "sovereign": "Backbone Blockchain Souverain",
+      "sovereign": "Blockchain Privée",
       "compliant": "Conforme EASA & FAA",
-      "immutable": "Documentation Immuable"
+      "immutable": "Documentation Certifiée"
     }
   },
   "valueProposition": {
@@ -42,8 +42,9 @@
     "title": "Écosystème Aérospatial Complet",
     "subtitle": "Solutions de la Plateforme METRA",
     "description": "Sécurité, traçabilité et confiance réglementaire pour la gestion d'actifs aérospatiaux",
+    "keyFeatures": "Caractéristiques Clés :",
     "pselion": {
-      "title": "Pselion",
+      "title": "PSELION",
       "subtitle": "Gestion d'Actifs en Temps Réel",
       "description": "Préserver la valeur des actifs via un contrôle des données sur tout le cycle de vie et une conformité active",
       "features": {
@@ -86,11 +87,17 @@
         "inspections": "Inspections PPI/bail"
       }
     },
-    "learnMore": "En savoir plus"
+    "learnMore": "En savoir plus",
+    "cta": {
+      "title": "Prêt à Transformer Vos Opérations ?",
+      "description": "Découvrez comment le blockchain privée de METRA peut apporter sécurité, traçabilité et confiance réglementaire à votre gestion d'actifs aérospatiaux.",
+      "button": "Contactez Nos Experts"
+    }
   },
   "useCases": {
     "title": "Cas d'Usage en Action",
     "subtitle": "Transformation des opérations dans tout l'écosystème aérospatial",
+    "badge": "CAS D'USAGE EN ACTION",
     "lessor": {
       "title": "Transitions de Bailleur",
       "description": "Transitions plus rapides, documentation sécurisée, valeur résiduelle préservée",
@@ -125,6 +132,17 @@
   "technology": {
     "title": "Stack Technologique de Pointe",
     "subtitle": "Construit sur les technologies les plus avancées et sécurisées disponibles aujourd'hui",
+    "metraBackbone": "METRA BLOCKCHAIN BACKBONE",
+    "metraDescription": "Blockchain souveraine conçue pour apporter sécurité, traçabilité et confiance réglementaire à la gestion d'actifs aérospatiaux",
+    "labels": {
+      "aiAnalytics": "Analytique IA",
+      "blockchain": "Blockchain",
+      "realTimeData": "Données en Temps Réel"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Transformer l'aérospatiale grâce à des données fiables et une infrastructure intelligente, redéfinissant les standards en conformité, traçabilité et performance prédictive."
+    },
     "blockchain": {
       "title": "Sécurité Blockchain",
       "description": "Enregistrements immuables et documentation inviolable",

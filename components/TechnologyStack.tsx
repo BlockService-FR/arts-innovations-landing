@@ -90,14 +90,14 @@ export default function TechnologyStack() {
         >
           <div className="mb-6">
             <span className="inline-block text-base font-semibold tracking-wider uppercase text-white bg-arts-green px-4 py-2 rounded-full">
-              METRA BLOCKCHAIN BACKBONE
+              {t('technology.metraBackbone')}
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-arts-navy text-balance">
-            Cutting-Edge Technology Stack
+            {t('technology.title')}
           </h2>
           <p className="text-xl text-arts-gray max-w-3xl mx-auto text-balance">
-            Sovereign blockchain designed to bring security, traceability, and regulatory trust to aerospace asset management
+            {t('technology.metraDescription')}
           </p>
         </motion.div>
 
