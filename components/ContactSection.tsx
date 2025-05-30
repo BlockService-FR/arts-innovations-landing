@@ -32,7 +32,7 @@ export default function ContactSection() {
     }
   ]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
   }
@@ -45,7 +45,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-arts-navy relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,10 +55,10 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-white">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             {t('contact.subtitle')}
           </p>
         </motion.div>
@@ -72,8 +72,8 @@ export default function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">{t('contact.team')}</h3>
-              <p className="text-gray-400 mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-white">{t('contact.team')}</h3>
+              <p className="text-gray-300 mb-8">
                 {t('contact.teamDescription')}
               </p>
             </div>
@@ -83,20 +83,20 @@ export default function ContactSection() {
                 <motion.div
                   key={index}
                   whileHover={{ x: 10 }}
-                  className="p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+                  className="p-6 bg-arts-teal/50 rounded-lg border border-arts-green/20 hover:border-arts-green transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-linear-to-r from-cyan-600 to-blue-700 rounded-lg flex items-center justify-center">
-                      <User size={20} className="text-white" />
+                    <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
+                      <User size={20} className="text-arts-navy" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold text-white mb-2">{contact.name}</h4>
                       <div className="space-y-1">
-                        <div className="flex items-center space-x-2 text-sm text-gray-400">
+                        <div className="flex items-center space-x-2 text-sm text-gray-300">
                           <Phone size={14} />
                           <span>{contact.phone}</span>
                         </div>
-                        <div className="flex items-center space-x-2 text-sm text-gray-400">
+                        <div className="flex items-center space-x-2 text-sm text-gray-300">
                           <Mail size={14} />
                           <span>{contact.email}</span>
                         </div>
@@ -113,12 +113,12 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700"
+            className="bg-white rounded-2xl p-8 shadow-lg"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-arts-navy mb-2">
                     {t('contact.form.name')} {t('contact.form.required')}
                   </label>
                   <input
@@ -128,12 +128,12 @@ export default function ContactSection() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray"
                     placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-arts-navy mb-2">
                     {t('contact.form.email')} {t('contact.form.required')}
                   </label>
                   <input
@@ -143,14 +143,14 @@ export default function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray"
                     placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-arts-navy mb-2">
                   {t('contact.form.company')}
                 </label>
                 <input
@@ -159,13 +159,13 @@ export default function ContactSection() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray"
                   placeholder={t('contact.form.companyPlaceholder')}
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-arts-navy mb-2">
                   {t('contact.form.message')} {t('contact.form.required')}
                 </label>
                 <textarea
@@ -175,7 +175,7 @@ export default function ContactSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray resize-none"
                   placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
@@ -184,7 +184,7 @@ export default function ContactSection() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-linear-to-r from-cyan-600 to-blue-700 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                className="w-full bg-arts-green text-arts-navy font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-arts-lime transition-all duration-300"
               >
                 <span>{t('contact.form.send')}</span>
                 <Send size={20} />

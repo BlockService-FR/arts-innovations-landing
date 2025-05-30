@@ -11,22 +11,26 @@ export default function ValueProposition() {
     {
       icon: Shield,
       titleKey: 'valueProposition.benefits.tamperProof.title',
-      descriptionKey: 'valueProposition.benefits.tamperProof.description'
+      descriptionKey: 'valueProposition.benefits.tamperProof.description',
+      size: "medium"
     },
     {
       icon: Clock,
       titleKey: 'valueProposition.benefits.realTime.title',
-      descriptionKey: 'valueProposition.benefits.realTime.description'
+      descriptionKey: 'valueProposition.benefits.realTime.description',
+      size: "medium"
     },
     {
       icon: FileCheck,
       titleKey: 'valueProposition.benefits.compliance.title',
-      descriptionKey: 'valueProposition.benefits.compliance.description'
+      descriptionKey: 'valueProposition.benefits.compliance.description',
+      size: "medium"
     },
     {
       icon: Users,
       titleKey: 'valueProposition.benefits.experience.title',
-      descriptionKey: 'valueProposition.benefits.experience.description'
+      descriptionKey: 'valueProposition.benefits.experience.description',
+      size: "small"
     }
   ]
 
@@ -46,7 +50,7 @@ export default function ValueProposition() {
   }
 
   return (
-    <section className="py-20 bg-slate-800">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,10 +58,10 @@ export default function ValueProposition() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-arts-navy">
             {t('valueProposition.title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-arts-gray max-w-3xl mx-auto">
             {t('valueProposition.subtitle')}
           </p>
         </motion.div>
@@ -71,6 +75,8 @@ export default function ValueProposition() {
         >
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon
+            const gridClass = benefit.size === 'large' ? 'md:col-span-2 md:row-span-2' :
+                             benefit.size === 'medium' ? 'md:col-span-2' : 'md:col-span-2'
             
             return (
               <motion.div
@@ -78,20 +84,39 @@ export default function ValueProposition() {
                 variants={itemVariants}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: '0 20px 40px rgba(6, 182, 212, 0.1)'
+                  boxShadow: '0 20px 40px rgba(154, 255, 0, 0.1)'
                 }}
-                className={`md:col-span-2 bg-linear-to-br from-slate-700 to-slate-800 rounded-2xl p-6 border border-slate-600 hover:border-cyan-500 transition-all duration-300`}
+                className={`${gridClass} bg-white rounded-2xl p-6 border border-gray-200 hover:border-arts-green transition-all duration-300 shadow-lg`}
               >
                 <div className="flex flex-col h-full">
                   <div className="mb-4">
-                    <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                      <Icon size={24} className="text-white" />
+                    <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center mb-4">
+                      <Icon size={24} className="text-arts-navy" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{t(benefit.titleKey)}</h3>
-                    <p className="text-gray-400">{t(benefit.descriptionKey)}</p>
+                    <h3 className="text-xl font-bold mb-2 text-arts-navy">{t(benefit.titleKey)}</h3>
+                    <p className="text-arts-gray">{t(benefit.descriptionKey)}</p>
                   </div>
                   
-
+                  {benefit.size === 'large' && (
+                    <div className="mt-auto">
+                      <div className="w-full h-32 bg-linear-to-r from-arts-green/10 to-arts-lime/10 rounded-lg flex items-center justify-center">
+                        <motion.div
+                          animate={{ 
+                            scale: [1, 1.1, 1],
+                            rotate: [0, 5, -5, 0]
+                          }}
+                          transition={{ 
+                            duration: 4, 
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                          }}
+                          className="text-6xl opacity-30"
+                        >
+                          🔗
+                        </motion.div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             )

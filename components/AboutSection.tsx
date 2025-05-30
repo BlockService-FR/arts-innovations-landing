@@ -8,7 +8,7 @@ export default function AboutSection() {
   const { t } = useTranslation()
 
   const milestones = [
-    { year: '2000', eventKey: 'about.timeline.2000.event', descriptionKey: 'about.timeline.2000.description' },
+    { year: '2010', eventKey: 'about.timeline.2000.event', descriptionKey: 'about.timeline.2000.description' },
     { year: '2020', eventKey: 'about.timeline.2020.event', descriptionKey: 'about.timeline.2020.description' },
     { year: '2024', eventKey: 'about.timeline.2024.event', descriptionKey: 'about.timeline.2024.description' },
     { year: '2025', eventKey: 'about.timeline.2025.event', descriptionKey: 'about.timeline.2025.description' }
@@ -22,7 +22,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-slate-800">
+    <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -31,10 +31,10 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-arts-navy">
               {t('about.title')}
             </h2>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-xl text-arts-gray mb-8">
               {t('about.description')}
             </p>
             
@@ -45,11 +45,11 @@ export default function AboutSection() {
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.05 }}
-                    className="text-center p-4 bg-slate-700 rounded-lg"
+                    className="text-center p-4 bg-gray-50 rounded-lg border border-gray-200"
                   >
-                    <Icon size={24} className="text-cyan-400 mx-auto mb-2" />
-                    <div className="text-2xl font-bold">{t(item.labelKey)}</div>
-                    <div className="text-sm text-gray-400">{t(item.sublabelKey)}</div>
+                    <Icon size={24} className="text-arts-green mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-arts-navy">{t(item.labelKey)}</div>
+                    <div className="text-sm text-arts-gray">{t(item.sublabelKey)}</div>
                   </motion.div>
                 )
               })}
@@ -73,12 +73,12 @@ export default function AboutSection() {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center space-x-4"
                 >
-                  <div className="w-16 h-16 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-16 h-16 bg-arts-green rounded-full flex items-center justify-center text-arts-navy font-bold">
                     {milestone.year}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">{t(milestone.eventKey)}</h3>
-                    <p className="text-gray-400">{t(milestone.descriptionKey)}</p>
+                    <h3 className="text-xl font-bold text-arts-navy">{t(milestone.eventKey)}</h3>
+                    <p className="text-arts-gray">{t(milestone.descriptionKey)}</p>
                   </div>
                 </motion.div>
               ))}

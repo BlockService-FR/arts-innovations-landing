@@ -9,9 +9,23 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Updated gradient classes for v4 */}
-      <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        {/* Background Image - Replace with your image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/hero-background.jpg')`, // Replace with your image path
+          }}
+        />
+        
+        {/* Dark Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-linear-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80"></div>
+        
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        
+        {/* Floating Elements */}
         <div className="absolute inset-0">
           {[...Array(6)].map((_, i) => (
             <motion.div
@@ -19,7 +33,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 0.1, scale: 1 }}
               transition={{ delay: i * 0.5, duration: 2 }}
-              className="absolute w-32 h-32 border border-cyan-500/30 rounded-lg"
+              className="absolute w-32 h-32 border border-arts-green/30 rounded-lg"
               style={{
                 left: `${20 + (i % 3) * 30}%`,
                 top: `${20 + Math.floor(i / 3) * 40}%`,
@@ -36,14 +50,14 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-6">
-            <span className="text-lg text-amber-400 font-semibold tracking-wide uppercase">
+            <span className="text-lg text-arts-green font-semibold tracking-wide uppercase">
               {t('hero.poweredBy')}
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-linear-to-r from-white via-cyan-200 to-amber-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-linear-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto text-balance">
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
             {t('hero.subtitle')}
           </p>
         </motion.div>
@@ -55,9 +69,9 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: 'var(--shadow-metra)' }}
+            whileHover={{ scale: 1.05, boxShadow: 'var(--shadow-arts)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-linear-to-r from-cyan-600 to-blue-700 px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg"
+            className="bg-linear-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300"
           >
             <span>{t('hero.cta')}</span>
             <ArrowRight size={20} />
@@ -68,24 +82,24 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400"
+          className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-300"
         >
           <div className="flex items-center space-x-2">
-            <Shield size={16} className="text-emerald-400" />
+            <Shield size={16} className="text-arts-green" />
             <span>{t('hero.trustIndicators.sovereign')}</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Zap size={16} className="text-amber-400" />
+            <Zap size={16} className="text-arts-lime" />
             <span>{t('hero.trustIndicators.compliant')}</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Globe size={16} className="text-cyan-400" />
+            <Globe size={16} className="text-arts-green" />
             <span>{t('hero.trustIndicators.immutable')}</span>
           </div>
         </motion.div>
       </div>
 
-      {/* 3D Elements with updated gradient */}
+      {/* 3D Elements with updated colors */}
       <motion.div
         animate={{ 
           rotateY: 360,
@@ -97,7 +111,7 @@ export default function HeroSection() {
         }}
         className="absolute right-10 top-1/3 w-32 h-32 opacity-20"
       >
-        <div className="w-full h-full bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg transform perspective-1000 rotateY-45"></div>
+        <div className="w-full h-full bg-linear-to-r from-arts-green to-arts-lime rounded-lg transform perspective-1000 rotateY-45"></div>
       </motion.div>
     </section>
   )

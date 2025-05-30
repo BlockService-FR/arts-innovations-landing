@@ -17,29 +17,11 @@ export default function Footer() {
         'footer.sections.solutions.links.digital',
         'footer.sections.solutions.links.mobile'
       ]
-    },
-    {
-      titleKey: 'footer.sections.company.title',
-      linksKeys: [
-        'footer.sections.company.links.about',
-        'footer.sections.company.links.team',
-        'footer.sections.company.links.careers',
-        'footer.sections.company.links.news'
-      ]
-    },
-    {
-      titleKey: 'footer.sections.resources.title',
-      linksKeys: [
-        'footer.sections.resources.links.documentation',
-        'footer.sections.resources.links.api',
-        'footer.sections.resources.links.cases',
-        'footer.sections.resources.links.papers'
-      ]
     }
   ]
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800">
+    <footer className="bg-arts-navy border-t border-arts-green/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -51,12 +33,16 @@ export default function Footer() {
               className="mb-6"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">M</span>
+                <div className="w-8 h-8 bg-arts-green rounded-lg flex items-center justify-center p-1">
+                  <img
+                    src="/logo.png"
+                    alt="ARTS Innovations Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <span className="font-space-grotesk font-bold text-xl">ARTS Innovations</span>
+                <span className="font-space-grotesk font-bold text-xl text-white">ARTS Innovations</span>
               </div>
-              <p className="text-gray-400 mb-6 max-w-md">
+              <p className="text-gray-300 mb-6 max-w-md">
                 {t('footer.description')}
               </p>
               
@@ -73,16 +59,16 @@ export default function Footer() {
                       key={index}
                       href={social.href}
                       whileHover={{ scale: 1.1, y: -2 }}
-                      className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-600 transition-colors duration-300"
+                      className="w-10 h-10 bg-arts-teal rounded-lg flex items-center justify-center hover:bg-arts-green transition-colors duration-300"
                     >
-                      <Icon size={20} className="text-gray-400 hover:text-white" />
+                      <Icon size={20} className="text-white" />
                     </motion.a>
                   )
                 })}
               </div>
             </motion.div>
           </div>
-
+          <div className="lg:col-span-2"></div>
           {/* Footer Links */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -99,7 +85,7 @@ export default function Footer() {
                     <motion.a
                       href="#"
                       whileHover={{ x: 5 }}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      className="text-gray-300 hover:text-arts-green transition-colors duration-200"
                     >
                       {t(linkKey)}
                     </motion.a>
@@ -115,9 +101,9 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-arts-green/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-300 text-sm">
             © {currentYear} ARTS Innovations. {t('footer.legal.rights')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
@@ -130,7 +116,7 @@ export default function Footer() {
                 key={index}
                 href="#"
                 whileHover={{ y: -1 }}
-                className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-200"
+                className="text-gray-300 hover:text-arts-green text-sm transition-colors duration-200"
               >
                 {t(linkKey)}
               </motion.a>

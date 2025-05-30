@@ -52,7 +52,7 @@ export default function TechnologyStack() {
   ]
 
   return (
-    <section id="technology" className="py-20 bg-linear-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="technology" className="py-20 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -65,7 +65,7 @@ export default function TechnologyStack() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-linear-to-r from-cyan-500/10 to-blue-400/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-linear-to-r from-arts-green/10 to-arts-lime/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -77,7 +77,7 @@ export default function TechnologyStack() {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-r from-purple-500/10 to-pink-400/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-r from-arts-navy/10 to-arts-teal/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -88,11 +88,16 @@ export default function TechnologyStack() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6">
-            {t('technology.title')}
+          <div className="mb-6">
+            <span className="inline-block text-base font-semibold tracking-wider uppercase text-white bg-arts-green px-4 py-2 rounded-full">
+              METRA BLOCKCHAIN BACKBONE
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-arts-navy text-balance">
+            Cutting-Edge Technology Stack
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            {t('technology.subtitle')}
+          <p className="text-xl text-arts-gray max-w-3xl mx-auto text-balance">
+            Sovereign blockchain designed to bring security, traceability, and regulatory trust to aerospace asset management
           </p>
         </motion.div>
 
@@ -108,19 +113,19 @@ export default function TechnologyStack() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-arts-green transition-all duration-300 shadow-lg"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center shrink-0">
-                      <Icon size={24} className="text-white" />
+                    <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon size={24} className="text-arts-navy" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">{t(tech.titleKey)}</h3>
-                      <p className="text-gray-400 mb-4">{t(tech.descriptionKey)}</p>
+                      <h3 className="text-xl font-bold mb-2 text-arts-navy">{t(tech.titleKey)}</h3>
+                      <p className="text-arts-gray mb-4 text-balance">{t(tech.descriptionKey)}</p>
                       <ul className="space-y-1">
                         {tech.featuresKeys.map((featureKey, featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-gray-500 flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                          <li key={featureIndex} className="text-sm text-arts-gray flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-arts-green rounded-full"></div>
                             <span>{t(featureKey)}</span>
                           </li>
                         ))}
@@ -131,74 +136,8 @@ export default function TechnologyStack() {
               )
             })}
           </div>
-
-          {/* 3D Visualization */}
           <div className="flex items-center justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative w-full max-w-md h-96"
-            >
-              {/* Central Brain/AI Node */}
-              <motion.div
-                animate={{
-                  rotateY: 360,
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  rotateY: { duration: 10, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-linear-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
-              >
-                <Brain size={32} className="text-white" />
-              </motion.div>
-
-              {/* Orbiting Elements */}
-              {[0, 90, 180, 270].map((rotation, index) => (
-                <motion.div
-                  key={index}
-                  animate={{
-                    rotate: rotation + 360,
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: index * 0.5
-                  }}
-                  className="absolute top-1/2 left-1/2 w-48 h-48 transform -translate-x-1/2 -translate-y-1/2"
-                  style={{ transformOrigin: 'center' }}
-                >
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-linear-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    {React.createElement(technologies[index]?.icon || Lock, { size: 20, className: "text-white" })}
-                  </div>
-                </motion.div>
-              ))}
-
-              {/* Connection Lines */}
-              <svg className="absolute inset-0 w-full h-full">
-                <motion.circle
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 0.5 }}
-                  cx="50%"
-                  cy="50%"
-                  r="96"
-                  fill="none"
-                  stroke="url(#gradient)"
-                  strokeWidth="2"
-                  strokeDasharray="5,5"
-                />
-                <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#06B6D4" />
-                    <stop offset="100%" stopColor="#3B82F6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </motion.div>
+            <img src="reactor.png" alt="Reactor" style={{ 'border-radius': '20px' }}/>
           </div>
         </div>
       </div>

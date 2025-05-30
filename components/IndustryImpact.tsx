@@ -35,7 +35,7 @@ export default function IndustryImpact() {
   ]
 
   return (
-    <section className="py-20 bg-linear-to-r from-slate-900 via-blue-900 to-slate-900">
+    <section className="py-20 bg-arts-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +43,7 @@ export default function IndustryImpact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 bg-linear-to-r from-white to-cyan-400 bg-clip-text text-transparent text-balance">
+          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t('impact.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
@@ -62,22 +62,22 @@ export default function IndustryImpact() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+                className="text-center p-6 bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-green/20 hover:border-arts-green transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon size={32} className="text-white" />
+                <div className="w-16 h-16 bg-arts-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon size={32} className="text-arts-navy" />
                 </div>
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 + 0.3, type: "spring" }}
-                  className="text-4xl font-bold text-cyan-400 mb-2"
+                  className="text-4xl font-bold text-arts-green mb-2"
                 >
                   {t(stat.valueKey)}
                 </motion.div>
-                <h3 className="text-xl font-semibold mb-2">{t(stat.labelKey)}</h3>
-                <p className="text-gray-400 text-sm">{t(stat.descriptionKey)}</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">{t(stat.labelKey)}</h3>
+                <p className="text-gray-300 text-sm">{t(stat.descriptionKey)}</p>
               </motion.div>
             )
           })}

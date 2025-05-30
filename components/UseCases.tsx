@@ -17,8 +17,7 @@ export default function UseCases() {
         'useCases.lessor.benefits.documentation',
         'useCases.lessor.benefits.preservation',
         'useCases.lessor.benefits.audit'
-      ],
-      color: 'from-cyan-600 to-blue-700'
+      ]
     },
     {
       icon: Wrench,
@@ -29,8 +28,7 @@ export default function UseCases() {
         'useCases.oems.benefits.fraud',
         'useCases.oems.benefits.compliance',
         'useCases.oems.benefits.supply'
-      ],
-      color: 'from-emerald-600 to-teal-700'
+      ]
     },
     {
       icon: Plane,
@@ -41,13 +39,12 @@ export default function UseCases() {
         'useCases.operators.benefits.compliance',
         'useCases.operators.benefits.risk',
         'useCases.operators.benefits.efficiency'
-      ],
-      color: 'from-amber-600 to-orange-700'
+      ]
     }
   ]
 
   return (
-    <section id="use-cases" className="py-20 bg-slate-800">
+    <section id="use-cases" className="py-20 bg-arts-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -55,10 +52,15 @@ export default function UseCases() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6">
+          <div className="mb-4">
+            <span className="text-lg text-arts-green font-semibold tracking-wide uppercase">
+              USE CASES IN ACTION
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-white">
             {t('useCases.title')}
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             {t('useCases.subtitle')}
           </p>
         </motion.div>
@@ -74,20 +76,20 @@ export default function UseCases() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600 hover:border-cyan-500 transition-all duration-300"
+                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"
               >
-                <div className={`w-16 h-16 rounded-xl bg-linear-to-r ${useCase.color} flex items-center justify-center mb-6`}>
-                  <Icon size={32} className="text-white" />
+                <div className="w-16 h-16 rounded-xl bg-arts-green flex items-center justify-center mb-6">
+                  <Icon size={32} className="text-arts-navy" />
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-4">{t(useCase.titleKey)}</h3>
-                <p className="text-gray-400 mb-6">{t(useCase.descriptionKey)}</p>
+                <h3 className="text-2xl font-bold mb-4 text-white">{t(useCase.titleKey)}</h3>
+                <p className="text-gray-300 mb-6">{t(useCase.descriptionKey)}</p>
                 
                 <ul className="space-y-3">
                   {useCase.benefitsKeys.map((benefitKey, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                      <span className="text-gray-300">{t(benefitKey)}</span>
+                      <div className="w-2 h-2 bg-arts-green rounded-full"></div>
+                      <span className="text-gray-200">{t(benefitKey)}</span>
                     </li>
                   ))}
                 </ul>

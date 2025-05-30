@@ -5,13 +5,14 @@
   --font-inter: "Inter", sans-serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
   
-  /* METRA Brand Colors */
-  --color-metra-blue: #1e3a8a;
-  --color-innovation-cyan: #0891b2;
-  --color-sovereign-gold: #f59e0b;
-  --color-trust-green: #059669;
-  --color-dark-navy: #0f172a;
-  --color-steel-gray: #475569;
+  /* ARTS Brand Colors - Updated to match images */
+  --color-arts-navy: #1e3a4a;
+  --color-arts-teal: #2d4a5a;
+  --color-arts-green: #9aff00;
+  --color-arts-lime: #b3ff33;
+  --color-arts-dark: #0f1419;
+  --color-arts-gray: #4a5568;
+  --color-arts-light: #f7fafc;
   
   /* Custom Spacing */
   --spacing-18: 4.5rem;
@@ -25,8 +26,8 @@
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   
   /* Custom Shadows */
-  --shadow-metra: 0 20px 40px rgba(8, 145, 178, 0.3);
-  --shadow-sovereign: 0 20px 40px rgba(245, 158, 11, 0.3);
+  --shadow-arts: 0 20px 40px rgba(154, 255, 0, 0.2);
+  --shadow-teal: 0 20px 40px rgba(45, 74, 90, 0.3);
 }
 
 @layer base {
@@ -41,8 +42,8 @@
   }
 
   body {
-    background: linear-gradient(to bottom, #0f172a, #1e293b);
-    color: #f8fafc;
+    background: linear-gradient(to bottom, #0f1419, #1e3a4a);
+    color: #f7fafc;
     font-family: var(--font-inter);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -50,35 +51,35 @@
 }
 
 @layer components {
-  /* Custom scrollbar with METRA colors */
+  /* Custom scrollbar with ARTS colors */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #1e293b;
+    background: #1e3a4a;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #0891b2;
+    background: #9aff00;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #0e7490;
+    background: #b3ff33;
   }
 }
 
-@utility metra-gradient {
-  background: linear-gradient(135deg, #0891b2, #1e3a8a);
+@utility arts-gradient {
+  background: linear-gradient(135deg, #9aff00, #b3ff33);
 }
 
-@utility sovereign-gradient {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+@utility teal-gradient {
+  background: linear-gradient(135deg, #2d4a5a, #1e3a4a);
 }
 
-@utility trust-gradient {
-  background: linear-gradient(135deg, #059669, #047857);
+@utility navy-gradient {
+  background: linear-gradient(135deg, #1e3a4a, #0f1419);
 }
 
 @utility perspective-1000 {
