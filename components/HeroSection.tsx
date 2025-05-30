@@ -49,6 +49,22 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Logo */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="w-40 h-40 rounded-lg flex items-center justify-center p-2">
+              <img
+                src="/logo-green.png"
+                alt="ARTS Innovations Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </motion.div>
+
           <div className="mb-6">
             <span className="text-lg text-arts-green font-semibold tracking-wide uppercase">
               {t('hero.poweredBy')}
