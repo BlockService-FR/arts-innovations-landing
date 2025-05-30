@@ -7,6 +7,17 @@ import { ArrowRight, Shield, Zap, Globe } from 'lucide-react'
 export default function HeroSection() {
   const { t } = useTranslation()
 
+  const scrollToSolutions = () => {
+    const solutionsSection = document.getElementById('solutions')
+    if (solutionsSection) {
+      solutionsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -85,9 +96,10 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <motion.button
+            onClick={scrollToSolutions}
             whileHover={{ scale: 1.05, boxShadow: 'var(--shadow-arts)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-linear-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300"
+            className="bg-linear-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
           >
             <span>{t('hero.cta')}</span>
             <ArrowRight size={20} />

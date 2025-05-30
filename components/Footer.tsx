@@ -68,9 +68,10 @@ export default function Footer() {
               </div>
             </motion.div>
           </div>
-          <div className="lg:col-span-2"></div>
+          
+          {/* <div className="lg:col-span-2"></div> */}
           {/* Footer Links */}
-          {footerSections.map((section, index) => (
+          {/* {footerSections.map((section, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -93,7 +94,7 @@ export default function Footer() {
                 ))}
               </ul>
             </motion.div>
-          ))}
+          ))} */}
         </div>
 
         {/* Bottom Section */}

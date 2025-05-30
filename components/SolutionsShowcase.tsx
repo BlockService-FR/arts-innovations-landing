@@ -9,6 +9,16 @@ export default function SolutionsShowcase() {
   const { t } = useTranslation()
   const [activeCard, setActiveCard] = useState(0)
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const solutions = [
     {
       id: 'pselion',
@@ -213,12 +223,13 @@ export default function SolutionsShowcase() {
 
           {/* CTA Button with improved accessibility */}
           <motion.button
+            onClick={scrollToContact}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className={`
               w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300
               ${solution.iconBg} text-white shadow-lg hover:shadow-xl
-              focus:outline-none focus:ring-4 focus:ring-opacity-50
+              focus:outline-none focus:ring-4 focus:ring-opacity-50 cursor-pointer
             `}
             style={{ 
               backgroundColor: solution.primaryColor,
@@ -315,9 +326,10 @@ export default function SolutionsShowcase() {
               {t('solutions.cta.description')}
             </p>
             <motion.button
+              onClick={scrollToContact}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-arts-green text-arts-navy font-semibold py-4 px-8 rounded-xl text-lg hover:bg-arts-lime transition-all duration-300 shadow-lg"
+              className="bg-arts-green text-arts-navy font-semibold py-4 px-8 rounded-xl text-lg hover:bg-arts-lime transition-all duration-300 shadow-lg cursor-pointer"
             >
               {t('solutions.cta.button')}
             </motion.button>

@@ -184,7 +184,7 @@ export default function ContactSection() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-arts-green text-arts-navy font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-arts-lime transition-all duration-300"
+                className="w-full bg-arts-green text-arts-navy font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-arts-lime transition-all duration-300 cursor-pointer"
               >
                 <span>{t('contact.form.send')}</span>
                 <Send size={20} />
