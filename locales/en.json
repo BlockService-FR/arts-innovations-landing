@@ -1,8 +1,9 @@
 {
   "navigation": {
     "solutions": "Solutions",
-    "technology": "Technology",
     "useCases": "Use Cases",
+    "technology": "Technology",
+    "about": "About",
     "contact": "Contact"
   },
   "hero": {
@@ -19,6 +20,7 @@
   "valueProposition": {
     "title": "Why Choose ARTS Innovations?",
     "subtitle": "Combining decades of aerospace expertise with cutting-edge blockchain and AI technology",
+    "transition": "Discover our comprehensive solution ecosystem",
     "benefits": {
       "tamperProof": {
         "title": "Tamper-Proof Documentation",
@@ -52,6 +54,17 @@
         "compliance": "Active compliance",
         "preservation": "Asset preservation",
         "monitoring": "Real-time monitoring"
+      }
+    },
+     "metrablockchain": {
+      "title": "MetraBlockchain",
+      "subtitle": "Sovereign Blockchain Infrastructure",
+      "description": "The foundational blockchain backbone powering all METRA applications with sovereign, secure, and scalable infrastructure",
+      "features": {
+        "sovereign": "Sovereign blockchain network",
+        "immutable": "Immutable data storage",
+        "smartContracts": "Smart contract automation",
+        "interoperability": "Cross-platform interoperability"
       }
     },
     "metrasign": {
