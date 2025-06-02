@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight, Shield, Zap, Globe } from 'lucide-react'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const { t } = useTranslation()
@@ -68,9 +69,11 @@ export default function HeroSection() {
             className="flex justify-center mb-8"
           >
             <div className="w-40 h-40 rounded-lg flex items-center justify-center p-2">
-              <img
+              <Image
                 src="/logo-green.png"
                 alt="ARTS Innovations Logo"
+                width={160}
+                height={160}
                 className="w-full h-full object-contain"
               />
             </div>
@@ -126,21 +129,6 @@ export default function HeroSection() {
           </div>
         </motion.div>
       </div>
-
-      {/* 3D Elements with updated colors */}
-      <motion.div
-        animate={{ 
-          rotateY: 360,
-          rotateX: [0, 10, 0],
-        }}
-        transition={{ 
-          rotateY: { duration: 20, repeat: Infinity, ease: "linear" },
-          rotateX: { duration: 6, repeat: Infinity, ease: "easeInOut" }
-        }}
-        className="absolute right-10 top-1/3 w-32 h-32 opacity-20"
-      >
-        <div className="w-full h-full bg-linear-to-r from-arts-green to-arts-lime rounded-lg transform perspective-1000 rotateY-45"></div>
-      </motion.div>
     </section>
   )
 }

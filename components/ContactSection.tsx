@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Mail, Phone, MapPin, Send, User } from 'lucide-react'
+import { Mail, Phone, Send, User } from 'lucide-react'
 
 export default function ContactSection() {
   const { t } = useTranslation()

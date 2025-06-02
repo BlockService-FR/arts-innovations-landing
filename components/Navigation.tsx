@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Navigation() {
@@ -43,9 +44,11 @@ export default function Navigation() {
           >
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-arts-green rounded-lg flex items-center justify-center p-1">
-                <img
+                <Image
                   src="/logo.png"
                   alt="ARTS Innovations Logo"
+                  width={40}
+                  height={40}
                   className="w-full h-full object-contain"
                 />
               </div>

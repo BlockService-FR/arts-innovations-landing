@@ -3,7 +3,25 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Database, Shield, Smartphone, QrCode, Network, Sparkles } from 'lucide-react'
+import { Database, Shield, Smartphone, QrCode, Network, LucideIcon } from 'lucide-react'
+
+interface Solution {
+  id: string;
+  icon: LucideIcon;
+  titleKey: string;
+  subtitleKey: string;
+  descriptionKey: string;
+  featuresKeys: string[];
+  primaryColor: string;
+  secondaryColor: string;
+  accentColor: string;
+  bgColor: string;
+  borderColor: string;
+  hoverBorderColor: string;
+  iconBg: string;
+  textColor: string;
+  titleColor: string;
+}
 
 export default function SolutionsShowcase() {
   const { t } = useTranslation()
@@ -19,7 +37,7 @@ export default function SolutionsShowcase() {
     }
   };
 
-  const solutions = [
+  const solutions: Solution[] = [
     {
       id: 'pselion',
       icon: Database,
@@ -142,7 +160,7 @@ export default function SolutionsShowcase() {
   const middleSolution = solutions[2] // MetraBlockchain
   const lastRowSolutions = solutions.slice(3, 5)
 
-  const renderSolutionCard = (solution: any, index: number) => {
+  const renderSolutionCard = (solution: Solution, index: number) => {
     const Icon = solution.icon
     const isActive = activeCard === index
 

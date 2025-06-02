@@ -2,23 +2,24 @@
 
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Linkedin, Twitter } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
-  const footerSections = [
-    {
-      titleKey: 'footer.sections.solutions.title',
-      linksKeys: [
-        'footer.sections.solutions.links.realtime',
-        'footer.sections.solutions.links.blockchain',
-        'footer.sections.solutions.links.digital',
-        'footer.sections.solutions.links.mobile'
-      ]
-    }
-  ]
+  // const footerSections = [
+  //   {
+  //     titleKey: 'footer.sections.solutions.title',
+  //     linksKeys: [
+  //       'footer.sections.solutions.links.realtime',
+  //       'footer.sections.solutions.links.blockchain',
+  //       'footer.sections.solutions.links.digital',
+  //       'footer.sections.solutions.links.mobile'
+  //     ]
+  //   }
+  // ]
 
   return (
     <footer className="bg-arts-navy border-t border-arts-green/20">
@@ -34,9 +35,11 @@ export default function Footer() {
             >
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-arts-green rounded-lg flex items-center justify-center p-1">
-                  <img
+                  <Image
                     src="/logo.png"
                     alt="ARTS Innovations Logo"
+                    width={32}
+                    height={32}
                     className="w-full h-full object-contain"
                   />
                 </div>

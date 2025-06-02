@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Brain, Lock, Zap, CheckCircle } from 'lucide-react'
 import React from 'react'
+import Image from 'next/image'
 
 export default function TechnologyStack() {
   const { t } = useTranslation()
@@ -136,8 +137,8 @@ export default function TechnologyStack() {
               )
             })}
           </div>
-          <div className="flex items-center justify-center">
-            <img src="reactor.png" alt="Reactor" style={{ borderRadius: '20px' }}/>
+          <div className="flex items-center justify-center relative">
+            <Image src="/reactor.png" alt="Reactor" fill={true} style={{ objectFit: 'contain' }} />
           </div>
         </div>
       </div>
