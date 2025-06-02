@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Globe, ChevronDown } from 'lucide-react'
@@ -14,12 +14,36 @@ const languages = [
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0]
+  // Fix hydration mismatch by only rendering after mount
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Get current language, fallback to 'en' if not found
+  const getCurrentLanguage = () => {
+    if (!mounted) return languages[0] // Return default during SSR
+    return languages.find(lang => lang.code === i18n.language.substring(0,2)) || languages[0]
+  }
+
+  const currentLanguage = getCurrentLanguage()
 
   const handleLanguageChange = (languageCode: string) => {
     i18n.changeLanguage(languageCode)
     setIsOpen(false)
+  }
+
+  // Don't render until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="flex items-center space-x-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-600">
+        <Globe size={16} className="text-gray-400" />
+        <span className="text-sm">🇺🇸</span>
+        <span className="text-sm text-gray-300">English 2</span>
+        <ChevronDown size={16} className="text-gray-400" />
+      </div>
+    )
   }
 
   return (
@@ -27,7 +51,7 @@ export default function LanguageSwitcher() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-600 hover:border-cyan-500 transition-all duration-300"
+        className="flex items-center space-x-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-600 hover:border-arts-green transition-all duration-300"
       >
         <Globe size={16} className="text-gray-400" />
         <span className="text-sm">{currentLanguage.flag}</span>
@@ -49,11 +73,11 @@ export default function LanguageSwitcher() {
             {languages.map((language) => (
               <motion.button
                 key={language.code}
-                whileHover={{ backgroundColor: 'rgba(6, 182, 212, 0.1)' }}
+                whileHover={{ backgroundColor: 'rgba(154, 255, 0, 0.1)' }}
                 onClick={() => handleLanguageChange(language.code)}
                 className={`w-full flex items-center space-x-3 px-4 py-3 text-left text-sm transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg ${
                   language.code === i18n.language 
-                    ? 'bg-cyan-500/10 text-cyan-400' 
+                    ? 'bg-arts-green/10 text-arts-green' 
                     : 'text-gray-300 hover:text-white'
                 }`}
               >
