@@ -70,7 +70,7 @@ export default function HeroSection() {
           >
             <div className="w-40 h-40 rounded-lg flex items-center justify-center p-2">
               <Image
-                src="/logo-green.png"
+                src="/logo-green.svg"
                 alt="ARTS Innovations Logo"
                 width={160}
                 height={160}
@@ -79,11 +79,6 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          <div className="mb-6">
-            <span className="text-lg text-arts-green font-semibold tracking-wide uppercase">
-              {t('hero.poweredBy')}
-            </span>
-          </div>
           <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-linear-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
             {t('hero.title')}
           </h1>

@@ -39,8 +39,8 @@ export default function LanguageSwitcher() {
     return (
       <div className="flex items-center space-x-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-600">
         <Globe size={16} className="text-gray-400" />
-        <span className="text-sm">🇺🇸</span>
-        <span className="text-sm text-gray-300">English 2</span>
+        {/* <span className="text-sm">🇺🇸</span>
+        <span className="text-sm text-gray-300">English</span> */}
         <ChevronDown size={16} className="text-gray-400" />
       </div>
     )
@@ -54,8 +54,8 @@ export default function LanguageSwitcher() {
         className="flex items-center space-x-2 px-3 py-2 bg-slate-800/50 rounded-lg border border-slate-600 hover:border-arts-green transition-all duration-300"
       >
         <Globe size={16} className="text-gray-400" />
-        <span className="text-sm">{currentLanguage.flag}</span>
-        <span className="text-sm text-gray-300">{currentLanguage.name}</span>
+        {/* <span className="text-sm">{currentLanguage.flag}</span>
+        <span className="text-sm text-gray-300">{currentLanguage.name}</span> */}
         <ChevronDown 
           size={16} 
           className={`text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}

@@ -1,17 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Archivo_Black, Montserrat } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
-  subsets: ['latin'], 
-  variable: '--font-inter',
+const archivoBlack = Archivo_Black({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-archivo-black',
   display: 'swap',
   preload: true,
 })
 
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'], 
-  variable: '--font-space-grotesk',
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '500'],
+  variable: '--font-montserrat',
   display: 'swap',
   preload: true,
 })
@@ -27,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`${archivoBlack.variable} ${montserrat.variable}`} suppressHydrationWarning>
+      <body className={`${montserrat.className} antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>

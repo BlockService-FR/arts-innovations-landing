@@ -2,17 +2,17 @@
 
 @theme {
   /* Font Variables */
-  --font-inter: "Inter", sans-serif;
-  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-archivo-black: "Archivo Black", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
   
-  /* ARTS Brand Colors - Updated to match images */
-  --color-arts-navy: #1e3a4a;
-  --color-arts-teal: #2d4a5a;
+  /* ARTS Brand Colors */
+  --color-arts-navy: #0b1928;
+  --color-arts-teal: #273543;
   --color-arts-green: #9aff00;
-  --color-arts-lime: #b3ff33;
-  --color-arts-dark: #0f1419;
-  --color-arts-gray: #4a5568;
-  --color-arts-light: #f7fafc;
+  --color-arts-lime: #c0ff7e;
+  --color-arts-dark: #000000;
+  --color-arts-gray: #cccccc;
+  --color-arts-light: #f6f6f6;
   
   /* Custom Spacing */
   --spacing-18: 4.5rem;
@@ -42,9 +42,9 @@
   }
 
   body {
-    background: linear-gradient(to bottom, #0f1419, #1e3a4a);
-    color: #f7fafc;
-    font-family: var(--font-inter);
+    background: linear-gradient(to bottom, #0b1928, #273543);
+    color: #f6f6f6;
+    font-family: var(--font-montserrat);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -57,7 +57,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #1e3a4a;
+    background: #0b1928;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -66,20 +66,16 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #b3ff33;
+    background: #c0ff7e;
   }
 }
 
 @utility arts-gradient {
-  background: linear-gradient(135deg, #9aff00, #b3ff33);
-}
-
-@utility teal-gradient {
-  background: linear-gradient(135deg, #2d4a5a, #1e3a4a);
+  background: linear-gradient(135deg, #9aff00, #c0ff7e);
 }
 
 @utility navy-gradient {
-  background: linear-gradient(135deg, #1e3a4a, #0f1419);
+  background: linear-gradient(135deg, #273543, #0b1928);
 }
 
 @utility perspective-1000 {
@@ -92,4 +88,19 @@
 
 @utility text-balance {
   text-wrap: balance;
+}
+
+@layer utilities {
+  .font-title {
+    font-family: var(--font-archivo-black);
+    font-weight: 400;
+  }
+  .font-subtitle {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+  }
+  .font-text {
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+  }
 }
