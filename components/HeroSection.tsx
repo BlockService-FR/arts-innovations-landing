@@ -21,18 +21,10 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background with Overlay */}
       <div className="absolute inset-0">
-        {/* Background Image - Replace with your image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/hero-background.jpg')`, // Replace with your image path
-          }}
-        />
-        
-        {/* Dark Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-linear-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80"></div>
+        {/* Corrected gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80"></div>
         
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
@@ -75,11 +67,12 @@ export default function HeroSection() {
                 width={160}
                 height={160}
                 className="w-full h-full object-contain"
+                priority
               />
             </div>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-linear-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-gradient-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
             {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
@@ -97,7 +90,7 @@ export default function HeroSection() {
             onClick={scrollToSolutions}
             whileHover={{ scale: 1.05, boxShadow: 'var(--shadow-arts)' }}
             whileTap={{ scale: 0.95 }}
-            className="bg-linear-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+            className="bg-gradient-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
           >
             <span>{t('hero.cta')}</span>
             <ArrowRight size={20} />
