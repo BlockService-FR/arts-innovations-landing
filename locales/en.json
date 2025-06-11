@@ -10,7 +10,11 @@
   },
   "hero": {
     "poweredBy": "Powered by METRA Blockchain",
-    "title": "TRANSFORMING AEROSPACE",
+    "title": {
+      "before": "Advanced Solutions for a",
+      "after": "Aviation Ecosystem",
+      "words": { "0": "Safer", "1": "Smarter", "2": "Sharper", "3": "Clearer" }
+    },
     "subtitle": "Trusted data and intelligent infrastructure, redefining standards in compliance, traceability, and predictive performance",
     "cta": "Discover our solutions",
     "trustIndicators": {
@@ -58,7 +62,7 @@
         "monitoring": "Real-time monitoring"
       }
     },
-     "metrablockchain": {
+    "metrablockchain": {
       "title": "MetraBlockchain",
       "subtitle": "Sovereign Blockchain Infrastructure",
       "description": "The foundational blockchain backbone powering all METRA applications with sovereign, secure, and scalable infrastructure",

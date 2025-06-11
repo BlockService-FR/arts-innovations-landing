@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { TrendingUp, Clock, Shield, Eye } from 'lucide-react'
+import AnimatedCounter from './ui/AnimatedCounter'
 
 export default function IndustryImpact() {
   const { t } = useTranslation()
@@ -10,19 +11,19 @@ export default function IndustryImpact() {
   const stats = [
     {
       icon: Shield,
-      valueKey: 'impact.stats.integrity.value',
+      value: 99.9,
       labelKey: 'impact.stats.integrity.label',
       descriptionKey: 'impact.stats.integrity.description'
     },
     {
       icon: Clock,
-      valueKey: 'impact.stats.inspections.value',
+      value: 50,
       labelKey: 'impact.stats.inspections.label',
       descriptionKey: 'impact.stats.inspections.description'
     },
     {
       icon: Eye,
-      valueKey: 'impact.stats.audit.value',
+      value: 100,
       labelKey: 'impact.stats.audit.label',
       descriptionKey: 'impact.stats.audit.description'
     },
@@ -74,7 +75,8 @@ export default function IndustryImpact() {
                   transition={{ delay: index * 0.1 + 0.3, type: "spring" }}
                   className="text-4xl font-bold text-arts-green mb-2"
                 >
-                  {t(stat.valueKey)}
+                  {/* <AnimatedCounter from={0} to={99} /> */}
+                  {stat.valueKey ? t(stat.valueKey) : <AnimatedCounter from={0} to={stat.value!} suffix="%"/>}
                 </motion.div>
                 <h3 className="text-xl font-semibold mb-2 text-white">{t(stat.labelKey)}</h3>
                 <p className="text-gray-300 text-sm">{t(stat.descriptionKey)}</p>

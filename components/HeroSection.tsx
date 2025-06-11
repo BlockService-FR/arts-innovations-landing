@@ -1,34 +1,57 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
-import { ArrowRight, Shield, Zap, Globe } from 'lucide-react'
-import Image from 'next/image'
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Shield, Zap, Globe } from "lucide-react";
+import Image from "next/image";
+import { WordRotate } from "@/components/ui/WordRotate";
+import { useMemo, useRef } from "react";
 
 export default function HeroSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation();
+
+  const heroWords = useMemo(() => [
+    t('hero.title.words.0'),
+    t('hero.title.words.1'),
+    t('hero.title.words.2'),
+    t('hero.title.words.3'),
+  ], [i18n.language])
+
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Transform scroll progress to upward movement
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
 
   const scrollToSolutions = () => {
-    const solutionsSection = document.getElementById('solutions')
+    const solutionsSection = document.getElementById("solutions");
     if (solutionsSection) {
-      solutionsSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
+      solutionsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
-  }
-
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <motion.section
+      ref={heroRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ y: heroY, opacity: heroOpacity }}
+    >
       {/* Background with Overlay */}
       <div className="absolute inset-0">
         {/* Corrected gradient overlay */}
         <div className="absolute inset-0 "></div>
-        
+
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-        
+
         {/* Floating Elements */}
         <div className="absolute inset-0">
           {[...Array(6)].map((_, i) => (
@@ -72,11 +95,11 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 bg-gradient-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
-            {t('hero.title')}
+          <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 pb-2 bg-gradient-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
+            {t("hero.title.before")}{' '}<WordRotate className="text-arts-green" words={heroWords} />{' '}{t("hero.title.after")}
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
-            {t('hero.subtitle')}
+            {t("hero.subtitle")}
           </p>
         </motion.div>
 
@@ -88,11 +111,11 @@ export default function HeroSection() {
         >
           <motion.button
             onClick={scrollToSolutions}
-            whileHover={{ scale: 1.05, boxShadow: 'var(--shadow-arts)' }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
           >
-            <span>{t('hero.cta')}</span>
+            <span>{t("hero.cta")}</span>
             <ArrowRight size={20} />
           </motion.button>
         </motion.div>
@@ -105,18 +128,18 @@ export default function HeroSection() {
         >
           <div className="flex items-center space-x-2">
             <Shield size={16} className="text-arts-green" />
-            <span>{t('hero.trustIndicators.sovereign')}</span>
+            <span>{t("hero.trustIndicators.sovereign")}</span>
           </div>
           <div className="flex items-center space-x-2">
             <Zap size={16} className="text-arts-lime" />
-            <span>{t('hero.trustIndicators.compliant')}</span>
+            <span>{t("hero.trustIndicators.compliant")}</span>
           </div>
           <div className="flex items-center space-x-2">
             <Globe size={16} className="text-arts-green" />
-            <span>{t('hero.trustIndicators.immutable')}</span>
+            <span>{t("hero.trustIndicators.immutable")}</span>
           </div>
         </motion.div>
       </div>
-    </section>
-  )
+    </motion.section>
+  );
 }

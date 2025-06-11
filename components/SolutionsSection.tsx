@@ -73,10 +73,10 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <section id="solutions" className="py-10">
+    <section id="solutions" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="text-start mb-5"

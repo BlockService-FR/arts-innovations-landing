@@ -81,7 +81,7 @@ export default function AboutSection() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.2 }}
                   className="flex items-center space-x-4"
                 >
                   <div className="w-16 h-16 bg-arts-green rounded-full flex items-center justify-center text-arts-navy font-bold">
