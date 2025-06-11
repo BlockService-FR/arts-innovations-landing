@@ -27,7 +27,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-arts-navy relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

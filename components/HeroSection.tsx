@@ -24,7 +24,7 @@ export default function HeroSection() {
       {/* Background with Overlay */}
       <div className="absolute inset-0">
         {/* Corrected gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80"></div>
+        <div className="absolute inset-0 "></div>
         
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>

@@ -21,7 +21,7 @@ export default function Home() {
   if (!mounted) return null
 
   return (
-    <main className="bg-slate-900 text-white overflow-x-hidden">
+    <main className="bg-gradient-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80 text-white overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <TechnologySection />
