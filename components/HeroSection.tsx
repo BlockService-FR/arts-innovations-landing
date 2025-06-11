@@ -8,14 +8,14 @@ import { WordRotate } from "@/components/ui/WordRotate";
 import { useMemo, useRef } from "react";
 
 export default function HeroSection() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const heroWords = useMemo(() => [
     t('hero.title.words.0'),
     t('hero.title.words.1'),
     t('hero.title.words.2'),
     t('hero.title.words.3'),
-  ], [i18n.language])
+  ], [t])
 
   const heroRef = useRef<HTMLDivElement>(null);
 

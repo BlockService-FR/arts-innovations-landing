@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  AnimationOptions, // Import AnimationOptions
+  AnimationOptions, AnimationPlaybackControls, // Import AnimationOptions
   animate,
   useInView,
   useIsomorphicLayoutEffect,
@@ -47,7 +47,7 @@ const AnimatedCounter = ({
     const totalDuration = animationOptions?.duration ?? 5;
     const integerTarget = Math.floor(to);
 
-    let controls: any; // To hold the animation controls for cleanup
+    let controls: AnimationPlaybackControls; // To hold the animation controls for cleanup
 
     if (from < integerTarget) {
       // Animate integer part first
