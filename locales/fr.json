@@ -259,6 +259,31 @@
       }
     }
   },
+  "faq": {
+    "title": "FAQ",
+    "description": "Voici quelques-unes de nos questions les plus posées. Si jamais la vôtre n'y est pas, n'hésitez pas à nous",
+    "cta": "contacter",
+    "technologies": {
+      "question": "Avec quelles technologies travaillez-vous?",
+      "answer": "Chez ventrinco, notre expertise est centralisée sur l'ensemble des technologies data analytics de Microsoft. La majorité des solutions proposées chez nos clients impliquent donc des technologies telles qu'Azure Synapse, Azure Data Factory, Azure Databricks, Microsoft Power BI, Microsoft Power Apps, Microsoft Power Automate, Azure Storage account (Data Lake), Azure Logic Apps, Azure Functions, Azure Cognitive Services, Azure SQL DB, Azure Purview et plusieurs autres. Le tout géré dans des processus d'intégration et de livraison en continu (CI/CD) sous Azure DevOps."
+    },
+    "adoption": {
+      "question": "Comment faites-vous pour assurer un taux d'adoption élevé des solutions?",
+      "answer": "Notre expertise est large dans l'écosystème informatique et On-Premise de Microsoft, ce qui nous permet de toujours déterminer les bonnes technologies qui permettent de supporter vos besoins d'affaires."
+    },
+    "approach": {
+      "question": "Quelle est votre approche lorsque vous commencez une nouvelle initiative?",
+      "answer": "ventrinco est un partenaire de confiance de Microsoft, consulter nos certifications. Notre équipe débute toujours par une analyse approfondie de vos besoins et de votre environnement technologique existant."
+    },
+    "partners": {
+      "question": "Travaillez-vous avec des partenaires de toutes tailles?",
+      "answer": "Oui, nous travaillons avec des organisations de toutes tailles, des startups aux grandes entreprises. Notre approche s'adapte aux besoins spécifiques de chaque client."
+    },
+    "hosting": {
+      "question": "Est-ce que les solutions que vous mettez en place sont hébergées dans vos environnements?",
+      "answer": "Nos solutions peuvent être hébergées dans le cloud Azure ou dans vos environnements on-premise selon vos préférences et contraintes de sécurité."
+    }
+  },
   "contact": {
     "title": "Commencez Votre Transformation Numérique",
     "subtitle": "Prêt à révolutionner vos opérations aéronautiques avec ARTS Innovations ? Discutons de la façon dont nous pouvons vous aider.",

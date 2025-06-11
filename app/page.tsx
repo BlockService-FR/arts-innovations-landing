@@ -10,6 +10,7 @@ import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import TechnologySection from '@/components/TechnologySection'
 import SolutionsSection from '@/components/SolutionsSection'
+import FAQSection from '@/components/FAQSection'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -28,6 +29,7 @@ export default function Home() {
       <SolutionsSection />
       <AboutSection />
       <IndustryImpact />
+      <FAQSection />
       <ContactSection />
 
       {/* <SolutionsShowcase />
