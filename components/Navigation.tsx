@@ -25,6 +25,7 @@ export default function Navigation() {
     { key: 'solutions', href: '#solutions' },
     { key: 'about', href: '#about' },
     { key: 'impact', href: '#impact' },
+    { key: 'faq', href: '#faq' },
     { key: 'contact', href: '#contact' }
   ]
 
