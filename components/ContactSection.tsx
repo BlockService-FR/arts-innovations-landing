@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Mail, Phone, Send, User } from 'lucide-react'
+import { Send } from 'lucide-react'
 
 export default function ContactSection() {
   const { t } = useTranslation()
@@ -13,24 +13,6 @@ export default function ContactSection() {
     company: '',
     message: ''
   })
-
-  const teamContacts = [
-    {
-      name: 'Romain NUGUES',
-      phone: '+33.(0)6.38.11.19.16',
-      email: 'romain-nugues@arts-innovations.com'
-    },
-    {
-      name: 'Pierre PUISSEGUR',
-      phone: '+33.(0)6.74.96.60.68',
-      email: 'pierre.puissegur@arts-innovations.com'
-    },
-    {
-      name: 'Marc BOUZAID',
-      phone: '+33.(0)6.73.87.37.31',
-      email: 'marc.bouzaid@arts.eu'
-    }
-  ]
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -63,51 +45,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Team Contacts */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">{t('contact.team')}</h3>
-              <p className="text-gray-300 mb-8">
-                {t('contact.teamDescription')}
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {teamContacts.map((contact, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ x: 10 }}
-                  className="p-6 bg-arts-teal/50 rounded-lg border border-arts-green/20 hover:border-arts-green transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
-                      <User size={20} className="text-arts-navy" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-white mb-2">{contact.name}</h4>
-                      <div className="space-y-1">
-                        <div className="flex items-center space-x-2 text-sm text-gray-300">
-                          <Phone size={14} />
-                          <span>{contact.phone}</span>
-                        </div>
-                        <div className="flex items-center space-x-2 text-sm text-gray-300">
-                          <Mail size={14} />
-                          <span>{contact.email}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
+        <div className="grid grid-cols-1 gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -175,7 +113,7 @@ export default function ContactSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray/20 resize-none"
                   placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>

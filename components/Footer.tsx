@@ -34,9 +34,9 @@ export default function Footer() {
               className="mb-6"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-arts-green rounded-lg flex items-center justify-center p-1">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center p-1">
                   <Image
-                    src="/logo.png"
+                    src="/logo-white.svg"
                     alt="ARTS Innovations Logo"
                     width={32}
                     height={32}

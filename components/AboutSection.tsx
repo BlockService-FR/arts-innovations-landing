@@ -22,8 +22,22 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-arts-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
+            {t('about.title')}
+          </h2>
+          {/* <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
+            {t('about.subtitle')}
+          </p> */}
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <motion.div
@@ -31,9 +45,6 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-arts-navy">
-              {t('about.title')}
-            </h2>
             <p className="text-xl text-arts-gray mb-8">
               {t('about.description')}
             </p>
@@ -49,7 +60,7 @@ export default function AboutSection() {
                   >
                     <Icon size={24} className="text-arts-green mx-auto mb-2" />
                     <div className="text-2xl font-bold text-arts-navy">{t(item.labelKey)}</div>
-                    <div className="text-sm text-arts-gray">{t(item.sublabelKey)}</div>
+                    <div className="text-sm text-arts-navy">{t(item.sublabelKey)}</div>
                   </motion.div>
                 )
               })}
@@ -77,7 +88,7 @@ export default function AboutSection() {
                     {milestone.year}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-arts-navy">{t(milestone.eventKey)}</h3>
+                    <h3 className="text-xl font-bold text-white">{t(milestone.eventKey)}</h3>
                     <p className="text-arts-gray">{t(milestone.descriptionKey)}</p>
                   </div>
                 </motion.div>

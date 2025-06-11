@@ -39,16 +39,16 @@ export default function SolutionsShowcase() {
 
   const solutions: Solution[] = [
     {
-      id: 'pselion',
+      id: 'metrafleet',
       icon: Database,
-      titleKey: 'solutions.pselion.title',
-      subtitleKey: 'solutions.pselion.subtitle',
-      descriptionKey: 'solutions.pselion.description',
+      titleKey: 'solutions.metrafleet.title',
+      subtitleKey: 'solutions.metrafleet.subtitle',
+      descriptionKey: 'solutions.metrafleet.description',
       featuresKeys: [
-        'solutions.pselion.features.lifecycle',
-        'solutions.pselion.features.compliance',
-        'solutions.pselion.features.preservation',
-        'solutions.pselion.features.monitoring'
+        'solutions.metrafleet.features.lifecycle',
+        'solutions.metrafleet.features.compliance',
+        'solutions.metrafleet.features.preservation',
+        'solutions.metrafleet.features.monitoring'
       ],
       // Blue theme for data management
       primaryColor: '#1e40af',

@@ -4,6 +4,8 @@
     "useCases": "Use Cases",
     "technology": "Technology",
     "about": "About",
+    "impact": "Impact",
+    "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
@@ -45,8 +47,8 @@
     "subtitle": "METRA Platform Solutions",
     "description": "Security, traceability, and regulatory trust for aerospace asset management",
     "keyFeatures": "Key Features:",
-    "pselion": {
-      "title": "PSELION",
+    "metrafleet": {
+      "title": "MetraFleet",
       "subtitle": "Real-time Asset Management",
       "description": "Preserve asset value via lifecycle-wide data control and active compliance",
       "features": {
@@ -221,6 +223,7 @@
   },
   "about": {
     "title": "Heritage Meets Innovation",
+    "subtitle": "Heritage Meets Innovation",
     "description": "ARTS Innovations represents the evolution of over two decades of aerospace excellence, now enhanced with cutting-edge blockchain and AI technologies.",
     "stats": {
       "experience": {

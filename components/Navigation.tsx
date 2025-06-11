@@ -21,10 +21,10 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { key: 'solutions', href: '#solutions' },
-    { key: 'useCases', href: '#use-cases' },
     { key: 'technology', href: '#technology' },
+    { key: 'solutions', href: '#solutions' },
     { key: 'about', href: '#about' },
+    { key: 'impact', href: '#impact' },
     { key: 'contact', href: '#contact' }
   ]
 
