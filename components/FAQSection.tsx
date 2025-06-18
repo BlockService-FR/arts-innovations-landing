@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
 
 interface FAQItem {
   id: string;
@@ -18,29 +18,29 @@ export default function FAQSection() {
   // FAQ data
   const faqItems: FAQItem[] = [
     {
-      id: 'technologies',
-      questionKey: 'faq.technologies.question',
-      answerKey: 'faq.technologies.answer',
+      id: "ecosystem",
+      questionKey: "faq.ecosystem.question",
+      answerKey: "faq.ecosystem.answer",
     },
     {
-      id: 'adoption',
-      questionKey: 'faq.adoption.question',
-      answerKey: 'faq.adoption.answer',
+      id: "documents",
+      questionKey: "faq.documents.question",
+      answerKey: "faq.documents.answer",
     },
     {
-      id: 'approach',
-      questionKey: 'faq.approach.question',
-      answerKey: 'faq.approach.answer',
+      id: "ai",
+      questionKey: "faq.ai.question",
+      answerKey: "faq.ai.answer",
     },
     {
-      id: 'partners',
-      questionKey: 'faq.partners.question',
-      answerKey: 'faq.partners.answer',
+      id: "clients",
+      questionKey: "faq.clients.question",
+      answerKey: "faq.clients.answer",
     },
     {
-      id: 'hosting',
-      questionKey: 'faq.hosting.question',
-      answerKey: 'faq.hosting.answer',
+      id: "data",
+      questionKey: "faq.data.question",
+      answerKey: "faq.data.answer",
     },
   ];
 
@@ -50,37 +50,37 @@ export default function FAQSection() {
 
   const iconVariants = {
     closed: { rotate: 0 },
-    open: { rotate: 180 }
+    open: { rotate: 180 },
   };
-  
+
   const contentVariants = {
-    closed: { 
+    closed: {
       height: 0,
       opacity: 0,
       transition: {
-        height: { 
+        height: {
           duration: 0.3,
-          ease: [0.2, 0, 0, 1] // ease-snappy
+          ease: [0.2, 0, 0, 1], // ease-snappy
         },
-        opacity: { 
-          duration: 0.2 
-        }
-      }
+        opacity: {
+          duration: 0.2,
+        },
+      },
     },
-    open: { 
-      height: 'auto',
+    open: {
+      height: "auto",
       opacity: 1,
       transition: {
-        height: { 
+        height: {
           duration: 0.4,
-          ease: [0.3, 0, 0, 1] // ease-fluid
+          ease: [0.3, 0, 0, 1], // ease-fluid
         },
-        opacity: { 
+        opacity: {
           duration: 0.25,
-          delay: 0.1
-        }
-      }
-    }
+          delay: 0.1,
+        },
+      },
+    },
   };
 
   return (
@@ -91,13 +91,18 @@ export default function FAQSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            
           >
-            <h2 className="text-4xl md:text-5xl font-title font-bold mb-6 text-white">FAQ</h2>
+            <h2 className="text-4xl md:text-5xl font-title font-bold mb-6 text-white">
+              FAQ
+            </h2>
             <p className="text-arts-gray">
-              {t('faq.description')}{' '}
-              <a href="#contact" className="text-arts-green hover:text-arts-lime transition-colors">
-                {t('faq.cta')}
+              {t("faq.description")}{" "}
+              <a
+                href="#contact"
+                className="text-arts-green hover:text-arts-lime transition-colors"
+              >
+                {t("faq.cta")}
               </a>
               .
             </p>
@@ -109,7 +114,7 @@ export default function FAQSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            
             className="space-y-3"
           >
             {faqItems.map((item, index) => (
@@ -118,7 +123,7 @@ export default function FAQSection() {
                 className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-green/20 hover:border-arts-green transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                
                 transition={{ delay: index * 0.1 }}
               >
                 {/* Question header */}
@@ -129,7 +134,9 @@ export default function FAQSection() {
                 >
                   <div className="flex items-center">
                     <span className="text-arts-green mr-3">•</span>
-                    <span className="text-white text-lg font-medium">{t(item.questionKey)}</span>
+                    <span className="text-white text-lg font-medium">
+                      {t(item.questionKey)}
+                    </span>
                   </div>
                   <motion.div
                     variants={iconVariants}
@@ -157,7 +164,10 @@ export default function FAQSection() {
                       exit="closed"
                       className="overflow-hidden"
                     >
-                      <div className="px-4 sm:px-6 pb-6 pt-0 text-arts-gray">
+                      <div
+                        className="px-4 sm:px-6 pb-6 pt-0 text-arts-gray"
+                        style={{ whiteSpace: "pre-wrap" }}
+                      >
                         {t(item.answerKey)}
                       </div>
                     </motion.div>

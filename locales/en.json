@@ -227,8 +227,8 @@
   },
   "about": {
     "title": "Heritage Meets Innovation",
-    "subtitle": "Heritage Meets Innovation",
-    "description": "ARTS Innovations represents the evolution of over two decades of aerospace excellence, now enhanced with cutting-edge blockchain and AI technologies.",
+    "subtitle": "25 years of industrial heritage. A vision turned towards the future.",
+    "description": "ARTS Innovations was born of a strong conviction: aeronautics deserves the best technologies of its time. Backed by the expertise of ARTS, a benchmark player for over 25 years, our mission is clear: to lead the industry into a new era.",
     "stats": {
       "experience": {
         "label": "20+ Years",
@@ -270,35 +270,31 @@
     "title": "FAQ",
     "description": "Here are some of our most frequently asked questions. If you don't find yours here, feel free to",
     "cta": "contact us",
-    "technologies": {
-      "question": "What technologies do you work with?",
-      "answer": "At our company, we specialize in cutting-edge cloud technologies and modern development practices. Our expertise covers cloud platforms like AWS, Azure, and Google Cloud, along with modern frameworks such as React, Next.js, Node.js, and Python. We also work extensively with containerization technologies like Docker and Kubernetes, and implement CI/CD pipelines using GitHub Actions, Jenkins, and various DevOps tools."
+    "ecosystem": {
+      "question": "What is ARTS Innovations and how is your ecosystem unique for the aerospace industry?",
+      "answer": "ARTS Innovations is a technological ecosystem that combines artificial intelligence and blockchain to meet the critical challenges of traceability, compliance and asset management in the aerospace industry. \nWe have developed a sovereign infrastructure, the METRA blockchain, dedicated to securing sensitive data (technical documents, maintenance histories, inspections, spare parts), while automating high value-added processes thanks to AI. This ecosystem is designed to integrate with industry regulatory and operational standards."
     },
-    "adoption": {
-      "question": "How do you ensure high adoption rates for your solutions?",
-      "answer": "We focus on user-centered design and comprehensive training programs. Our approach includes conducting thorough user research, creating intuitive interfaces, providing extensive documentation, and offering ongoing support. We also implement gradual rollout strategies and gather continuous feedback to ensure smooth adoption and maximum value realization."
+    "documents": {
+      "question": "What does blockchain certification actually enable for my aeronautical documents?",
+      "answer": "Blockchain certification via our METRASign solution guarantees that every document (certificate, report, logbook, etc.) is authentic, forgery-proof and time-stamped.It provides verifiable proof of origin and integrity at all times, permanent traceability for audits or asset transitions, and a reduction in disputes linked to incomplete or modified documents.\nOur solutions integrate into your existing processes, and are simple to use both in the field and remotely."
     },
-    "approach": {
-      "question": "What is your approach when starting a new project?",
-      "answer": "We begin every project with a comprehensive discovery phase where we thoroughly understand your business goals, technical requirements, and existing infrastructure. Our team conducts stakeholder interviews, technical audits, and market research to create a tailored strategy that aligns with your objectives and ensures successful project delivery."
+    "ai": {
+      "question": "How does artificial intelligence improve document and technical management?",
+      "answer": "Our artificial intelligence, integrated into the MetraFleet platform, automatically recognizes imported documents, classifies them according to a standardized tree structure (IATA/CAMO), extracts key data (references, hours, cycles, replacements), and checks their regulatory compliance.\nIt detects inconsistencies, learns to reason like a CAMO, and automatically updates asset statuses. The result: considerable time savings, fewer human errors, and continuous, auditable compliance."
     },
-    "partners": {
-      "question": "Do you work with companies of all sizes?",
-      "answer": "Yes, we work with organizations ranging from innovative startups to Fortune 500 enterprises. Our scalable approach allows us to adapt our methodologies and solutions to meet the specific needs, budget constraints, and growth objectives of each client, regardless of their size or industry."
+    "clients": {
+      "question": "Who can benefit from your solutions? Are they reserved for large groups?",
+      "answer": "Our solutions are designed to be modular, scalable and accessible to all players in the sector:\nLessors and asset managers: to digitize transitions, reinforce documentary value and automate airworthiness monitoring.\nMROs and airlines: to make certificates more reliable, digitize inspections, and implement predictive maintenance.\nPart-21 and Part-145 workshops: to certify their documents securely and meet regulatory requirements.\nOur SaaS model enables rapid deployment with personalized support, on site or remotely."
     },
-    "hosting": {
-      "question": "Where are the solutions you implement hosted?",
-      "answer": "We offer flexible hosting solutions to meet your security and compliance requirements. Our solutions can be deployed on major cloud platforms (AWS, Azure, Google Cloud), hybrid environments, or on-premises infrastructure. We work with you to determine the best hosting strategy based on your data sensitivity, performance requirements, and regulatory compliance needs."
-    },
-    "support": {
-      "question": "What kind of ongoing support do you provide?",
-      "answer": "We provide comprehensive post-launch support including 24/7 monitoring, regular maintenance updates, performance optimization, and technical support. Our support packages range from basic maintenance to full managed services, ensuring your solutions continue to perform optimally and evolve with your business needs."
+    "data": {
+      "question": "Is my data protected? Doesn't blockchain mean making everything public?",
+      "answer": "No. Our METRA blockchain is private, sovereign and RGPD-compliant.\nOnly the cryptographic fingerprints (hashes) of the documents are written to the blockchain. The documents themselves remain stored in a secure environment that you control, whether in your internal system or in a secure cloud.\nThis model guarantees data confidentiality, while ensuring total traceability, integrity and auditability."
     }
   },
   "contact": {
     "title": "Start Your Digital Transformation",
     "subtitle": "Ready to revolutionize your aviation operations with ARTS Innovations? Let's discuss how we can help.",
-    "team": "Meet Our Team",
+    "team": "Discuss with Our Team",
     "teamDescription": "Connect directly with our aerospace and technology experts.",
     "form": {
       "name": "Name",

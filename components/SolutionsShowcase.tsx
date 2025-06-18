@@ -169,7 +169,7 @@ export default function SolutionsShowcase() {
         key={solution.id}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        
         transition={{ delay: index * 0.15 }}
         whileHover={{ 
           scale: 1.02,
@@ -284,7 +284,7 @@ export default function SolutionsShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-24"
         >
           <div className="mb-6">
@@ -303,7 +303,7 @@ export default function SolutionsShowcase() {
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "100%" }}
-            viewport={{ once: true }}
+            
             transition={{ delay: 0.5, duration: 0.8 }}
             className="mt-12 mx-auto max-w-md h-px bg-gradient-to-r from-transparent via-arts-green to-transparent"
           />
@@ -333,7 +333,7 @@ export default function SolutionsShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="mt-20 text-center"
         >
           <div className="bg-arts-navy rounded-3xl p-8 lg:p-12 text-white">

@@ -27,15 +27,15 @@ export default function AboutSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t('about.title')}
           </h2>
-          {/* <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
             {t('about.subtitle')}
-          </p> */}
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -43,9 +43,9 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            
           >
-            <p className="text-xl text-arts-gray mb-8">
+            <p className="text-xl text-arts-gray mb-8" style={{ whiteSpace: "pre-wrap" }}>
               {t('about.description')}
             </p>
             
@@ -71,7 +71,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            
             className="relative"
           >
             <div className="space-y-8">
@@ -80,7 +80,7 @@ export default function AboutSection() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  
                   transition={{ delay: index * 0.2 }}
                   className="flex items-center space-x-4"
                 >

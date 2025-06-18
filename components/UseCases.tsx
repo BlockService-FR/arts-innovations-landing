@@ -49,7 +49,7 @@ export default function UseCases() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-16"
         >
           <div className="mb-4">
@@ -73,7 +73,7 @@ export default function UseCases() {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ scale: 1.02 }}
                 className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"

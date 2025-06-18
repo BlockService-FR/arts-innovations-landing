@@ -86,7 +86,7 @@ export default function TechnologyStack() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-16"
         >
           <div className="mb-6">
@@ -111,7 +111,7 @@ export default function TechnologyStack() {
                   key={index}
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
                   className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-arts-green transition-all duration-300 shadow-lg"

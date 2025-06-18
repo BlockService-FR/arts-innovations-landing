@@ -71,7 +71,7 @@ export default function ValueProposition() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-arts-navy">
@@ -86,7 +86,7 @@ export default function ValueProposition() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          
           className="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-96"
         >
           {benefits.map((benefit, index) => {
@@ -151,7 +151,7 @@ export default function ValueProposition() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           transition={{ delay: 0.5 }}
           className="mt-20 text-center"
         >

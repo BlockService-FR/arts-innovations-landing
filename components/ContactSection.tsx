@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Send } from 'lucide-react'
+import { Mail, Phone, Send, User } from 'lucide-react'
 
 export default function ContactSection() {
   const { t } = useTranslation()
@@ -34,7 +34,7 @@ export default function ContactSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-space-grotesk font-bold mb-6 text-white">
@@ -45,12 +45,57 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Team Contacts */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-white">{t('contact.team')}</h3>
+              <p className="text-gray-300 mb-8">
+                {t('contact.teamDescription')}
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <motion.div
+                whileHover={{ x: 10 }}
+                className="p-6 bg-arts-teal/50 rounded-lg border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
+                    <Mail size={20} className="text-arts-navy" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
+                    <p className="text-gray-300">contact@arts-innovations.com</p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                whileHover={{ x: 10 }}
+                className="p-6 bg-arts-teal/50 rounded-lg border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
+                    <Phone size={20} className="text-arts-navy" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
+                    <p className="text-gray-300">+33 1 23 45 67 89</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            
             className="bg-white rounded-2xl p-8 shadow-lg"
           >
             <form onSubmit={handleSubmit} className="space-y-6">

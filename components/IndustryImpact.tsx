@@ -41,7 +41,7 @@ export default function IndustryImpact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
@@ -60,7 +60,7 @@ export default function IndustryImpact() {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 className="text-center p-6 bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-green/20 hover:border-arts-green transition-all duration-300"
@@ -71,7 +71,7 @@ export default function IndustryImpact() {
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
+                  
                   transition={{ delay: index * 0.1 + 0.3, type: "spring" }}
                   className="text-4xl font-bold text-arts-green mb-2"
                 >

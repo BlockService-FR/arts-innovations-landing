@@ -47,7 +47,7 @@
     "description": "Sécurité, traçabilité et confiance réglementaire pour la gestion d'actifs aérospatiaux",
     "keyFeatures": "Caractéristiques Clés :",
     "metrafleet": {
-      "title": "PSELION",
+      "title": "MetraFleet",
       "subtitle": "Gestion d'Actifs en Temps Réel",
       "description": "Préserver la valeur des actifs via un contrôle des données sur tout le cycle de vie et une conformité active",
       "features": {
@@ -222,10 +222,11 @@
   },
   "about": {
     "title": "L'Héritage Rencontre l'Innovation",
-    "description": "ARTS Innovations représente l'évolution de plus de deux décennies d'excellence aérospatiale, maintenant renforcée par des technologies blockchain et IA de pointe.",
+    "subtitle": "25 ans d'héritage industriel. Une vision tournée vers l'avenir.",
+    "description": "ARTS Innovations est née d'une conviction forte : l'aéronautique mérite les meilleures technologies de son temps.\nForte de l'expertise d'ARTS, acteur de référence depuis plus de 25 ans, notre mission est claire : faire entrer l'industrie dans une nouvelle ère.",
     "stats": {
       "experience": {
-        "label": "20+ Années",
+        "label": "25+ Années",
         "sublabel": "Expérience Aérospatiale"
       },
       "clients": {
@@ -264,31 +265,31 @@
     "title": "FAQ",
     "description": "Voici quelques-unes de nos questions les plus posées. Si jamais la vôtre n'y est pas, n'hésitez pas à nous",
     "cta": "contacter",
-    "technologies": {
-      "question": "Avec quelles technologies travaillez-vous?",
-      "answer": "Chez ventrinco, notre expertise est centralisée sur l'ensemble des technologies data analytics de Microsoft. La majorité des solutions proposées chez nos clients impliquent donc des technologies telles qu'Azure Synapse, Azure Data Factory, Azure Databricks, Microsoft Power BI, Microsoft Power Apps, Microsoft Power Automate, Azure Storage account (Data Lake), Azure Logic Apps, Azure Functions, Azure Cognitive Services, Azure SQL DB, Azure Purview et plusieurs autres. Le tout géré dans des processus d'intégration et de livraison en continu (CI/CD) sous Azure DevOps."
+    "ecosystem": {
+      "question": "Qu'est-ce qu'ARTS Innovations et en quoi votre écosystème est-il unique pour l'industrie aéronautique ?",
+      "answer": "ARTS Innovations est un écosystème technologique qui combine intelligence artificielle et blockchain pour répondre aux enjeux critiques de traçabilité, de conformité et de gestion des actifs dans l'aéronautique.\nNous avons développé une infrastructure souveraine, la blockchain METRA, dédiée à la sécurisation des données sensibles (documents techniques, historiques de maintenance, inspections, pièces détachées), tout en automatisant les processus à forte valeur ajoutée grâce à l'IA. Cet écosystème est conçu pour s'intégrer aux standards réglementaires et opérationnels du secteur."
     },
-    "adoption": {
-      "question": "Comment faites-vous pour assurer un taux d'adoption élevé des solutions?",
-      "answer": "Notre expertise est large dans l'écosystème informatique et On-Premise de Microsoft, ce qui nous permet de toujours déterminer les bonnes technologies qui permettent de supporter vos besoins d'affaires."
+    "documents": {
+      "question": "Que permet concrètement la certification blockchain pour mes documents aéronautiques ?",
+      "answer": "La certification blockchain via notre solution METRASign garantit que chaque document (certificat, rapport, logbook, etc.) est authentique, infalsifiable et horodaté.\nCela apporte une preuve d'origine et d'intégrité vérifiable à tout moment, une traçabilité permanente pour les audits ou les transitions d'actifs, et une réduction des litiges liés à des documents incomplets ou modifiés. Nos solutions s'intègrent dans vos processus existants et sont simples à utiliser sur le terrain comme à distance."
     },
-    "approach": {
-      "question": "Quelle est votre approche lorsque vous commencez une nouvelle initiative?",
-      "answer": "ventrinco est un partenaire de confiance de Microsoft, consulter nos certifications. Notre équipe débute toujours par une analyse approfondie de vos besoins et de votre environnement technologique existant."
+    "ai": {
+      "question": "Comment l'intelligence artificielle améliore-t-elle la gestion documentaire et technique ?",
+      "answer": "Notre intelligence artificielle, intégrée à la plateforme MetraFleet, reconnaît automatiquement les documents importés, les classe selon une arborescence normée (IATA/CAMO), extrait les données clés (références, heures, cycles, remplacements), et vérifie leur conformité réglementaire.\nElle détecte les incohérences, apprend à raisonner comme un CAMO, et met à jour automatiquement les statuts des actifs. Résultat : un gain de temps considérable, une réduction des erreurs humaines, et une conformité continue et auditable."
     },
-    "partners": {
-      "question": "Travaillez-vous avec des partenaires de toutes tailles?",
-      "answer": "Oui, nous travaillons avec des organisations de toutes tailles, des startups aux grandes entreprises. Notre approche s'adapte aux besoins spécifiques de chaque client."
+    "clients": {
+      "question": "Qui peut bénéficier de vos solutions ? Sont-elles réservées aux grands groupes ?",
+      "answer": "Nos solutions sont conçues pour être modulaires, évolutives et accessibles à tous les acteurs du secteur :\nLessors et asset managers : pour digitaliser les transitions, renforcer la valeur documentaire et automatiser le suivi de la navigabilité.\nMRO et compagnies aériennes : pour fiabiliser les certificats, digitaliser les inspections, et mettre en œuvre la maintenance prédictive.\nAteliers Part-21 et Part-145 : pour certifier leurs documents de manière sécurisée et répondre aux exigences réglementaires.\nNotre modèle SaaS permet un déploiement rapide avec accompagnement personnalisé, sur site ou à distance."
     },
-    "hosting": {
-      "question": "Est-ce que les solutions que vous mettez en place sont hébergées dans vos environnements?",
-      "answer": "Nos solutions peuvent être hébergées dans le cloud Azure ou dans vos environnements on-premise selon vos préférences et contraintes de sécurité."
+    "data": {
+      "question": "Mes données sont-elles protégées ? La blockchain ne signifie-t-elle pas tout rendre public ?",
+      "answer": "Non. Notre blockchain METRA est privée, souveraine et conforme au RGPD.\nSeuls les empreintes cryptographiques (hashs) des documents sont inscrites dans la blockchain. Les documents eux-mêmes restent stockés dans un environnement sécurisé que vous contrôlez, que ce soit dans votre système interne ou dans un cloud sécurisé.\nCe modèle garantit la confidentialité des données, tout en assurant une traçabilité, une intégrité et une auditabilité totale."
     }
   },
   "contact": {
     "title": "Commencez Votre Transformation Numérique",
     "subtitle": "Prêt à révolutionner vos opérations aéronautiques avec ARTS Innovations ? Discutons de la façon dont nous pouvons vous aider.",
-    "team": "Rencontrez Notre Équipe",
+    "team": "Discutez avec Notre Équipe",
     "teamDescription": "Connectez-vous directement avec nos experts en aérospatiale et technologie.",
     "form": {
       "name": "Nom",

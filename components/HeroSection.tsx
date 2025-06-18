@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight, Shield, Zap, Globe } from "lucide-react";
 import Image from "next/image";
 import { WordRotate } from "@/components/ui/WordRotate";
+import { FloatingPaths } from "@/components/ui/FloatingPaths";
 import { useMemo, useRef } from "react";
 
 export default function HeroSection() {
@@ -50,28 +51,8 @@ export default function HeroSection() {
     >
       {/* Background with Overlay */}
       <div className="absolute inset-0">
-        {/* Corrected gradient overlay */}
-        <div className="absolute inset-0 "></div>
-
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-
-        {/* Floating Elements */}
-        <div className="absolute inset-0">
-          {[...Array(6)].map((_, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 0.1, scale: 1 }}
-              transition={{ delay: i * 0.5, duration: 2 }}
-              className="absolute w-32 h-32 border border-arts-green/30 rounded-lg"
-              style={{
-                left: `${20 + (i % 3) * 30}%`,
-                top: `${20 + Math.floor(i / 3) * 40}%`,
-              }}
-            />
-          ))}
-        </div>
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -81,7 +62,7 @@ export default function HeroSection() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
           style={{ y: heroLogoY }}
-          className="flex justify-center mb-8"
+          className="flex justify-center mt-8 md:mt-0 md:mb-8"
         >
           <div className="w-40 h-40 rounded-lg flex items-center justify-center p-2">
             <Image
@@ -89,7 +70,7 @@ export default function HeroSection() {
               alt="ARTS Innovations Logo"
               width={160}
               height={160}
-              className="w-full h-full object-contain"
+              className="w-24 h-24 md:w-40 md:h-40 object-contain"
               priority
             />
           </div>
@@ -100,7 +81,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 pb-2 bg-gradient-to-r from-white via-arts-light to-arts-green bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 pb-2 bg-gradient-to-r text-arts-light bg-clip-text">
               {t("hero.title.before")}{" "}
               <WordRotate className="text-arts-green" words={heroWords} />{" "}
               {t("hero.title.after")}
@@ -114,13 +95,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-12"
           >
             <motion.button
               onClick={scrollToSolutions}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-arts-green to-arts-lime text-arts-dark px-8 py-4 rounded-full font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="bg-arts-green text-arts-dark px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <span>{t("hero.cta")}</span>
               <ArrowRight size={20} />

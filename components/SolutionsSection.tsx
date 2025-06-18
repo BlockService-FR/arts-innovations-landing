@@ -73,12 +73,12 @@ export default function SolutionsSection() {
   ];
 
   return (
-    <section id="solutions" className="py-20">
+    <section id="solutions" className="py-20 border-b border-arts-green/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          
           className="text-start mb-5"
         >
           <span className="text-lg text-arts-green font-semibold tracking-wide">
@@ -86,7 +86,7 @@ export default function SolutionsSection() {
           </span>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
             return (
@@ -94,7 +94,7 @@ export default function SolutionsSection() {
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ scale: 1.02 }}
                 className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"
@@ -135,14 +135,14 @@ export default function SolutionsSection() {
                 </div>
 
                 {/* CTA Button with improved accessibility */}
-                <motion.button
+                {/* <motion.button
                   onClick={scrollToContact}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-arts-green w-full text-arts-navy font-semibold py-4 px-8 rounded-xl text-lg hover:bg-arts-lime transition-all duration-300 shadow-lg cursor-pointer"
+                  className="bg-arts-green w-full text-arts-navy font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 shadow-lg cursor-pointer"
                 >
                   {t("solutions.learnMore")}
-                </motion.button>
+                </motion.button> */}
               </motion.div>
             );
           })}

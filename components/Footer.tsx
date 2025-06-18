@@ -30,7 +30,7 @@ export default function Footer() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              
               className="mb-6"
             >
               <div className="flex items-center space-x-2 mb-4">
@@ -79,7 +79,7 @@ export default function Footer() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              
               transition={{ delay: index * 0.1 }}
             >
               <h3 className="font-semibold text-white mb-4">{t(section.titleKey)}</h3>
@@ -104,7 +104,7 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          
           className="border-t border-arts-green/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-gray-300 text-sm">
