@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 export default function SolutionsSection() {
   const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
 
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -71,13 +72,146 @@ export default function SolutionsSection() {
     },
   ];
 
+  // Main container animation for the entire card
+  const cardContainerVariants = {
+    hidden: {
+      // x: "100%",
+      opacity: 0,
+    },
+    visible: (index: number) => ({
+      // x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 80,
+        damping: 25,
+        mass: 1,
+        delay: prefersReducedMotion ? 0 : index * 0.3,
+        duration: prefersReducedMotion ? 0.1 : 1.2,
+      },
+    }),
+  };
+
+  // Initial content (image + subtitle) that appears with the card
+  const initialContentVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.9,
+    },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 20,
+        delay: prefersReducedMotion ? 0 : index * 0.3 + 0.4,
+        duration: prefersReducedMotion ? 0.1 : 0.8,
+      },
+    }),
+  };
+
+  // Progressive content reveal container
+  const progressiveContentVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: (index: number) => ({
+      opacity: 1,
+      transition: {
+        delay: prefersReducedMotion ? 0 : index * 0.3 + 1.0,
+        duration: prefersReducedMotion ? 0.1 : 0.3,
+        staggerChildren: prefersReducedMotion ? 0 : 0.15,
+        delayChildren: prefersReducedMotion ? 0 : 0.1,
+      },
+    }),
+  };
+
+  // Individual content elements
+  const contentItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 25,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        duration: prefersReducedMotion ? 0.1 : 0.6,
+      },
+    },
+  };
+
+  // Features list container
+  const featuresContainerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : 0.08,
+        delayChildren: prefersReducedMotion ? 0 : 0.2,
+      },
+    },
+  };
+
+  // Individual feature items
+  const featureItemVariants = {
+    hidden: {
+      opacity: 0,
+      x: -20,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 150,
+        damping: 18,
+        duration: prefersReducedMotion ? 0.1 : 0.5,
+      },
+    },
+  };
+
+  // Bullet point animation
+  const bulletVariants = {
+    hidden: {
+      scale: 0,
+      opacity: 0,
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 15,
+        duration: prefersReducedMotion ? 0.1 : 0.4,
+      },
+    },
+  };
+
   return (
     <section id="solutions" className="py-20 border-b border-arts-green/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          
+          viewport={{ amount: 0.3 }}
+          transition={{
+            duration: prefersReducedMotion ? 0.1 : 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94], // Custom easing for smoothness
+          }}
           className="text-start mb-5"
         >
           <span className="text-lg text-arts-green font-semibold tracking-wide">
@@ -89,59 +223,90 @@ export default function SolutionsSection() {
           {solutions.map((solution, index) => {
             return (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ scale: 1.02 }}
-                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+                key={solution.id}
+                custom={index}
+                variants={cardContainerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                whileHover={{
+                  scale: prefersReducedMotion ? 1 : 1.02,
+                  y: prefersReducedMotion ? 0 : -5,
+                  transition: { 
+                    duration: 0.3,
+                    ease: [0.25, 0.46, 0.45, 0.94]
+                  },
+                }}
+                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300 overflow-hidden"
               >
-                
-                <div className="w-full h-auto mb-6">
-                  <img src={solution.image} alt={t(solution.titleKey)} className="w-full h-auto object-cover" />
-                </div>
-
-                <div className="space-y-2">
-                  {/* <h3 className="text-2xl font-bold mb-4 text-white">
-                    {t(solution.titleKey)}
-                  </h3> */}
-                  <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">
-                    {t(solution.subtitleKey)}
-                  </p>
-                </div>
-
-                <div className="mt-8 mb-8">
-                  <p className="text-lg text-gray-300 leading-relaxed font-medium">
-                    {t(solution.descriptionKey)}
-                  </p>
-                </div>
-                <div className="mb-8">
-                  <h4 className={`text-lg font-semibold text-gray-300 mb-4`}>
-                    {t("solutions.keyFeatures")}
-                  </h4>
-                  <ul className="space-y-3">
-                    {solution.featuresKeys.map((benefitKey, benefitIndex) => (
-                      <li
-                        key={benefitIndex}
-                        className="flex items-center space-x-3"
-                      >
-                        <div className="w-2 h-2 bg-arts-green rounded-full"></div>
-                        <span className="text-gray-200">{t(benefitKey)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* CTA Button with improved accessibility */}
-                {/* <motion.button
-                  onClick={scrollToContact}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="bg-arts-green w-full text-arts-navy font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 shadow-lg cursor-pointer"
+                {/* Phase 1: Initial Content - Image and Subtitle */}
+                <motion.div
+                  custom={index}
+                  variants={initialContentVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  // viewport={{ once: true }}
                 >
-                  {t("solutions.learnMore")}
-                </motion.button> */}
+                  <div className="w-full h-auto mb-6">
+                    <img 
+                      src={solution.image} 
+                      alt={t(solution.titleKey)} 
+                      className="w-full h-auto object-cover" 
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">
+                      {t(solution.subtitleKey)}
+                    </p>
+                  </div>
+                </motion.div>
+
+                {/* Phase 2: Progressive Content Reveal */}
+                <motion.div
+                  custom={index}
+                  variants={progressiveContentVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  // viewport={{ once: true }}
+                  className="space-y-8"
+                >
+                  {/* Description */}
+                  <motion.div 
+                    variants={contentItemVariants}
+                    className="mt-8"
+                  >
+                    <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                      {t(solution.descriptionKey)}
+                    </p>
+                  </motion.div>
+
+                  {/* Features Section */}
+                  <motion.div variants={contentItemVariants}>
+                    <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                      {t("solutions.keyFeatures")}
+                    </h4>
+                    
+                    <motion.ul
+                      variants={featuresContainerVariants}
+                      className="space-y-3"
+                    >
+                      {solution.featuresKeys.map((benefitKey, benefitIndex) => (
+                        <motion.li
+                          key={benefitIndex}
+                          variants={featureItemVariants}
+                          className="flex items-center space-x-3"
+                        >
+                          <motion.div
+                            variants={bulletVariants}
+                            className="w-2 h-2 bg-arts-green rounded-full flex-shrink-0"
+                          />
+                          <span className="text-gray-200">{t(benefitKey)}</span>
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             );
           })}
