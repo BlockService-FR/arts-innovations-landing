@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Database, Shield, QrCode, Smartphone } from "lucide-react";
 
 export default function SolutionsSection() {
   const { t } = useTranslation();
@@ -20,7 +19,7 @@ export default function SolutionsSection() {
   const solutions = [
     {
       id: "metrafleet",
-      icon: Database,
+      image: "/metrafleet.svg",
       titleKey: "solutions.metrafleet.title",
       subtitleKey: "solutions.metrafleet.subtitle",
       descriptionKey: "solutions.metrafleet.description",
@@ -33,7 +32,7 @@ export default function SolutionsSection() {
     },
     {
       id: "metrasign",
-      icon: Shield,
+      image: "/metrasign.svg",
       titleKey: "solutions.metrasign.title",
       subtitleKey: "solutions.metrasign.subtitle",
       descriptionKey: "solutions.metrasign.description",
@@ -46,7 +45,7 @@ export default function SolutionsSection() {
     },
     {
       id: "metraseal",
-      icon: QrCode,
+      image: "/metraseal.svg",
       titleKey: "solutions.metraseal.title",
       subtitleKey: "solutions.metraseal.subtitle",
       descriptionKey: "solutions.metraseal.description",
@@ -59,7 +58,7 @@ export default function SolutionsSection() {
     },
     {
       id: "metrafield",
-      icon: Smartphone,
+      image: "/metrafield.svg",
       titleKey: "solutions.metrafield.title",
       subtitleKey: "solutions.metrafield.subtitle",
       descriptionKey: "solutions.metrafield.description",
@@ -88,7 +87,6 @@ export default function SolutionsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {solutions.map((solution, index) => {
-            const Icon = solution.icon;
             return (
               <motion.div
                 key={index}
@@ -99,14 +97,15 @@ export default function SolutionsSection() {
                 whileHover={{ scale: 1.02 }}
                 className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"
               >
-                <div className="w-16 h-16 rounded-xl bg-arts-green flex items-center justify-center mb-6">
-                  <Icon size={32} className="text-arts-navy" />
+                
+                <div className="w-full h-auto mb-6">
+                  <img src={solution.image} alt={t(solution.titleKey)} className="w-full h-auto object-cover" />
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold mb-4 text-white">
+                  {/* <h3 className="text-2xl font-bold mb-4 text-white">
                     {t(solution.titleKey)}
-                  </h3>
+                  </h3> */}
                   <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">
                     {t(solution.subtitleKey)}
                   </p>
