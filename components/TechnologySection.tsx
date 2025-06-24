@@ -252,23 +252,27 @@ export default function TechnologySection() {
     <motion.section
       id="technology"
       ref={sectionRef}
-      className="py-20 border-t border-arts-green/20"
+      className="py-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       exit="exit"
       viewport={{ amount: 0.3 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={titleVariants}
-          className="text-start mb-5"
+      <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-16 mt-16"
         >
-          <span className="text-lg text-arts-green font-semibold tracking-wide">
+          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t("technology.title")}
-          </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
+            {t("technology.subtitle")}
+          </p>
         </motion.div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+        
         <motion.div
           variants={splitContainerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-20"
@@ -277,16 +281,16 @@ export default function TechnologySection() {
           <motion.div
             custom={0}
             variants={cardVariants}
-            whileHover={{ 
+            whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
-            className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+            className="backdrop-blur-sm p-8 transition-all duration-300 border-r border-arts-green"
           >
             <motion.div variants={contentVariants}>
               <motion.div
                 variants={iconVariants}
-                className="w-16 h-16 rounded-xl bg-arts-green flex items-center justify-center mb-6"
+                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
               >
                 <Image
                   src="/ai.svg"
@@ -299,36 +303,33 @@ export default function TechnologySection() {
 
               <motion.h3
                 variants={itemVariants}
-                className="text-2xl font-bold mb-4 text-white"
+                className="text-4xl font-bold mb-4 text-white"
               >
                 {t("technology.ai.title")}
               </motion.h3>
-              
-              <motion.p
-                variants={itemVariants}
-                className="text-gray-300 mb-6"
-              >
+              <motion.p variants={itemVariants} className="text-2xl text-gray-300 mb-4">
+                {t("technology.ai.subtitle")}
+              </motion.p>
+
+              <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-6">
                 {t("technology.ai.description")}
               </motion.p>
 
-              <motion.ul
-                variants={featureListVariants}
-                className="space-y-3"
-              >
+              <motion.ul variants={featureListVariants} className="text-xl space-y-3">
                 {aiBenefitsKeys.map((benefitKey, benefitIndex) => (
                   <motion.li
                     key={benefitIndex}
                     variants={featureItemVariants}
                     className="flex items-center space-x-3"
                   >
-                    <motion.div 
+                    <motion.div
                       className="w-2 h-2 bg-arts-green rounded-full"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ 
+                      transition={{
                         delay: 0.8 + benefitIndex * 0.1,
                         type: "spring",
-                        stiffness: 200
+                        stiffness: 200,
                       }}
                     />
                     <span className="text-gray-200">{t(benefitKey)}</span>
@@ -342,11 +343,11 @@ export default function TechnologySection() {
           <motion.div
             custom={1}
             variants={cardVariants}
-            whileHover={{ 
+            whileHover={{
               scale: 1.02,
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
-            className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+            className="backdrop-blur-sm p-8 transition-all duration-300"
           >
             <motion.div variants={contentVariants}>
               <motion.div
@@ -364,36 +365,37 @@ export default function TechnologySection() {
 
               <motion.h3
                 variants={itemVariants}
-                className="text-2xl font-bold mb-4 text-white"
+                className="text-4xl font-bold mb-4 text-white"
               >
                 {t("technology.blockchain.title")}
               </motion.h3>
-              
+
               <motion.p
                 variants={itemVariants}
-                className="text-gray-300 mb-6"
+                className="text-2xl mb-4 text-gray-300"
               >
+                {t("technology.blockchain.subtitle")}
+              </motion.p>
+
+              <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-6">
                 {t("technology.blockchain.description")}
               </motion.p>
 
-              <motion.ul
-                variants={featureListVariants}
-                className="space-y-3"
-              >
+              <motion.ul variants={featureListVariants} className="text-xl space-y-3">
                 {blockchainBenefitsKeys.map((benefitKey, benefitIndex) => (
                   <motion.li
                     key={benefitIndex}
                     variants={featureItemVariants}
                     className="flex items-center space-x-3"
                   >
-                    <motion.div 
+                    <motion.div
                       className="w-2 h-2 bg-arts-green rounded-full"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ 
+                      transition={{
                         delay: 0.95 + benefitIndex * 0.1,
                         type: "spring",
-                        stiffness: 200
+                        stiffness: 200,
                       }}
                     />
                     <span className="text-gray-200">{t(benefitKey)}</span>

@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Shield, Zap, Globe } from "lucide-react";
+import { ArrowRight, Shield, Zap, Globe, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { WordRotate } from "@/components/ui/WordRotate";
 import { FloatingPaths } from "@/components/ui/FloatingPaths";
@@ -32,11 +32,12 @@ export default function HeroSection() {
   const heroLogoY = useTransform(scrollYProgress, [0, 0.25], ["0%", "-200%"]);
   const heroContentY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const ctaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
 
-  const scrollToSolutions = () => {
-    const solutionsSection = document.getElementById("solutions");
-    if (solutionsSection) {
-      solutionsSection.scrollIntoView({
+  const scrollToTechnology = () => {
+    const technologySection = document.getElementById("technology");
+    if (technologySection) {
+      technologySection.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
@@ -55,7 +56,7 @@ export default function HeroSection() {
         <FloatingPaths position={-1} />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Logo */}
         <motion.div
           initial={{ scale: 0 }}
@@ -83,29 +84,12 @@ export default function HeroSection() {
           >
             <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 pb-2 bg-gradient-to-r text-arts-light bg-clip-text">
               {t("hero.title.before")}{" "}
-              <WordRotate className="text-arts-green" words={heroWords} />{" "}
+              <WordRotate className="text-arts-lime" words={heroWords} />{" "}
               {t("hero.title.after")}
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
               {t("hero.subtitle")}
             </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-6 md:mb-12"
-          >
-            <motion.button
-              onClick={scrollToSolutions}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-arts-green text-arts-dark px-8 py-4 rounded-xl font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-            >
-              <span>{t("hero.cta")}</span>
-              <ArrowRight size={20} />
-            </motion.button>
           </motion.div>
 
           <motion.div
@@ -127,7 +111,23 @@ export default function HeroSection() {
               <span>{t("hero.trustIndicators.immutable")}</span>
             </div>
           </motion.div>
-        </motion.div>
+        </motion.div >
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            style={{ opacity: ctaOpacity, y: heroContentY }}
+            className="flex flex-row gap-3 md:gap-4 justify-center items-center mb-6 mt-6 md:mt-12 md:mb-12"
+          >
+            <motion.button
+              onClick={scrollToTechnology}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+            >
+              <ChevronDown size={60} />
+            </motion.button>
+          </motion.div>
       </div>
     </motion.section>
   );

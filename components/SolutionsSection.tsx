@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export default function SolutionsSection() {
   const { t } = useTranslation();
@@ -202,22 +203,20 @@ export default function SolutionsSection() {
   };
 
   return (
-    <section id="solutions" className="py-20 border-b border-arts-green/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ amount: 0.3 }}
-          transition={{
-            duration: prefersReducedMotion ? 0.1 : 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94], // Custom easing for smoothness
-          }}
-          className="text-start mb-5"
+    <section id="solutions" className="py-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden">
+            <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-16 mt-16"
         >
-          <span className="text-lg text-arts-green font-semibold tracking-wide">
+          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t("solutions.title")}
-          </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
+            {t("solutions.subtitle")}
+          </p>
         </motion.div>
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {solutions.map((solution, index) => {
@@ -247,12 +246,22 @@ export default function SolutionsSection() {
                   whileInView="visible"
                   // viewport={{ once: true }}
                 >
-                  <div className="w-full h-auto mb-6">
-                    <img 
+                  <div className="w-full h-auto mb-6 max-w-xs items-start">
+                    <Image 
                       src={solution.image} 
                       alt={t(solution.titleKey)} 
                       className="w-full h-auto object-cover" 
+                      width={500} // placeholder, adjust as needed
+                      height={300} // placeholder, adjust as needed
+                      style={{
+                        objectFit: "cover",
+                        width: '100%',
+                        height: '100%'
+                      }}
                     />
+                  </div>
+
+                  <div className="space-y-2">
                   </div>
 
                   <div className="space-y-2">

@@ -36,7 +36,7 @@ export default function Footer() {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center p-1">
                   <Image
-                    src="/logo-white.svg"
+                    src="/logo-green.svg"
                     alt="ARTS Innovations Logo"
                     width={32}
                     height={32}

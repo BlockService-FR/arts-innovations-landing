@@ -37,12 +37,13 @@ export default function IndustryImpact() {
 
   return (
     <section id="impact" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           
-          className="text-center mb-16"
+          className="text-center mb-16 md:order-2"
         >
           <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t('impact.title')}
@@ -51,8 +52,7 @@ export default function IndustryImpact() {
             {t('impact.subtitle')}
           </p>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:order-1">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -84,6 +84,7 @@ export default function IndustryImpact() {
             )
           })}
         </div>
+
       </div>
     </section>
   )

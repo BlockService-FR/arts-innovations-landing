@@ -27,15 +27,10 @@ export default function Home() {
       <HeroSection />
       <TechnologySection />
       <SolutionsSection />
-      <AboutSection />
       <IndustryImpact />
+      <AboutSection />
       <FAQSection />
       <ContactSection />
-
-      {/* <SolutionsShowcase />
-      <UseCases />
-      <TechnologyStack />
-      <ValueProposition /> */}
       <Footer />
     </main>
   )

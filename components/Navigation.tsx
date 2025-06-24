@@ -24,7 +24,6 @@ export default function Navigation() {
     { key: 'technology', href: '#technology' },
     { key: 'solutions', href: '#solutions' },
     { key: 'about', href: '#about' },
-    { key: 'impact', href: '#impact' },
     { key: 'faq', href: '#faq' },
     { key: 'contact', href: '#contact' }
   ]
@@ -46,7 +45,7 @@ export default function Navigation() {
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center p-1">
                 <Image
-                  src="/logo-white.svg"
+                  src="/logo-green.svg"
                   alt="ARTS Innovations Logo"
                   width={40}
                   height={40}
