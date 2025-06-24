@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { ArrowRight, Shield, Zap, Globe, ChevronDown } from "lucide-react";
-import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useTranslation } from "react-i18next"
+import { ArrowRight, Shield, Zap, Globe, ChevronDown } from "lucide-react"
+import Image from "next/image"
 import { WordRotate } from "@/components/ui/WordRotate";
 import { FloatingPaths } from "@/components/ui/FloatingPaths";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef } from "react"
 
 export default function HeroSection() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const heroWords = useMemo(
     () => [
@@ -19,35 +19,35 @@ export default function HeroSection() {
       t("hero.title.words.3"),
     ],
     [t]
-  );
+  )
 
-  const heroRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
-  });
+  })
 
   // Transform scroll progress to upward movement
-  const heroLogoY = useTransform(scrollYProgress, [0, 0.25], ["0%", "-200%"]);
-  const heroContentY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  const ctaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const heroLogoY = useTransform(scrollYProgress, [0, 0.25], [0, -200])
+  const heroContentY = useTransform(scrollYProgress, [0, 1], [0, 100])
+  const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+  const ctaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.8])
 
   const scrollToTechnology = () => {
-    const technologySection = document.getElementById("technology");
+    const technologySection = document.getElementById("technology")
     if (technologySection) {
       technologySection.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      });
+      })
     }
-  };
+  }
 
   return (
     <motion.section
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
       style={{ opacity: heroOpacity }}
     >
       {/* Background with Overlay */}
@@ -56,7 +56,8 @@ export default function HeroSection() {
         <FloatingPaths position={-1} />
       </div>
 
-      <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Main Hero Content */}
+      <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center flex-grow flex flex-col justify-center">
         {/* Logo */}
         <motion.div
           initial={{ scale: 0 }}
@@ -76,6 +77,7 @@ export default function HeroSection() {
             />
           </div>
         </motion.div>
+
         <motion.div style={{ y: heroContentY }}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -111,24 +113,26 @@ export default function HeroSection() {
               <span>{t("hero.trustIndicators.immutable")}</span>
             </div>
           </motion.div>
-        </motion.div >
-                  <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            style={{ opacity: ctaOpacity, y: heroContentY }}
-            className="flex flex-row gap-3 md:gap-4 justify-center items-center mb-6 mt-6 md:mt-12 md:mb-12"
-          >
-            <motion.button
-              onClick={scrollToTechnology}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-            >
-              <ChevronDown size={60} />
-            </motion.button>
-          </motion.div>
+        </motion.div>
       </div>
+
+      {/* CTA Button - Positioned at bottom of section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        style={{ opacity: ctaOpacity }}
+        className="relative z-10 flex justify-center items-center pb-8"
+      >
+        <motion.button
+          onClick={scrollToTechnology}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+        >
+          <ChevronDown size={60} />
+        </motion.button>
+      </motion.div>
     </motion.section>
-  );
+  )
 }
