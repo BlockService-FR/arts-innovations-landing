@@ -64,7 +64,7 @@ export default function ContactSection() {
                 whileHover={{ x: 10 }}
                 className="p-6 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
                     <Mail size={20} className="text-arts-navy" />
                   </div>
@@ -77,7 +77,7 @@ export default function ContactSection() {
                 whileHover={{ x: 10 }}
                 className="p-6 rounded-lg transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
                     <Phone size={20} className="text-arts-navy" />
                   </div>
