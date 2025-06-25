@@ -193,25 +193,25 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             className="relative"
           >
-            <div className="space-y-8">
+            <div className="space-y-16 pt-8 z-10">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2 }}
-                  className="flex items-center space-x-4"
+                  className="flex items-center space-x-6"
                 >
-                  <div className="w-16 h-16 bg-arts-green rounded-full flex items-center justify-center text-arts-navy font-bold">
+                  <div className="w-20 h-20 bg-arts-green rounded-full flex items-center justify-center text-arts-navy font-bold">
                     {milestone.year}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">
-                      {t(milestone.eventKey)}
-                    </h3>
-                    <p className="text-arts-gray">
-                      {t(milestone.descriptionKey)}
-                    </p>
+                     <h3 className="text-2xl font-bold text-white mb-2">
+                        {t(milestone.eventKey)}
+                      </h3>
+                      <p className="text-xl text-gray-300">
+                        {t(milestone.descriptionKey)}
+                      </p>
                   </div>
                 </motion.div>
               ))}
