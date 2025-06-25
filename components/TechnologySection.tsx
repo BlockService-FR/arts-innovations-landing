@@ -3,11 +3,21 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
-import { Lock, Brain } from "lucide-react";
+import { Lock, Brain, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export default function TechnologySection() {
   const { t } = useTranslation();
+
+  const scrollToNextSection = () => {
+    const section = document.getElementById("solutions");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   const aiBenefitsKeys = [
     "technology.ai.features.learning",
@@ -26,7 +36,11 @@ export default function TechnologySection() {
     offset: ["start end", "end start"],
   });
 
-  const scrollYProgressLine = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
+  const scrollYProgressLine = useTransform(
+    scrollYProgress,
+    [0, 0.5],
+    ["0%", "100%"]
+  );
 
   // Animation variants for the split-reveal effect
   const containerVariants = {
@@ -266,19 +280,18 @@ export default function TechnologySection() {
       viewport={{ amount: 0.3 }}
     >
       <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16 mt-16"
-        >
-          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
-            {t("technology.title")}
-          </h2>
-          <p className="text-2xl text-gray-300 max-w-3xl mx-auto text-balance">
-            {t("technology.subtitle")}
-          </p>
-        </motion.div>
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="text-center mb-16 mt-16"
+      >
+        <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
+          {t("technology.title")}
+        </h2>
+        <p className="text-2xl text-gray-300 max-w-3xl mx-auto text-balance">
+          {t("technology.subtitle")}
+        </p>
+      </motion.div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
-        
         <motion.div
           variants={splitContainerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-20 relative"
@@ -313,15 +326,24 @@ export default function TechnologySection() {
               >
                 {t("technology.ai.title")}
               </motion.h3>
-              <motion.p variants={itemVariants} className="text-2xl text-gray-300 mb-4">
+              <motion.p
+                variants={itemVariants}
+                className="text-2xl text-gray-300 mb-4"
+              >
                 {t("technology.ai.subtitle")}
               </motion.p>
 
-              <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-6">
+              <motion.p
+                variants={itemVariants}
+                className="text-xl text-gray-300 mb-6"
+              >
                 {t("technology.ai.description")}
               </motion.p>
 
-              <motion.ul variants={featureListVariants} className="text-xl space-y-3">
+              <motion.ul
+                variants={featureListVariants}
+                className="text-xl space-y-3"
+              >
                 {aiBenefitsKeys.map((benefitKey, benefitIndex) => (
                   <motion.li
                     key={benefitIndex}
@@ -391,11 +413,17 @@ export default function TechnologySection() {
                 {t("technology.blockchain.subtitle")}
               </motion.p>
 
-              <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-6">
+              <motion.p
+                variants={itemVariants}
+                className="text-xl text-gray-300 mb-6"
+              >
                 {t("technology.blockchain.description")}
               </motion.p>
 
-              <motion.ul variants={featureListVariants} className="text-xl space-y-3">
+              <motion.ul
+                variants={featureListVariants}
+                className="text-xl space-y-3"
+              >
                 {blockchainBenefitsKeys.map((benefitKey, benefitIndex) => (
                   <motion.li
                     key={benefitIndex}
@@ -420,6 +448,23 @@ export default function TechnologySection() {
           </motion.div>
         </motion.div>
       </div>
+
+            {/* CTA Button - Positioned at bottom of section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="relative z-10 flex justify-center items-center pb-8"
+      >
+        <motion.button
+          onClick={scrollToNextSection}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+        >
+          <ChevronDown size={60} />
+        </motion.button>
+      </motion.div>
     </motion.section>
   );
 }

@@ -3,15 +3,16 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 export default function SolutionsSection() {
   const { t } = useTranslation();
   const prefersReducedMotion = useReducedMotion();
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({
+   const scrollToNextSection = () => {
+    const section = document.getElementById("about");
+    if (section) {
+      section.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
@@ -321,6 +322,22 @@ export default function SolutionsSection() {
           })}
         </div>
       </div>
+             {/* CTA Button - Positioned at bottom of section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="relative z-10 flex justify-center items-center pb-8"
+      >
+        <motion.button
+          onClick={scrollToNextSection}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
+        >
+          <ChevronDown size={60} />
+        </motion.button>
+      </motion.div>
     </section>
   );
 }
