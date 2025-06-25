@@ -82,22 +82,22 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-20 relative min-h-screen flex flex-col gap-40 justify-start items-center overflow-hidden mt-16">
+    <section id="about" className="py-20 relative min-h-screen flex flex-col gap-16 justify-start items-center overflow-hidden mt-10">
       <div className="max-w-[70vw] mx-auto my-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-40">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           
-          className="mb-16 md:order-2 text-end"
+          className="mb-10 md:order-2 text-end"
         >
           <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t('impact.title')}
           </h2>
-          <p className="text-4xl text-gray-300 ml-auto mt-16">
+          <p className="text-4xl text-gray-300 ml-auto mt-10">
             {t('impact.subtitle')}
           </p>
-          <p className="text-2xl text-gray-300 max-w-3xl ml-auto mt-16">
+          <p className="text-2xl text-gray-300 max-w-3xl ml-auto mt-10">
             {t('impact.description')}
           </p>
         </motion.div>
@@ -141,12 +141,12 @@ export default function AboutSection() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-start mb-16"
+              className="text-start mb-10"
             >
               <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
                 {t("about.title")}
               </h2>
-              <p className="text-4xl text-gray-300 mr-auto mt-16">
+              <p className="text-4xl text-gray-300 mr-auto mt-10">
                 {t("about.subtitle")}
               </p>
             </motion.div>
