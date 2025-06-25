@@ -120,7 +120,7 @@ export default function FAQSection() {
             {faqItems.map((item, index) => (
               <motion.div
                 key={item.id}
-                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-green/20 hover:border-arts-green transition-all duration-300 cursor-pointer"
+                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 

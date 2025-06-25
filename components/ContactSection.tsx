@@ -28,7 +28,6 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -63,29 +62,27 @@ export default function ContactSection() {
             <div className="space-y-6">
               <motion.div
                 whileHover={{ x: 10 }}
-                className="p-6 bg-arts-teal/50 rounded-lg border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+                className="p-6 transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
                     <Mail size={20} className="text-arts-navy" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
-                    <p className="text-gray-300">contact@arts-innovations.com</p>
+                    <p className="text-lg text-white"><a href="mailto:contact@arts-innovations.com">contact@arts-innovations.com</a></p>
                   </div>
                 </div>
               </motion.div>
               <motion.div
                 whileHover={{ x: 10 }}
-                className="p-6 bg-arts-teal/50 rounded-lg border border-arts-green/20 hover:border-arts-green transition-all duration-300"
+                className="p-6 rounded-lg transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
                     <Phone size={20} className="text-arts-navy" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
-                    <p className="text-gray-300">+33 1 23 45 67 89</p>
+                    <p className="text-lg text-white"><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
                   </div>
                 </div>
               </motion.div>
@@ -96,12 +93,12 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             
-            className="bg-white rounded-2xl p-8 shadow-lg"
+            className="bg-arts-teal/50 backdrop-blur-sm border border-arts-light hover:border-arts-green rounded-2xl p-8 shadow-lg"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-arts-navy mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                     {t('contact.form.name')} {t('contact.form.required')}
                   </label>
                   <input
@@ -111,12 +108,12 @@ export default function ContactSection() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-white placeholder-arts-gray"
                     placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-arts-navy mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                     {t('contact.form.email')} {t('contact.form.required')}
                   </label>
                   <input
@@ -126,14 +123,14 @@ export default function ContactSection() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-white placeholder-arts-gray"
                     placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-arts-navy mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                   {t('contact.form.company')}
                 </label>
                 <input
@@ -142,13 +139,13 @@ export default function ContactSection() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-white placeholder-arts-gray"
                   placeholder={t('contact.form.companyPlaceholder')}
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-arts-navy mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   {t('contact.form.message')} {t('contact.form.required')}
                 </label>
                 <textarea
@@ -158,7 +155,7 @@ export default function ContactSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-navy placeholder-arts-gray/20 resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-white placeholder-arts-gray resize-none"
                   placeholder={t('contact.form.messagePlaceholder')}
                 />
               </div>
