@@ -454,7 +454,7 @@ export default function TechnologySection() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="relative z-10 flex justify-center items-center pb-8"
+        className="absolute z-10 flex justify-center items-center bottom-0"
       >
         <motion.button
           onClick={scrollToNextSection}
@@ -462,7 +462,7 @@ export default function TechnologySection() {
           whileTap={{ scale: 0.95 }}
           className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
         >
-          <ChevronDown size={60} />
+          <ChevronDown size={40} />
         </motion.button>
       </motion.div>
     </motion.section>
