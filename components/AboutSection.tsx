@@ -191,7 +191,7 @@ export default function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="relative"
+            className="relative mx-auto"
           >
             <div className="space-y-16 pt-8 z-10">
               {milestones.map((milestone, index) => (
