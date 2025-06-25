@@ -21,6 +21,13 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'ARTS Innovations - Revolutionizing Aviation with Blockchain & AI',
   description: 'Advanced software solutions for aircraft industry using blockchain and AI technologies powered by METRA platform',
+  openGraph: {
+    images: '/logo-green.svg',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: '/logo-green.svg',
+  },
 }
 
 export default function RootLayout({
