@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import '@/lib/i18n'
 import Navigation from '@/components/Navigation'
 import HeroSection from '@/components/HeroSection'
-import IndustryImpact from '@/components/IndustryImpact'
 import AboutSection from '@/components/AboutSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
@@ -27,7 +26,6 @@ export default function Home() {
       <HeroSection />
       <TechnologySection />
       <SolutionsSection />
-      <IndustryImpact />
       <AboutSection />
       <FAQSection />
       <ContactSection />

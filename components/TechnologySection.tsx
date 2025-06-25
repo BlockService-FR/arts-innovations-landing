@@ -21,6 +21,12 @@ export default function TechnologySection() {
     "technology.blockchain.features.security",
   ];
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const scrollYProgressLine = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
 
   // Animation variants for the split-reveal effect
   const containerVariants = {
@@ -267,7 +273,7 @@ export default function TechnologySection() {
           <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t("technology.title")}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-2xl text-gray-300 max-w-3xl mx-auto text-balance">
             {t("technology.subtitle")}
           </p>
         </motion.div>
@@ -275,7 +281,7 @@ export default function TechnologySection() {
         
         <motion.div
           variants={splitContainerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-20"
+          className="grid grid-cols-1 md:grid-cols-2 gap-20 relative"
         >
           {/* AI Technology Card */}
           <motion.div
@@ -285,7 +291,7 @@ export default function TechnologySection() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="backdrop-blur-sm p-8 transition-all duration-300 border-r border-arts-green"
+            className="backdrop-blur-sm p-8 transition-all duration-300"
           >
             <motion.div variants={contentVariants}>
               <motion.div
@@ -338,6 +344,14 @@ export default function TechnologySection() {
               </motion.ul>
             </motion.div>
           </motion.div>
+
+          {/* Vertical Line Divider */}
+          <motion.div
+            className="invisible md:visible absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 bg-arts-lime"
+            transition={{ delay: 2 }}
+            initial={{ height: 0 }}
+            style={{ height: scrollYProgressLine }}
+          ></motion.div>
 
           {/* Blockchain Technology Card */}
           <motion.div

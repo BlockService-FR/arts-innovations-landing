@@ -212,13 +212,13 @@ export default function SolutionsSection() {
           <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t("solutions.title")}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto text-balance">
+          <p className="text-2xl text-gray-300 max-w-3xl mx-auto text-balance">
             {t("solutions.subtitle")}
           </p>
         </motion.div>
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+      <div className="max-w-[70vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 h-full">
           {solutions.map((solution, index) => {
             return (
               <motion.div
@@ -227,7 +227,7 @@ export default function SolutionsSection() {
                 variants={cardContainerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ amount: 0.1 }}
                 whileHover={{
                   scale: prefersReducedMotion ? 1 : 1.02,
                   y: prefersReducedMotion ? 0 : -5,
@@ -236,7 +236,7 @@ export default function SolutionsSection() {
                     ease: [0.25, 0.46, 0.45, 0.94]
                   },
                 }}
-                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-green/20 hover:border-arts-green transition-all duration-300 overflow-hidden"
+                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-light hover:border-arts-green transition-all duration-300 overflow-hidden h-full"
               >
                 {/* Phase 1: Initial Content - Image and Subtitle */}
                 <motion.div
@@ -246,7 +246,7 @@ export default function SolutionsSection() {
                   whileInView="visible"
                   // viewport={{ once: true }}
                 >
-                  <div className="w-full h-auto mb-6 max-w-xs items-start">
+                  <div className="w-full h-auto mb-8 mt-8 max-w-xs items-start">
                     <Image 
                       src={solution.image} 
                       alt={t(solution.titleKey)} 
@@ -265,7 +265,7 @@ export default function SolutionsSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-sm font-medium text-gray-300 uppercase tracking-wider">
+                    <p className="text-2xl font-medium text-gray-300 uppercase tracking-wider">
                       {t(solution.subtitleKey)}
                     </p>
                   </div>
@@ -285,20 +285,20 @@ export default function SolutionsSection() {
                     variants={contentItemVariants}
                     className="mt-8"
                   >
-                    <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                    <p className="text-2xl text-gray-300 leading-relaxed font-medium">
                       {t(solution.descriptionKey)}
                     </p>
                   </motion.div>
 
                   {/* Features Section */}
                   <motion.div variants={contentItemVariants}>
-                    <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                    <h4 className="text-2xl font-semibold text-gray-300 mb-4">
                       {t("solutions.keyFeatures")}
                     </h4>
                     
                     <motion.ul
                       variants={featuresContainerVariants}
-                      className="space-y-3"
+                      className="space-y-3 text-2xl"
                     >
                       {solution.featuresKeys.map((benefitKey, benefitIndex) => (
                         <motion.li

@@ -54,7 +54,9 @@ export default function Navigation() {
               </div>
               <div className="flex flex-col">
                 <span className="font-space-grotesk font-bold text-lg leading-none text-white">
+                  <a href='#'>
                   ARTS Innovations
+                  </a>
                 </span>
               </div>
             </div>
