@@ -204,7 +204,7 @@ export default function SolutionsSection() {
   };
 
   return (
-    <section id="solutions" className="py-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden">
+    <section id="solutions" className="pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden">
             <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
