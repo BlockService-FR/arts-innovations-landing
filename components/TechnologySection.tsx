@@ -282,16 +282,16 @@ export default function TechnologySection() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-center mb-16 mt-16"
+        className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10"
       >
-        <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
+        <h2 className="text-4xl lg:text-5xl font-space-grotesk font-bold mb-6 text-white text-balance">
           {t("technology.title")}
         </h2>
         <p className="text-2xl text-gray-300 max-w-3xl mx-auto text-balance">
           {t("technology.subtitle")}
         </p>
       </motion.div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+      <div className="w-full lg:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
         <motion.div
           variants={splitContainerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-20 relative"
@@ -304,12 +304,12 @@ export default function TechnologySection() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="backdrop-blur-sm p-8 transition-all duration-300"
+            className="backdrop-blur-sm p-6 transition-all duration-300"
           >
             <motion.div variants={contentVariants}>
               <motion.div
                 variants={iconVariants}
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
               >
                 <Image
                   src="/ai.svg"
@@ -322,27 +322,27 @@ export default function TechnologySection() {
 
               <motion.h3
                 variants={itemVariants}
-                className="text-4xl font-bold mb-4 text-white"
+                className="text-xl lg:text-2xl font-bold mb-4 text-white"
               >
                 {t("technology.ai.title")}
               </motion.h3>
               <motion.p
                 variants={itemVariants}
-                className="text-2xl text-gray-300 mb-4"
+                className="text-md lg:text-lg text-gray-300 mb-4"
               >
                 {t("technology.ai.subtitle")}
               </motion.p>
 
               <motion.p
                 variants={itemVariants}
-                className="text-xl text-gray-300 mb-6"
+                className="text-md lg:text-lg text-gray-300 mb-4"
               >
                 {t("technology.ai.description")}
               </motion.p>
 
               <motion.ul
                 variants={featureListVariants}
-                className="text-xl space-y-3"
+                className="text-md lg:text-lg space-y-2"
               >
                 {aiBenefitsKeys.map((benefitKey, benefitIndex) => (
                   <motion.li
@@ -383,12 +383,12 @@ export default function TechnologySection() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="backdrop-blur-sm p-8 transition-all duration-300"
+            className="backdrop-blur-sm p-6 transition-all duration-300"
           >
             <motion.div variants={contentVariants}>
               <motion.div
                 variants={iconVariants}
-                className="w-16 h-16 rounded-xl bg-arts-green flex items-center justify-center mb-6"
+                className="w-12 h-12 rounded-xl bg-arts-green flex items-center justify-center mb-4"
               >
                 <Image
                   src="/blockchain.svg"
@@ -401,28 +401,28 @@ export default function TechnologySection() {
 
               <motion.h3
                 variants={itemVariants}
-                className="text-4xl font-bold mb-4 text-white"
+                className="text-xl lg:text-2xl font-bold mb-4 text-white"
               >
                 {t("technology.blockchain.title")}
               </motion.h3>
 
               <motion.p
                 variants={itemVariants}
-                className="text-2xl mb-4 text-gray-300"
+                className="text-md lg:text-lg mb-4 text-gray-300"
               >
                 {t("technology.blockchain.subtitle")}
               </motion.p>
 
               <motion.p
                 variants={itemVariants}
-                className="text-xl text-gray-300 mb-6"
+                className="text-md lg:text-lg text-gray-300 mb-6"
               >
                 {t("technology.blockchain.description")}
               </motion.p>
 
               <motion.ul
                 variants={featureListVariants}
-                className="text-xl space-y-3"
+                className="text-md lg:text-lg space-y-3"
               >
                 {blockchainBenefitsKeys.map((benefitKey, benefitIndex) => (
                   <motion.li
@@ -450,7 +450,7 @@ export default function TechnologySection() {
       </div>
 
             {/* CTA Button - Positioned at bottom of section */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -464,7 +464,7 @@ export default function TechnologySection() {
         >
           <ChevronDown size={40} />
         </motion.button>
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 }

@@ -208,18 +208,18 @@ export default function SolutionsSection() {
             <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16 mt-16"
+          className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10"
         >
-          <h2 className="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 text-white text-balance">
+          <h2 className="text-4xl lg:text-5xl font-space-grotesk font-bold mb-6 text-white text-balance">
             {t("solutions.title")}
           </h2>
           <p className="text-2xl text-gray-300 max-w-3xl mx-auto text-balance">
             {t("solutions.subtitle")}
           </p>
         </motion.div>
-      <div className="max-w-[70vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+      <div className="w-full lg:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 h-full">
           {solutions.map((solution, index) => {
             return (
               <motion.div
@@ -247,7 +247,7 @@ export default function SolutionsSection() {
                   whileInView="visible"
                   // viewport={{ once: true }}
                 >
-                  <div className="w-full h-auto mb-8 mt-8 max-w-xs items-start">
+                  <div className="w-full h-auto mb-8 max-w-xs items-start">
                     <Image 
                       src={solution.image} 
                       alt={t(solution.titleKey)} 
@@ -263,10 +263,7 @@ export default function SolutionsSection() {
                   </div>
 
                   <div className="space-y-2">
-                  </div>
-
-                  <div className="space-y-2">
-                    <p className="text-2xl font-medium text-gray-300 uppercase tracking-wider">
+                    <p className="text-lg lg:text-xl font-medium text-gray-300 uppercase tracking-wider">
                       {t(solution.subtitleKey)}
                     </p>
                   </div>
@@ -279,27 +276,27 @@ export default function SolutionsSection() {
                   initial="hidden"
                   whileInView="visible"
                   // viewport={{ once: true }}
-                  className="space-y-8"
+                  className="space-y-4"
                 >
                   {/* Description */}
                   <motion.div 
                     variants={contentItemVariants}
-                    className="mt-8"
+                    className="mt-6"
                   >
-                    <p className="text-2xl text-gray-300 leading-relaxed font-medium">
+                    <p className="text-xl text-gray-300 leading-relaxed font-medium">
                       {t(solution.descriptionKey)}
                     </p>
                   </motion.div>
 
                   {/* Features Section */}
                   <motion.div variants={contentItemVariants}>
-                    <h4 className="text-2xl font-semibold text-gray-300 mb-4">
+                    <h4 className="text-xl font-semibold text-gray-300 mb-4">
                       {t("solutions.keyFeatures")}
                     </h4>
                     
                     <motion.ul
                       variants={featuresContainerVariants}
-                      className="space-y-3 text-2xl"
+                      className="space-y-3 text-xl"
                     >
                       {solution.featuresKeys.map((benefitKey, benefitIndex) => (
                         <motion.li
@@ -323,7 +320,7 @@ export default function SolutionsSection() {
         </div>
       </div>
              {/* CTA Button - Positioned at bottom of section */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -337,7 +334,7 @@ export default function SolutionsSection() {
         >
           <ChevronDown size={40} />
         </motion.button>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

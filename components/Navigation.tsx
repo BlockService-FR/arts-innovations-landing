@@ -74,12 +74,12 @@ export default function Navigation() {
                 {t(`navigation.${item.key}`)}
               </motion.a>
             ))}
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white hover:text-arts-green transition-colors duration-200"

@@ -84,12 +84,12 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-space-grotesk font-bold mb-6 pb-2 bg-gradient-to-r text-arts-light bg-clip-text">
+            <h1 className="text-4xl lg:text-5xl font-space-grotesk font-bold mb-6 pb-2 bg-gradient-to-r text-arts-light bg-clip-text">
               {t("hero.title.before")}{" "}
               <WordRotate className="text-arts-lime" words={heroWords} />{" "}
               {t("hero.title.after")}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
+            <p className="text-xl lg:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto text-balance">
               {t("hero.subtitle")}
             </p>
           </motion.div>

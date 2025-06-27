@@ -8,8 +8,8 @@ import fr from '@/locales/fr.json'
 
 const resources = {
   en: { translation: en },
-  de: { translation: de },
-  fr: { translation: fr }
+  // de: { translation: de },
+  // fr: { translation: fr }
 }
 
 i18n
