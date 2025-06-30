@@ -47,7 +47,7 @@ export default function Navigation() {
                 <Image
                   src="/logo-navigation.svg"
                   alt="ARTS Innovations Logo"
-                  width={400}
+                  width={300}
                   height={40}
                   className="w-full h-full object-contain"
                 />
