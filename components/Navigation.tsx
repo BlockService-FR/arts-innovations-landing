@@ -40,26 +40,17 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
-            <div className="flex items-center space-x-2">
-              <div className="rounded-lg flex items-center justify-center p-1">
-                <Image
-                  src="/logo-navigation.svg"
-                  alt="ARTS Innovations Logo"
-                  width={300}
-                  height={40}
-                  className="w-300 h-40 object-contain"
-                />
-              </div>
-              {/* <div className="flex flex-col">
-                <span className="font-space-grotesk font-bold text-lg leading-none text-white">
-                  <a href='#'>
-                  ARTS Innovations
-                  </a>
-                </span>
-              </div> */}
-            </div>
+            <a href='#'>
+              <Image
+                src="/logo-navigation.svg"
+                alt="ARTS Innovations Logo"
+                width={40}
+                height={40}
+                className="h-6 w-auto object-contain"
+              />
+            </a>
           </motion.div>
 
           {/* Desktop Menu */}
