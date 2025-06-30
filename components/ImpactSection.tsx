@@ -40,8 +40,6 @@ export default function ImpactSection() {
       <div className="w-full lg:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-40">
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
           
           className="mb-10 lg:order-2 text-center lg:text-end"
         >
@@ -61,21 +59,12 @@ export default function ImpactSection() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
                 className="text-center p-6 bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-arts-green rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon size={32} className="text-arts-navy" />
                 </div>
                 <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  
-                  transition={{ delay: index * 0.1 + 0.3, type: "spring" }}
                   className="text-4xl font-bold text-arts-green mb-2"
                 >
                   {/* <AnimatedCounter from={0} to={99} /> */}

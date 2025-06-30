@@ -43,22 +43,22 @@ export default function Navigation() {
             className="flex items-center space-x-3"
           >
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center p-1">
+              <div className=" rounded-lg flex items-center justify-center p-1">
                 <Image
-                  src="/logo-green.svg"
+                  src="/logo-navigation.svg"
                   alt="ARTS Innovations Logo"
-                  width={40}
+                  width={400}
                   height={40}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="flex flex-col">
+              {/* <div className="flex flex-col">
                 <span className="font-space-grotesk font-bold text-lg leading-none text-white">
                   <a href='#'>
                   ARTS Innovations
                   </a>
                 </span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 

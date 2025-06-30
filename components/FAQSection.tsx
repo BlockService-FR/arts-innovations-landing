@@ -88,11 +88,7 @@ export default function FAQSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left side - Title and description */}
         <div className="lg:col-span-3">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            
-          >
+          <motion.div>
             <h2 className="text-4xl md:text-5xl font-title font-bold mb-6 text-white">
               FAQ
             </h2>
@@ -111,20 +107,12 @@ export default function FAQSection() {
 
         {/* Right side - FAQ Items */}
         <div className="lg:col-span-9">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            
-            className="space-y-3"
+          <motion.div className="space-y-3"
           >
             {faqItems.map((item, index) => (
               <motion.div
                 key={item.id}
                 className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green transition-all duration-300 cursor-pointer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                
-                transition={{ delay: index * 0.1 }}
               >
                 {/* Question header */}
                 <button

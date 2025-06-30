@@ -59,8 +59,6 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               className="text-start mb-10"
             >
               <h2 className="text-4xl lg:text-5xl font-space-grotesk font-bold mb-6 text-white text-balance">
@@ -71,10 +69,7 @@ export default function AboutSection() {
               </p>
             </motion.div>
             {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-            >
+            <motion.div>
               <p
                 className="text-2xl text-arts-gray mb-8"
                 style={{ whiteSpace: "pre-wrap" }}
@@ -90,13 +85,6 @@ export default function AboutSection() {
                   >
                     <motion.div
                       className="w-2 h-2 bg-arts-green rounded-full"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{
-                        delay: 0.8 + index * 0.1,
-                        type: "spring",
-                        stiffness: 200,
-                      }}
                     />
                     <span className="text-gray-200">
                       {t(item.labelKey)} {t(item.sublabelKey)}
@@ -109,17 +97,12 @@ export default function AboutSection() {
 
           {/* Timeline */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             className="relative mx-auto"
           >
             <div className="space-y-16 pt-8 z-10">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2 }}
                   className="flex items-center space-x-6"
                 >
                   <div className="w-20 h-20 bg-arts-green rounded-full flex items-center justify-center text-arts-navy font-bold">
