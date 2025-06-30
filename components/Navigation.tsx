@@ -49,7 +49,7 @@ export default function Navigation() {
                   alt="ARTS Innovations Logo"
                   width={300}
                   height={40}
-                  className="w-full h-full object-contain"
+                  className="object-contain"
                 />
               </div>
               {/* <div className="flex flex-col">
