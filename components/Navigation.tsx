@@ -43,7 +43,7 @@ export default function Navigation() {
             className="flex items-center space-x-3"
           >
             <div className="flex items-center space-x-2">
-              <div className=" rounded-lg flex items-center justify-center p-1">
+              <div className="w-300 h-40 rounded-lg flex items-center justify-center p-1">
                 <Image
                   src="/logo-navigation.svg"
                   alt="ARTS Innovations Logo"
