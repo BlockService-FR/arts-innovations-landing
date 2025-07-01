@@ -12,7 +12,7 @@ const archivoBlack = Archivo_Black({
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '500'],
+  weight: ['300', '400', '500'],
   variable: '--font-montserrat',
   display: 'swap',
   preload: true,
