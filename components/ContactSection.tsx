@@ -44,58 +44,13 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Team Contacts */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="mb-6 text-arts-light font-text-important">{t('contact.team')}</h3>
-              <p className="text-arts-light mb-8 font-text">
-                {t('contact.teamDescription')}
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <motion.div
-                whileHover={{ x: 10 }}
-                className="p-6 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4 p-6 bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green">
-                  <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
-                    <Mail size={20} className="text-arts-navy" />
-                  </div>
-                  <div>
-                    <h4 className="text-arts-light mb-1 font-text-important">Email</h4>
-                    <p className="text-arts-light font-text"><a href="mailto:contact@arts-innovations.com">contact@arts-innovations.com</a></p>
-                  </div>
-                </div>
-              </motion.div>
-              <motion.div
-                whileHover={{ x: 10 }}
-                className="p-6 rounded-lg transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4 p-6 bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green">
-                  <div className="w-12 h-12 bg-arts-green rounded-lg flex items-center justify-center">
-                    <Phone size={20} className="text-arts-navy" />
-                  </div>
-                  <div>
-                    <h4 className="text-arts-light mb-1 font-text-important">Phone</h4>
-                    <p className="text-arts-light font-text"><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
+        <div className="flex items-center">          
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             
-            className="bg-arts-teal/50 backdrop-blur-sm border border-arts-light hover:border-arts-green rounded-2xl p-8 shadow-lg"
+            className="bg-arts-teal/50 backdrop-blur-sm border border-arts-light hover:border-arts-green rounded-2xl p-8 shadow-lg mx-auto"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
