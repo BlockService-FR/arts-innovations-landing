@@ -89,14 +89,14 @@ export default function FAQSection() {
         {/* Left side - Title and description */}
         <div className="lg:col-span-3">
           <motion.div>
-            <h2 className="text-4xl md:text-5xl font-title font-bold mb-6 text-white">
+            <h2 className="mb-6 text-arts-light font-title">
               FAQ
             </h2>
-            <p className="text-arts-gray">
+            <p className="text-arts-light font-text">
               {t("faq.description")}{" "}
               <a
                 href="#contact"
-                className="text-arts-green hover:text-arts-lime transition-colors"
+                className="text-arts-green hover:text-arts-lime transition-colors font-text-important"
               >
                 {t("faq.cta")}
               </a>
@@ -122,7 +122,7 @@ export default function FAQSection() {
                 >
                   <div className="flex items-center">
                     <span className="text-arts-green mr-3">•</span>
-                    <span className="text-white text-lg font-medium">
+                    <span className="text-arts-light font-text-important">
                       {t(item.questionKey)}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export default function FAQSection() {
                       className="overflow-hidden"
                     >
                       <div
-                        className="px-4 sm:px-6 pb-6 pt-0 text-arts-gray"
+                        className="px-4 sm:px-6 pb-6 pt-0 text-arts-light font-text"
                         style={{ whiteSpace: "pre-wrap" }}
                       >
                         {t(item.answerKey)}

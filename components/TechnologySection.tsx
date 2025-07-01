@@ -60,10 +60,10 @@ export default function TechnologySection() {
         whileInView={{ opacity: 1, y: 0 }}
         className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10"
       >
-        <h2 className="text-2xl lg:text-3xl font-archivo-black font-bold mb-6 text-white text-balance">
+        <h2 className="mb-6 text-arts-light text-balance font-title">
           {t("technology.title")}
         </h2>
-        <p className="text-2xl text-gray-300 font-montserra max-w-3xl mx-auto text-balance">
+        <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
           {t("technology.subtitle")}
         </p>
       </motion.div>
@@ -94,18 +94,18 @@ export default function TechnologySection() {
               </motion.div>
 
               <motion.h3
-                className="text-xl lg:text-2xl font-bold mb-4 text-white"
+                className="mb-4 text-arts-light font-content-title"
               >
                 {t("technology.ai.title")}
               </motion.h3>
               <motion.p
-                className="text-md lg:text-lg text-gray-300 mb-4"
+                className="text-arts-light mb-4 font-content-subtitle"
               >
                 {t("technology.ai.subtitle")}
               </motion.p>
 
               <motion.p
-                className="text-md lg:text-lg text-gray-300 mb-4"
+                className="text-arts-light mb-4 font-text"
               >
                 {t("technology.ai.description")}
               </motion.p>
@@ -120,15 +120,8 @@ export default function TechnologySection() {
                   >
                     <motion.div
                       className="w-2 h-2 bg-arts-green rounded-full"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{
-                        delay: 0.8 + benefitIndex * 0.1,
-                        type: "spring",
-                        stiffness: 200,
-                      }}
                     />
-                    <span className="text-gray-200">{t(benefitKey)}</span>
+                    <span className="text-arts-light font-text"><span className="font-text-important">{t(benefitKey + '.title')}</span>{t(benefitKey + '.description')}</span>
                   </motion.li>
                 ))}
               </motion.ul>
@@ -165,21 +158,21 @@ export default function TechnologySection() {
               </motion.div>
 
               <motion.h3
-                className="text-xl lg:text-2xl font-bold mb-4 text-white"
+                className="mb-4 text-arts-light font-content-title"
               >
                 {t("technology.blockchain.title")}
               </motion.h3>
 
               <motion.p
-                className="text-md lg:text-lg mb-4 text-gray-300"
+                className="mb-4 text-arts-light font-content-subtitle"
               >
                 {t("technology.blockchain.subtitle")}
               </motion.p>
 
               <motion.p
-                className="text-md lg:text-lg text-gray-300 mb-6"
+                className="text-arts-light mb-6 font-text"
               >
-                {t("technology.blockchain.description")}
+                {t("technology.blockchain.description.before")}<span className="font-text-important">METRA</span>{t("technology.blockchain.description.after")}
               </motion.p>
 
               <motion.ul
@@ -200,7 +193,7 @@ export default function TechnologySection() {
                         stiffness: 200,
                       }}
                     />
-                    <span className="text-gray-200">{t(benefitKey)}</span>
+                    <span className="text-arts-light font-text"><span className="font-text-important">{t(benefitKey + '.title')}</span>{t(benefitKey + '.description')}</span>
                   </motion.li>
                 ))}
               </motion.ul>

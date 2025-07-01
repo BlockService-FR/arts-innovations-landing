@@ -80,10 +80,10 @@ export default function SolutionsSection() {
       className="pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10">
-        <h2 className="text-4xl lg:text-5xl font-archivo-black font-bold mb-6 text-white text-balance">
+        <h2 className="mb-6 text-arts-light text-balance font-title">
           {t("solutions.title")}
         </h2>
-        <p className="text-2xl text-gray-300 font-montserrat max-w-3xl mx-auto text-balance">
+        <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
           {t("solutions.subtitle")}
         </p>
       </motion.div>
@@ -120,7 +120,7 @@ export default function SolutionsSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-lg font-medium text-gray-300 uppercase tracking-wider">
+                    <p className="text-arts-light font-subtitle-alt">
                       {t(solution.subtitleKey)}
                     </p>
                   </div>
@@ -130,25 +130,25 @@ export default function SolutionsSection() {
                 <motion.div className="space-y-4">
                   {/* Description */}
                   <motion.div className="mt-6">
-                    <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                    <p className="text-arts-light leading-relaxed font-text">
                       {t(solution.descriptionKey)}
                     </p>
                   </motion.div>
 
                   {/* Features Section */}
                   <motion.div>
-                    <h4 className="text-lg font-semibold text-gray-300 mb-4">
+                    <h4 className="text-arts-light mb-4 font-text-important">
                       {t("solutions.keyFeatures")}
                     </h4>
 
-                    <motion.ul className="space-y-3 text-lg">
+                    <motion.ul className="space-y-3 font-text">
                       {solution.featuresKeys.map((benefitKey, benefitIndex) => (
                         <motion.li
                           key={benefitIndex}
                           className="flex items-center space-x-3"
                         >
                           <motion.div className="w-2 h-2 bg-arts-green rounded-full flex-shrink-0" />
-                          <span className="text-gray-200">{t(benefitKey)}</span>
+                          <span className="text-arts-light">{t(benefitKey)}</span>
                         </motion.li>
                       ))}
                     </motion.ul>

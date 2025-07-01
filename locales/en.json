@@ -165,11 +165,23 @@
     "blockchain": {
       "title": "Blockchain Security",
       "subtitle": "Trust though transparency and tamper-proof infrastructure",
-      "description": "Built on METRA, our proprietary sovereign blockchain, this foundation delivers uncompromised security, verifiable compliance, and end-to-end traceability across the entire aerospace asset lifecycle by combining decentralization, automation, and cryptographic protection.",
+      "description": {
+        "before" : "Built on ",
+        "after" : ", our proprietary sovereign blockchain, this foundation delivers uncompromised security, verifiable compliance, and end-to-end traceability across the entire aerospace asset lifecycle by combining decentralization, automation, and cryptographic protection."
+      },
       "features": {
-        "ledger": "Distributed Ledger : Ensures synchronized, secure and decentralized records",
-        "contracts": "Smart Contracts : Automates compliance and asset-related workflows.",
-        "security": "Cryptographic Security : Guarantees data integrity and auditability at every step."
+        "ledger": {
+          "title": "Distributed Ledger: ",
+          "description": "Ensures synchronized, secure and decentralized records"
+        },
+        "contracts": {
+          "title": "Smart Contracts: ",
+          "description": "Automates compliance and asset-related workflows."
+        },
+        "security": {
+          "title": "Cryptographic Security: ",
+          "description": "Guarantees data integrity and auditability at every step."
+        }
       }
     },
     "ai": {
@@ -177,9 +189,18 @@
       "subtitle": "From data to foresight: unlocking operational intelligence.",
       "description": "Our AI model transforms complex datasets into actionable insights. By learning continuously from historical and real-time data, it powers smarter operations, enables predictive maintenance, and supports data-driven decision-making across the asset lifecycle.",
       "features": {
-        "learning": "Machine Learning : Continuously trains on aircraft behavior to refine models.",
-        "recognition": "Pattern Recognition: Detects anomalies, recurring issues, and usage trends.",
-        "analytics": "Predictive Analytics : Anticipates failures, optimizes maintenancescheduling, and reduces downtime."
+        "learning": {
+          "title": "Machine Learning: ",
+          "description": "Continuously trains on aircraft behavior to refine models."
+        },
+        "recognition": {
+          "title": "Pattern Recognition: ",
+          "description": "Detects anomalies, recurring issues, and usage trends."
+        },
+        "analytics": {
+          "title": "Predictive Analytics: ",
+          "description": "Anticipates failures, optimizes maintenancescheduling, and reduces downtime."
+        }
       }
     },
     "realtime": {

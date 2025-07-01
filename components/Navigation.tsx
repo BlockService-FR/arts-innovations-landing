@@ -60,7 +60,7 @@ export default function Navigation() {
                 key={item.key}
                 href={item.href}
                 whileHover={{ y: -2 }}
-                className="text-gray-200 hover:text-arts-green transition-colors duration-200 font-medium"
+                className="text-gray-200 hover:text-arts-green transition-colors duration-200 font-menu-text"
               >
                 {t(`navigation.${item.key}`)}
               </motion.a>
@@ -91,7 +91,7 @@ export default function Navigation() {
               <a
                 key={item.key}
                 href={item.href}
-                className="block py-2 text-gray-200 hover:text-arts-green transition-colors duration-200"
+                className="block py-2 text-gray-200 hover:text-arts-green transition-colors duration-200 font-menu-text"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t(`navigation.${item.key}`)}

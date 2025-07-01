@@ -4,6 +4,7 @@
   /* Font Variables */
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
+  --font-weight-medium: 400;
   
   /* ARTS Brand Colors */
   --color-arts-navy: #0b1928;
@@ -91,16 +92,78 @@
 }
 
 @layer utilities {
+  .font-hero-title {
+    font-family: var(--font-archivo-black);
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .font-hero-subtitle {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .font-hero-text {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .font-menu-text {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 12px;
+  }
+
   .font-title {
     font-family: var(--font-archivo-black);
-    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 24px;
   }
   .font-subtitle {
     font-family: var(--font-montserrat);
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 20px;
   }
+
+  .font-subtitle-alt {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  .font-content-title {
+    font-family: var(--font-archivo-black);
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .font-content-subtitle {
+    font-family: var(--font-montserrat);
+    font-size: 20px;
+  }
+
+  .font-content-subtitle-important {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    font-size: 20px;
+  }
+
   .font-text {
     font-family: var(--font-montserrat);
     font-weight: 300;
+    font-size: 18px;
+  }
+
+  .font-text-light {
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .font-text-important {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    font-size: 18px;
   }
 }

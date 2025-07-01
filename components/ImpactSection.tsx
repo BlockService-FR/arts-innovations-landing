@@ -43,13 +43,13 @@ export default function ImpactSection() {
           
           className="mb-10 lg:order-2 text-center lg:text-end"
         >
-          <h2 className="text-4xl lg:text-5xl font-space-grotesk font-bold mb-6 text-white text-balance">
+          <h2 className="mb-6 text-arts-light text-balance font-title">
             {t('impact.title')}
           </h2>
-          <p className="text-2xl text-gray-300 ml-auto mt-10">
+          <p className="text-arts-light ml-auto mt-10 font-subtitle">
             {t('impact.subtitle')}
           </p>
-          <p className="text-2xl text-gray-300 max-w-3xl ml-auto mt-10">
+          <p className="text-arts-light max-w-3xl ml-auto mt-10 font-text">
             {t('impact.description')}
           </p>
         </motion.div>
@@ -65,13 +65,13 @@ export default function ImpactSection() {
                   <Icon size={32} className="text-arts-navy" />
                 </div>
                 <motion.div
-                  className="text-4xl font-bold text-arts-green mb-2"
+                  className="text-arts-green mb-2 font-content-title"
                 >
                   {/* <AnimatedCounter from={0} to={99} /> */}
                   {stat.valueKey ? t(stat.valueKey) : <AnimatedCounter from={0} to={stat.value!} suffix="%"/>}
                 </motion.div>
-                <h3 className="text-xl font-semibold mb-2 text-white">{t(stat.labelKey)}</h3>
-                <p className="text-gray-300 text-sm">{t(stat.descriptionKey)}</p>
+                <h3 className="mb-2 text-arts-light font-content-subtitle-important">{t(stat.labelKey)}</h3>
+                <p className="text-arts-light font-text-light">{t(stat.descriptionKey)}</p>
               </motion.div>
             )
           })}

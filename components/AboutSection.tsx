@@ -61,23 +61,23 @@ export default function AboutSection() {
             <motion.div
               className="text-start mb-10"
             >
-              <h2 className="text-4xl lg:text-5xl font-space-grotesk font-bold mb-6 text-white text-balance">
+              <h2 className="mb-6 text-arts-light text-balance font-title">
                 {t("about.title")}
               </h2>
-              <p className="text-2xl text-gray-300 mr-auto mt-10">
+              <p className="text-arts-light mr-auto mt-10 font-subtitle">
                 {t("about.subtitle")}
               </p>
             </motion.div>
             {/* Content */}
             <motion.div>
               <p
-                className="text-2xl text-arts-gray mb-8"
+                className="text-arts-light mb-8 font-text"
                 style={{ whiteSpace: "pre-wrap" }}
               >
                 {t("about.description")}
               </p>
 
-              <motion.ul className="text-xl space-y-3">
+              <motion.ul className="space-y-3 font-text">
                 {aboutStats.map((item, index) => (
                   <motion.li
                     key={index}
@@ -86,7 +86,7 @@ export default function AboutSection() {
                     <motion.div
                       className="w-2 h-2 bg-arts-green rounded-full"
                     />
-                    <span className="text-gray-200">
+                    <span className="text-arts-light">
                       {t(item.labelKey)} {t(item.sublabelKey)}
                     </span>
                   </motion.li>
@@ -105,14 +105,14 @@ export default function AboutSection() {
                   key={index}
                   className="flex items-center space-x-6"
                 >
-                  <div className="w-20 h-20 bg-arts-green rounded-full flex items-center justify-center text-arts-navy font-bold">
+                  <div className="w-20 h-20 bg-arts-teal/50 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-arts-green text-arts-light font-subtitle-alt">
                     {milestone.year}
                   </div>
                   <div>
-                     <h3 className="text-2xl font-bold text-white mb-2">
+                     <h3 className="text-arts-light mb-2 font-text-important">
                         {t(milestone.eventKey)}
                       </h3>
-                      <p className="text-xl text-gray-300">
+                      <p className="text-arts-light font-text">
                         {t(milestone.descriptionKey)}
                       </p>
                   </div>
