@@ -27,23 +27,16 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          
-          className="text-center mb-16"
-        >
-          <h2 className="mb-6 text-arts-light font-title">
-            {t('contact.title')}
-          </h2>
-          <p className="text-arts-light max-w-3xl mx-auto font-subtitle ">
-            {t('contact.subtitle')}
-          </p>
-        </motion.div>
-
+    <section id="contact" className="py-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden">
+      <motion.div className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10">
+        <h2 className="mb-6 text-arts-light text-balance font-title">
+          {t("contact.title")}
+        </h2>
+        <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
+          {t("contact.subtitle")}
+        </p>
+      </motion.div>
+      <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">          
           {/* Contact Form */}
           <motion.div

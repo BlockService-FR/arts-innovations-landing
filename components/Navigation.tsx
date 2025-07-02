@@ -1,24 +1,22 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, MotionValue } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import LanguageSwitcher from './LanguageSwitcher'
 
-export default function Navigation() {
-  const { t } = useTranslation()
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+type NavigationProps = {
+  isScrolled: boolean;
+};
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+export default function Navigation({
+  isScrolled
+}: NavigationProps) {
+  const { t } = useTranslation()
+  
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navItems = [
     { key: 'technology', href: '#technology' },

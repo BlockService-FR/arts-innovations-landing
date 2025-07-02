@@ -36,8 +36,8 @@ export default function ImpactSection() {
   ]
 
   return (
-<section id="impact" className="pt-20 relative min-h-screen xl:min-h-[50vh] flex flex-col gap-16 justify-start items-center overflow-hidden">
-      <div className="w-full xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-40">
+<section id="impact" className="pt-20 relative min-h-screen flex flex-col gap-16 justify-start items-center overflow-hidden">
+      <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
 
         <motion.div
           

@@ -67,7 +67,7 @@ export default function TechnologySection() {
           {t("technology.subtitle")}
         </p>
       </motion.div>
-      <div className="w-full xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+      <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-20 relative"
         >

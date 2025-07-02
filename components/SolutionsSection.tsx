@@ -87,7 +87,7 @@ export default function SolutionsSection() {
           {t("solutions.subtitle")}
         </p>
       </motion.div>
-      <div className="w-full xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+      <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 h-full">
           {solutions.map((solution, index) => {
             return (
