@@ -54,7 +54,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="pt-20 relative min-h-screen flex flex-col gap-16 justify-start items-center overflow-hidden">
+    <section id="about" className="pt-16 lg:pt-20 relative min-h-screen flex flex-col gap-16 justify-start items-center overflow-hidden">
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -99,7 +99,7 @@ export default function AboutSection() {
           <motion.div
             className="relative mx-auto"
           >
-            <div className="space-y-16 pt-8 z-10">
+            <div className="space-y-16 pt-6 lg:pt-8 z-10">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={index}

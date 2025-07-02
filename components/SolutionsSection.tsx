@@ -77,10 +77,10 @@ export default function SolutionsSection() {
   return (
     <section
       id="solutions"
-      className="pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
+      className="pt-16 lg:pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
     >
-      <motion.div className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10">
-        <h2 className="mb-6 text-arts-light text-balance font-title">
+      <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <h2 className="mb-4 text-arts-light text-balance font-title">
           {t("solutions.title")}
         </h2>
         <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
@@ -100,11 +100,11 @@ export default function SolutionsSection() {
                     duration: 0.3
                   },
                 }}
-                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-8 border border-arts-light hover:border-arts-green transition-all duration-300 overflow-hidden h-full"
+                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light hover:border-arts-green transition-all duration-300 overflow-hidden h-full"
               >
                 {/* Phase 1: Initial Content - Image and Subtitle */}
                 <motion.div>
-                  <div className="w-full h-auto mb-8 max-w-xs items-start">
+                  <div className="w-full h-auto mb-6 lg:mb-8 max-w-xs items-start">
                     <Image
                       src={solution.image}
                       alt={t(solution.titleKey)}
@@ -129,7 +129,7 @@ export default function SolutionsSection() {
                 {/* Phase 2: Progressive Content Reveal */}
                 <motion.div className="space-y-4">
                   {/* Description */}
-                  <motion.div className="mt-6">
+                  <motion.div className="mt-4 lg:mt-6">
                     <p className="text-arts-light leading-relaxed font-text">
                       {t(solution.descriptionKey)}
                     </p>
@@ -137,7 +137,7 @@ export default function SolutionsSection() {
 
                   {/* Features Section */}
                   <motion.div>
-                    <h4 className="text-arts-light mb-4 font-text-important">
+                    <h4 className="text-arts-light mb-2 lg:mb-4 font-text-important">
                       {t("solutions.keyFeatures")}
                     </h4>
 

@@ -27,9 +27,9 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden">
-      <motion.div className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10">
-        <h2 className="mb-6 text-arts-light text-balance font-title">
+    <section id="contact" className="pt-16 lg:pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden">
+      <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <h2 className="mb-4 lg:mb-6 text-arts-light text-balance font-title">
           {t("contact.title")}
         </h2>
         <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">

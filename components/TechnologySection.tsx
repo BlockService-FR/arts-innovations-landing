@@ -49,7 +49,7 @@ export default function TechnologySection() {
     <motion.section
       id="technology"
       ref={sectionRef}
-      className="py-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
+      className="pt-16 lg:pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
       exit="exit"
@@ -58,9 +58,9 @@ export default function TechnologySection() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-center mb-6 mt-6 lg:mb-10 lg:mt-10"
+        className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10"
       >
-        <h2 className="mb-6 text-arts-light text-balance font-title">
+        <h2 className="mb-4 lg:mb-6 text-arts-light text-balance font-title">
           {t("technology.title")}
         </h2>
         <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
@@ -69,7 +69,7 @@ export default function TechnologySection() {
       </motion.div>
       <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-20 relative"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 relative"
         >
           {/* AI Technology Card */}
           <motion.div
