@@ -275,24 +275,6 @@
         "label": "99.9%",
         "sublabel": "System Reliability"
       }
-    },
-    "timeline": {
-      "2000": {
-        "event": "ARTS Founded",
-        "description": "Aerospace expertise begins"
-      },
-      "2020": {
-        "event": "Digital Transformation",
-        "description": "Embracing new technologies"
-      },
-      "2024": {
-        "event": "Blockchain Integration",
-        "description": "Revolutionary security"
-      },
-      "2025": {
-        "event": "ARTS Innovations",
-        "description": "Leading the future"
-      }
     }
   },
   "faq": {

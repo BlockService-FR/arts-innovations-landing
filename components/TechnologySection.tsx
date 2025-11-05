@@ -58,7 +58,7 @@ export default function TechnologySection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="flex flex-col text-left mb-4 mt-4 lg:mb-10 lg:mt-10"
+          className="flex flex-col text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10"
         >
           <h2 className="mb-4 lg:mb-6 text-arts-light text-balance font-title">
             {t("technology.title")}
@@ -70,7 +70,7 @@ export default function TechnologySection() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-4 bg-arts-green text-arts-navy font-semibold py-4 px-6 rounded-lg space-x-2 hover:bg-arts-lime transition-all duration-300 cursor-pointer self-start"
+                className="mt-4 bg-arts-green text-arts-navy font-semibold py-4 px-6 rounded-lg space-x-2 hover:bg-arts-lime transition-all duration-300 cursor-pointer self-center lg:self-start"
               >
                 <span className='font-text-important'>{t('technology.cta')}</span>
               </motion.button>
