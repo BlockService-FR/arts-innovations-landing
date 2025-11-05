@@ -74,7 +74,7 @@ export default function AboutSection() {
             </div>
 
             {/* Right Branding Section */}
-            <div className="flex flex-col items-center justify-center md:m-10">
+            <div className="flex flex-col items-center justify-center md:m-10 mx-auto">
               <LogoIcon className="mb-2"/>
 
               {/* ARTS GROUP Text */}
