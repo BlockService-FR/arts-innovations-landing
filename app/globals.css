@@ -227,78 +227,222 @@
   .font-hero-title {
     font-family: var(--font-archivo-black);
     text-transform: uppercase;
-    font-size: 38px;
+    font-size: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .font-hero-title {
+      font-size: 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-hero-title {
+      font-size: 38px;
+    }
   }
 
   .font-hero-subtitle {
     font-family: var(--font-montserrat);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .font-hero-subtitle {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-hero-subtitle {
+      font-size: 18px;
+    }
   }
 
   .font-hero-text {
     font-family: var(--font-montserrat);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .font-hero-text {
+      font-size: 12px;
+    }
   }
 
   .font-menu-text {
     font-family: var(--font-montserrat);
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  @media (min-width: 768px) {
+    .font-menu-text {
+      font-size: 12px;
+    }
   }
 
   .font-title {
     font-family: var(--font-archivo-black);
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 22px;
+  }
+
+  @media (min-width: 768px) {
+    .font-title {
+      font-size: 26px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-title {
+      font-size: 30px;
+    }
   }
 
   .font-subtitle {
     font-family: var(--font-montserrat);
     font-weight: 400;
-    font-size: 22px;
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .font-subtitle {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-subtitle {
+      font-size: 22px;
+    }
   }
 
   .font-subtitle-alt {
     font-family: var(--font-montserrat);
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .font-subtitle-alt {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-subtitle-alt {
+      font-size: 18px;
+    }
   }
 
   .font-content-title {
     font-family: var(--font-archivo-black);
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .font-content-title {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-content-title {
+      font-size: 20px;
+    }
   }
 
   .font-content-subtitle {
     font-family: var(--font-montserrat);
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .font-content-subtitle {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-content-subtitle {
+      font-size: 20px;
+    }
   }
 
   .font-content-subtitle-important {
     font-family: var(--font-montserrat);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .font-content-subtitle-important {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-content-subtitle-important {
+      font-size: 20px;
+    }
   }
 
   .font-text {
     font-family: var(--font-montserrat);
     font-weight: 300;
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .font-text {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-text {
+      font-size: 18px;
+    }
   }
 
   .font-text-light {
     font-family: var(--font-montserrat);
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .font-text-light {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-text-light {
+      font-size: 16px;
+    }
   }
 
   .font-text-important {
     font-family: var(--font-montserrat);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .font-text-important {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-text-important {
+      font-size: 18px;
+    }
   }
 }
