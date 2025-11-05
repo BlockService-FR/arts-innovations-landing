@@ -7,6 +7,7 @@ import Image from "next/image"
 import { WordRotate } from "@/components/ui/WordRotate";
 import { FloatingPaths } from "@/components/ui/FloatingPaths";
 import { useMemo, useRef } from "react"
+import { Particles } from "@/components/ui/shadcn-io/particles"
 
 export default function HeroSection() {
   const { t } = useTranslation()
@@ -51,10 +52,10 @@ export default function HeroSection() {
       style={{ opacity: heroOpacity }}
     >
       {/* Background with Overlay */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
-      </div>
+      </div> */}
 
       {/* Main Hero Content */}
       <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center flex-grow flex flex-col justify-center">
@@ -122,7 +123,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         style={{ opacity: ctaOpacity }}
-        className="relative z-10 flex justify-center items-center"
+        className="z-10 justify-center items-center hidden lg:flex relative"
       >
         <motion.button
           onClick={scrollToTechnology}
@@ -133,6 +134,15 @@ export default function HeroSection() {
           <ChevronDown size={40} />
         </motion.button>
       </motion.div>
+      {/* Interactive particles */}
+      <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        staticity={50}
+        color="#c0ff7e"
+        size={0.8}
+      />
     </motion.section>
   )
 }

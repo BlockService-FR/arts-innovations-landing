@@ -1,13 +1,14 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
-import { Mail, Linkedin, Twitter } from 'lucide-react'
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Mail, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
+import { SparklesCore } from "@/components/ui//shadcn-io/sparkles";
 
 export default function Footer() {
-  const { t } = useTranslation()
-  const currentYear = new Date().getFullYear()
+  const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
 
   // const footerSections = [
   //   {
@@ -30,7 +31,6 @@ export default function Footer() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              
               className="mb-6"
             >
               <div className="flex items-center space-x-2 mb-4">
@@ -43,20 +43,27 @@ export default function Footer() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="font-space-grotesk font-bold text-xl text-primary">ARTS Innovations</span>
+                <span className="font-space-grotesk font-bold text-xl text-primary">
+                  ARTS Innovations
+                </span>
               </div>
               <p className="text-muted mb-6 max-w-md">
-                {t('footer.description')}
+                {t("footer.description")}
               </p>
-              
+
               {/* Social Links */}
               <div className="flex space-x-4">
                 {[
-                  { icon: Linkedin, href: '#' },
-                  { icon: Twitter, href: '#' },
-                  { icon: Mail, href: 'mailto:innovations@arts.aero' }
+                  {
+                    icon: Linkedin,
+                    href: "https://www.linkedin.com/company/arts-innovations",
+                  },
+                  {
+                    icon: Mail,
+                    href: "mailto:pierre.puissegur@arts-innovations.com",
+                  },
                 ].map((social, index) => {
-                  const Icon = social.icon
+                  const Icon = social.icon;
                   return (
                     <motion.a
                       key={index}
@@ -66,12 +73,12 @@ export default function Footer() {
                     >
                       <Icon size={20} className="text-primary" />
                     </motion.a>
-                  )
+                  );
                 })}
               </div>
             </motion.div>
           </div>
-          
+
           {/* <div className="lg:col-span-2"></div> */}
           {/* Footer Links */}
           {/* {footerSections.map((section, index) => (
@@ -100,15 +107,22 @@ export default function Footer() {
           ))} */}
         </div>
 
+        <div
+          className="h-px m-0"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.12) 0%, var(--color-brand-accent) 49%, transparent 100%)",
+            opacity: 1,
+          }}
+        />
         {/* Bottom Section */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          
-          className="border-t border-accent/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-muted text-sm">
-            © {currentYear} ARTS Innovations. {t('footer.legal.rights')}
+            © {currentYear} ARTS Innovations. {t("footer.legal.rights")}
           </p>
           {/* <div className="flex space-x-6 mt-4 md:mt-0">
             {[
@@ -129,5 +143,5 @@ export default function Footer() {
         </motion.div>
       </div>
     </footer>
-  )
+  );
 }

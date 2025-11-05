@@ -118,7 +118,6 @@ export default function FAQSection() {
                     aria-expanded={openItemId === item.id}
                   >
                     <div className="flex items-center">
-                      <span className="text-accent mr-3">•</span>
                       <span className="text-secondary font-text-important">
                         {t(item.questionKey)}
                       </span>
@@ -131,9 +130,9 @@ export default function FAQSection() {
                       className="text-accent"
                     >
                       {openItemId === item.id ? (
-                        <ChevronUp size={20} />
+                        <ChevronUp size={20} className="text-brand-accent"/>
                       ) : (
-                        <ChevronDown size={20} />
+                        <ChevronDown size={20} className="text-brand-accent"/>
                       )}
                     </motion.div>
                   </button>

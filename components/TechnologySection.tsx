@@ -2,12 +2,57 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Lock, Brain, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export default function TechnologySection() {
   const { t } = useTranslation();
+
+  // Detect if screen is lg+ (1024px)
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [maxY, setMaxY] = useState(0);
+
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    // Check on mount
+    checkScreenSize();
+
+    // Add event listener
+    window.addEventListener("resize", checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  // Calculate height difference between left and right sections
+  useEffect(() => {
+    const calculateHeightDifference = () => {
+      if (leftRef.current && rightRef.current && isLargeScreen) {
+        const leftHeight = leftRef.current.offsetHeight;
+        const rightHeight = rightRef.current.offsetHeight;
+        const difference = rightHeight - leftHeight;
+        setMaxY(difference > 0 ? difference : 0);
+      } else {
+        setMaxY(0);
+      }
+    };
+
+    // Calculate on mount and when screen size changes
+    calculateHeightDifference();
+
+    // Recalculate on window resize
+    window.addEventListener("resize", calculateHeightDifference);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", calculateHeightDifference);
+  }, [isLargeScreen]);
 
   const scrollToNextSection = () => {
     const section = document.getElementById("solutions");
@@ -19,17 +64,6 @@ export default function TechnologySection() {
     }
   };
 
-  const aiBenefitsKeys = [
-    "technology.ai.features.learning",
-    "technology.ai.features.recognition",
-    "technology.ai.features.analytics",
-  ];
-
-  const blockchainBenefitsKeys = [
-    "technology.blockchain.features.ledger",
-    "technology.blockchain.features.contracts",
-    "technology.blockchain.features.security",
-  ];
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -41,6 +75,9 @@ export default function TechnologySection() {
     [0, 0.5],
     ["0%", "100%"]
   );
+
+  // Left section Y movement: uses calculated pixel difference for consistent behavior
+  const leftY = useTransform(scrollYProgress, [0, 1], [-100, maxY]);
 
   // Animation variants for the split-reveal effect
 
@@ -56,9 +93,11 @@ export default function TechnologySection() {
     >
       <div className="grid gap-0 lg:grid-cols-2 lg:gap-16">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="flex flex-col text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10"
+          ref={leftRef}
+          initial={{ opacity: 0, y: 0 }}
+          whileInView={{ opacity: 1 }}
+          style={{ y: isLargeScreen ? leftY : 0 }}
+          className="flex flex-col text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10 lg:self-start"
         >
           <h2 className="mb-4 lg:mb-6 text-secondary text-balance font-title">
             {t("technology.title")}
@@ -70,12 +109,13 @@ export default function TechnologySection() {
             type="submit"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={scrollToNextSection}
             className="mt-4 bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer self-center lg:self-start hidden lg:block"
           >
             <span className="font-text-important">{t("technology.cta")}</span>
           </motion.button>
         </motion.div>
-        <div className="p-4 sm:px-6 lg:px-8 items-center flex flex-col gap-6 ">
+        <div ref={rightRef} className="p-4 sm:px-6 lg:px-8 items-center flex flex-col gap-6 ">
           {/* Blockchain Technology Card */}
           <motion.div
             whileHover={{
@@ -110,14 +150,6 @@ export default function TechnologySection() {
               </motion.p>
             </motion.div>
           </motion.div>
-
-          {/* Vertical Line Divider */}
-          <motion.div
-            className="invisible lg:visible absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 bg-brand-accent-bright"
-            transition={{ delay: 2 }}
-            initial={{ height: 0 }}
-            style={{ height: scrollYProgressLine }}
-          ></motion.div>
 
           {/* AI Technology Card */}
           <motion.div
