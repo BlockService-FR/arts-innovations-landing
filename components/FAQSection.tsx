@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
 
@@ -53,7 +53,7 @@ export default function FAQSection() {
     open: { rotate: 180 },
   };
 
-  const contentVariants = {
+  const contentVariants: Variants = {
     closed: {
       height: 0,
       opacity: 0,
@@ -86,7 +86,7 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="pt-16 lg:pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
+      className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">

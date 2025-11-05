@@ -49,7 +49,7 @@ export default function TechnologySection() {
     <motion.section
       id="technology"
       ref={sectionRef}
-      className="pt-16 lg:pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
+      className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
       exit="exit"

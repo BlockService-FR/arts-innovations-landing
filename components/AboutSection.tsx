@@ -54,7 +54,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="pt-16 lg:pt-20 relative min-h-screen flex flex-col gap-16 justify-start items-center overflow-hidden">
+    <section id="about" className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden">
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>

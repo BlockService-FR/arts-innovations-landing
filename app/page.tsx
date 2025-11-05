@@ -14,11 +14,11 @@ import FAQSection from "@/components/FAQSection";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
 export default function Home() {
-   const containerRef = useRef<HTMLDivElement>(null);
-   const [isScrolled, setIsScrolled] = useState(false);
-   const { scrollY } = useScroll({ container: containerRef, layoutEffect: false });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollY } = useScroll({ container: containerRef });
 
-   useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 50) {
       setIsScrolled(true);
     } else {
@@ -29,31 +29,22 @@ export default function Home() {
   return (
     <main className="bg-gradient-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80 text-white overflow-x-hidden">
       <Navigation isScrolled={isScrolled} />
-      <div ref={containerRef} className="snap-proximity md:snap-mandatory snap-y overflow-y-scroll h-screen">
-        <div className="snap-always snap-center">
-          <HeroSection />
-        </div>
-        <div className="snap-always snap-start">
-          <TechnologySection />
-        </div>
-        <div className="snap-always snap-start">
-          <SolutionsSection />
-        </div>
-        <div className="snap-always snap-start">
-          <ImpactSection />
-        </div>
-        <div className="snap-always snap-start">
-          <AboutSection />
-        </div>
-        <div className="snap-always snap-start">
-          <FAQSection />
-        </div>
-        <div className="snap-always snap-start">
-          <ContactSection />
-        </div>
-        <div className="snap-always snap-end">
-          <Footer />
-          </div>
+      <div ref={containerRef} className="overflow-y-scroll h-screen">
+        <HeroSection />
+
+        <TechnologySection />
+
+        <SolutionsSection />
+
+        <ImpactSection />
+
+        <AboutSection />
+
+        <FAQSection />
+
+        <ContactSection />
+
+        <Footer />
       </div>
     </main>
   );

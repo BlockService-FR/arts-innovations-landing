@@ -77,7 +77,7 @@ export default function SolutionsSection() {
   return (
     <section
       id="solutions"
-      className="pt-16 lg:pt-20 relative min-h-screen flex flex-col justify-start items-center overflow-hidden"
+      className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
         <h2 className="mb-4 text-arts-light text-balance font-title">
