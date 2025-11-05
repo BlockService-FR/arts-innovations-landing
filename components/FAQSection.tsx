@@ -90,14 +90,14 @@ export default function FAQSection() {
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
-        <h2 className="mb-2 text-arts-light text-balance font-title">
+        <h2 className="mb-2 text-secondary text-balance font-title">
           {t("faq.title")}
         </h2>
-        <p className="text-arts-light mx-auto text-balance font-subtitle">
+        <p className="text-secondary mx-auto text-balance font-subtitle">
           {t("faq.description")}{" "}
                 <a
                   href="#contact"
-                  className="text-arts-green hover:text-arts-lime transition-colors font-text-important"
+                  className="text-accent hover:text-hover-accent transition-colors font-text-important"
                 >
                   {t("faq.cta")}
                 </a>!
@@ -109,7 +109,7 @@ export default function FAQSection() {
               {faqItems.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green transition-all duration-300 cursor-pointer"
+                  className="bg-card backdrop-blur-sm rounded-2xl border border-default hover:border-accent transition-all duration-300 cursor-pointer"
                 >
                   {/* Question header */}
                   <button
@@ -118,8 +118,8 @@ export default function FAQSection() {
                     aria-expanded={openItemId === item.id}
                   >
                     <div className="flex items-center">
-                      <span className="text-arts-green mr-3">•</span>
-                      <span className="text-arts-light font-text-important">
+                      <span className="text-accent mr-3">•</span>
+                      <span className="text-secondary font-text-important">
                         {t(item.questionKey)}
                       </span>
                     </div>
@@ -128,7 +128,7 @@ export default function FAQSection() {
                       initial="closed"
                       animate={openItemId === item.id ? "open" : "closed"}
                       transition={{ duration: 0.3, ease: [0.3, 0, 0, 1] }}
-                      className="text-arts-green"
+                      className="text-accent"
                     >
                       {openItemId === item.id ? (
                         <ChevronUp size={20} />
@@ -150,7 +150,7 @@ export default function FAQSection() {
                         className="overflow-hidden"
                       >
                         <div
-                          className="px-4 sm:px-6 pb-6 pt-0 text-arts-light font-text"
+                          className="px-4 sm:px-6 pb-6 pt-0 text-secondary font-text"
                           style={{ whiteSpace: "pre-wrap" }}
                         >
                           {t(item.answerKey)}

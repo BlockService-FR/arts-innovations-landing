@@ -5,27 +5,154 @@
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-weight-medium: 400;
-  
-  /* ARTS Brand Colors */
-  --color-arts-navy: #0b1928;
-  --color-arts-teal: #273543;
-  --color-arts-green: #c0ff7e;
-  --color-arts-lime: #c0ff7e;
-  --color-arts-dark: #000000;
-  --color-arts-gray: #cccccc;
-  --color-arts-light: #f6f6f6;
-  
+
+  /* ========================================
+     COLOR USAGE GUIDE
+     ========================================
+
+     BACKGROUNDS:
+     - bg-primary: Main page background (#0b1928)
+     - bg-secondary: Section/card backgrounds (#273543)
+     - bg-card: Semi-transparent cards (already includes opacity)
+     - bg-elevated: Highlighted/elevated components
+
+     TEXT:
+     - text-primary: High contrast white text (#ffffff)
+     - text-secondary: Body text, off-white (#f6f6f6)
+     - text-muted: Secondary/helper text (#cccccc)
+     - text-accent: Branded links/highlights (#c0ff7e)
+     - text-inverse: Text on light backgrounds (#0b1928)
+
+     BORDERS:
+     - border-default: Standard borders (#f6f6f6)
+     - border-muted: Subtle dividers (white 30% opacity)
+     - border-accent: Interactive/hover states (#c0ff7e)
+     - border-input: Form input borders (#e5e7eb)
+
+     INTERACTIVE:
+     - hover:bg-hover-accent: Hover backgrounds (#a4ff00)
+     - focus:ring-focus-ring: Focus indicators (#c0ff7e)
+     - hover:border-accent: Hover borders (#c0ff7e)
+
+     BUTTONS:
+     - bg-button-primary: Primary action buttons (#c0ff7e)
+     - hover:bg-button-primary-hover: Button hover (#a4ff00)
+     - text-button-text: Text on colored buttons (#0b1928)
+
+     BRAND COLORS (use sparingly):
+     - brand-accent: Primary green (#c0ff7e)
+     - brand-accent-bright: Bright lime (#a4ff00)
+     - brand-purple: Purple accent (#681ee0)
+     - brand-purple-light: Light purple (#983ad6)
+     ======================================== */
+
+  /* ========================================
+     BRAND COLORS (Core Identity)
+     ======================================== */
+  --color-brand-navy: #0b1928;
+  --color-brand-teal: #273543;
+  --color-brand-accent: #c0ff7e;
+  --color-brand-accent-bright: #a4ff00;
+  --color-brand-purple: #681ee0;
+  --color-brand-purple-light: #983ad6;
+
+  /* ========================================
+     BACKGROUND COLORS (Semantic)
+     ======================================== */
+  --color-bg-primary: #0b1928;
+  --color-bg-secondary: #273543;
+  --color-bg-tertiary: #0a0e12;
+  --color-bg-overlay: #0b192866;
+  --color-bg-card: #27354380;
+  --color-bg-elevated: #1a1a2e;
+
+  /* ========================================
+     TEXT COLORS (Semantic)
+     ======================================== */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #f6f6f6;
+  --color-text-muted: #cccccc;
+  --color-text-disabled: #808080;
+  --color-text-accent: #c0ff7e;
+  --color-text-inverse: #0b1928;
+
+  /* ========================================
+     BORDER COLORS (Semantic)
+     ======================================== */
+  --color-border-default: #f6f6f6;
+  --color-border-muted: #ffffff4d;
+  --color-border-subtle: #ffffff1f;
+  --color-border-accent: #c0ff7e;
+  --color-border-focus: #c0ff7e;
+  --color-border-input: #e5e7eb;
+
+  /* ========================================
+     INTERACTIVE STATES
+     ======================================== */
+  --color-hover-accent: #a4ff00;
+  --color-hover-bg: #c0ff7e;
+  --color-focus-ring: #c0ff7e;
+  --color-active: #9ccf65;
+
+  /* ========================================
+     NEUTRAL/GRAYSCALE PALETTE
+     ======================================== */
+  --color-neutral-0: #000000;
+  --color-neutral-50: #f6f6f6;
+  --color-neutral-100: #e5e7eb;
+  --color-neutral-200: #cccccc;
+  --color-neutral-300: #a9a9a9;
+  --color-neutral-400: #808080;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-950: #0f1728;
+
+  /* ========================================
+     COMPONENT-SPECIFIC COLORS
+     ======================================== */
+  --color-input-bg: transparent;
+  --color-input-border: #e5e7eb;
+  --color-input-focus: #c0ff7e;
+  --color-input-placeholder: #cccccc;
+
+  --color-button-primary: #c0ff7e;
+  --color-button-primary-hover: #a4ff00;
+  --color-button-text: #0b1928;
+
+  --color-icon-accent: #c0ff7e;
+  --color-icon-bright: #a4ff00;
+  --color-icon-muted: #808080;
+
+  /* ========================================
+     EFFECTS & OVERLAYS
+     ======================================== */
+  --color-glow-green: #c0ff7e;
+  --color-glow-lime: #a4ff2b;
+  --color-shadow-teal: #2d4a5a;
+
+  /* ========================================
+     LEGACY ALIASES (Backward Compatibility)
+     ======================================== */
+  --color-arts-navy: var(--color-brand-navy);
+  --color-arts-teal: var(--color-brand-teal);
+  --color-arts-green: var(--color-brand-accent);
+  --color-arts-lime: var(--color-brand-accent-bright);
+  --color-arts-light: var(--color-text-secondary);
+  --color-arts-gray: var(--color-neutral-200);
+  --color-arts-dark: var(--color-neutral-0);
+
   /* Custom Spacing */
   --spacing-18: 4.5rem;
   --spacing-88: 22rem;
-  
+
   /* Custom Breakpoints */
   --breakpoint-3xl: 1920px;
-  
+
   /* Custom Animations */
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-  
+
   /* Custom Shadows */
   --shadow-arts: 0 20px 40px rgba(154, 255, 0, 0.2);
   --shadow-teal: 0 20px 40px rgba(45, 74, 90, 0.3);
@@ -40,7 +167,7 @@
 
   html {
     scroll-behavior: smooth;
-    
+
   }
 
   body {
@@ -53,6 +180,7 @@
 }
 
 @layer components {
+
   /* Custom scrollbar with ARTS colors */
   ::-webkit-scrollbar {
     width: 8px;
@@ -98,11 +226,13 @@
     text-transform: uppercase;
     font-size: 38px;
   }
+
   .font-hero-subtitle {
     font-family: var(--font-montserrat);
     font-weight: 400;
     font-size: 18px;
   }
+
   .font-hero-text {
     font-family: var(--font-montserrat);
     font-weight: 400;

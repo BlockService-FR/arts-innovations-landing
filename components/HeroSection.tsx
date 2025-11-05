@@ -84,12 +84,12 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="mb-6 pb-2 bg-gradient-to-r text-arts-light bg-clip-text font-hero-title">
+            <h1 className="mb-6 pb-2 bg-gradient-to-r text-secondary bg-clip-text font-hero-title">
               {t("hero.title.before")}{" "}
               <WordRotate className="text-arts-lime" words={heroWords} />{" "}
               {t("hero.title.after")}
             </h1>
-            <p className="text-arts-light mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle">
+            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle">
               {t("hero.subtitle")}
             </p>
           </motion.div>
@@ -98,18 +98,18 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap justify-center items-center gap-8 text-sm text-arts-light font-hero-text"
+            className="flex flex-wrap justify-center items-center gap-8 text-sm text-secondary font-hero-text"
           >
             <div className="flex items-center space-x-2">
-              <Shield size={16} className="text-arts-green" />
+              <Shield size={16} className="text-brand-accent" />
               <span>{t("hero.trustIndicators.sovereign")}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Zap size={16} className="text-arts-lime" />
+              <Zap size={16} className="text-accent" />
               <span>{t("hero.trustIndicators.compliant")}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Globe size={16} className="text-arts-green" />
+              <Globe size={16} className="text-brand-accent" />
               <span>{t("hero.trustIndicators.immutable")}</span>
             </div>
           </motion.div>
@@ -128,7 +128,7 @@ export default function HeroSection() {
           onClick={scrollToTechnology}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="text-arts-lime px-8 py-10 flex items-center space-x-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
+          className="text-accent px-8 py-10 flex items-center space-x-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
         >
           <ChevronDown size={40} />
         </motion.button>

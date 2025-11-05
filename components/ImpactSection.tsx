@@ -40,16 +40,16 @@ export default function ImpactSection() {
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
 
         <motion.div
-          
+
           className="mb-10 lg:order-2 text-center lg:text-end"
         >
-          <h2 className="mb-6 text-arts-light text-balance font-title">
+          <h2 className="mb-6 text-secondary text-balance font-title">
             {t('impact.title')}
           </h2>
-          <p className="text-arts-light ml-auto mt-10 font-subtitle">
+          <p className="text-secondary ml-auto mt-10 font-subtitle">
             {t('impact.subtitle')}
           </p>
-          <p className="text-arts-light max-w-3xl ml-auto mt-10 font-text">
+          <p className="text-secondary max-w-3xl ml-auto mt-10 font-text">
             {t('impact.description')}
           </p>
         </motion.div>
@@ -59,19 +59,19 @@ export default function ImpactSection() {
             return (
               <motion.div
                 key={index}
-                className="text-center p-6 bg-arts-teal/50 backdrop-blur-sm rounded-2xl border border-arts-light hover:border-arts-green transition-all duration-300"
+                className="text-center p-6 bg-card backdrop-blur-sm rounded-2xl border border-default hover:border-accent transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-arts-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon size={32} className="text-arts-navy" />
+                <div className="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon size={32} className="text-inverse" />
                 </div>
                 <motion.div
-                  className="text-arts-green mb-2 font-content-title"
+                  className="text-accent mb-2 font-content-title"
                 >
                   {/* <AnimatedCounter from={0} to={99} /> */}
                   {stat.valueKey ? t(stat.valueKey) : <AnimatedCounter from={0} to={stat.value!} suffix="%"/>}
                 </motion.div>
-                <h3 className="mb-2 text-arts-light font-content-subtitle-important">{t(stat.labelKey)}</h3>
-                <p className="text-arts-light font-text-light">{t(stat.descriptionKey)}</p>
+                <h3 className="mb-2 text-secondary font-content-subtitle-important">{t(stat.labelKey)}</h3>
+                <p className="text-secondary font-text-light">{t(stat.descriptionKey)}</p>
               </motion.div>
             )
           })}

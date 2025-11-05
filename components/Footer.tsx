@@ -22,7 +22,7 @@ export default function Footer() {
   // ]
 
   return (
-    <footer className="bg-arts-navy border-t border-arts-green/20">
+    <footer className="bg-primary border-t border-accent/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -43,9 +43,9 @@ export default function Footer() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="font-space-grotesk font-bold text-xl text-white">ARTS Innovations</span>
+                <span className="font-space-grotesk font-bold text-xl text-primary">ARTS Innovations</span>
               </div>
-              <p className="text-gray-300 mb-6 max-w-md">
+              <p className="text-muted mb-6 max-w-md">
                 {t('footer.description')}
               </p>
               
@@ -62,9 +62,9 @@ export default function Footer() {
                       key={index}
                       href={social.href}
                       whileHover={{ scale: 1.1, y: -2 }}
-                      className="w-10 h-10 bg-arts-teal rounded-lg flex items-center justify-center hover:bg-arts-green transition-colors duration-300"
+                      className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center hover:bg-brand-accent transition-colors duration-300"
                     >
-                      <Icon size={20} className="text-white" />
+                      <Icon size={20} className="text-primary" />
                     </motion.a>
                   )
                 })}
@@ -105,12 +105,12 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           
-          className="border-t border-arts-green/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-accent/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-gray-300 text-sm">
+          <p className="text-muted text-sm">
             © {currentYear} ARTS Innovations. {t('footer.legal.rights')}
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/* <div className="flex space-x-6 mt-4 md:mt-0">
             {[
               'footer.legal.privacy',
               'footer.legal.terms',
@@ -120,12 +120,12 @@ export default function Footer() {
                 key={index}
                 href="#"
                 whileHover={{ y: -1 }}
-                className="text-gray-300 hover:text-arts-green text-sm transition-colors duration-200"
+                className="text-muted hover:text-accent text-sm transition-colors duration-200"
               >
                 {t(linkKey)}
               </motion.a>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </footer>

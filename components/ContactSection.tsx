@@ -35,10 +35,10 @@ export default function ContactSection() {
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6">
         <motion.div className="text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10">
-          <h2 className="mb-4 lg:mb-6 text-arts-light text-balance font-title">
+          <h2 className="mb-4 lg:mb-6 text-secondary text-balance font-title">
             {t("contact.title")}
           </h2>
-          <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
+          <p className="text-secondary max-w-3xl text-balance font-subtitle">
             {t("contact.subtitle")}
           </p>
         </motion.div>
@@ -48,14 +48,14 @@ export default function ContactSection() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="bg-arts-teal/50 backdrop-blur-sm border border-arts-light hover:border-arts-green rounded-2xl p-8 shadow-lg mx-auto"
+              className="bg-card backdrop-blur-sm border border-default hover:border-accent rounded-2xl p-8 shadow-lg mx-auto"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-arts-light mb-2 font-text-important"
+                      className="block text-secondary mb-2 font-text-important"
                     >
                       {t("contact.form.name")} {t("contact.form.required")}
                     </label>
@@ -66,14 +66,14 @@ export default function ContactSection() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-light placeholder-arts-gray"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
                       placeholder={t("contact.form.namePlaceholder")}
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-arts-light mb-2 font-text-important"
+                      className="block text-secondary mb-2 font-text-important"
                     >
                       {t("contact.form.email")} {t("contact.form.required")}
                     </label>
@@ -84,7 +84,7 @@ export default function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-light placeholder-arts-gray"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
                       placeholder={t("contact.form.emailPlaceholder")}
                     />
                   </div>
@@ -93,7 +93,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="company"
-                    className="block text-arts-light mb-2 font-text-important"
+                    className="block text-secondary mb-2 font-text-important"
                   >
                     {t("contact.form.company")}
                   </label>
@@ -103,7 +103,7 @@ export default function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-light placeholder-arts-gray"
+                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
                     placeholder={t("contact.form.companyPlaceholder")}
                   />
                 </div>
@@ -111,7 +111,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-arts-light mb-2 font-text-important"
+                    className="block text-secondary mb-2 font-text-important"
                   >
                     {t("contact.form.message")} {t("contact.form.required")}
                   </label>
@@ -122,7 +122,7 @@ export default function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-arts-light placeholder-arts-gray resize-none"
+                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder resize-none"
                     placeholder={t("contact.form.messagePlaceholder")}
                   />
                 </div>
@@ -131,7 +131,7 @@ export default function ContactSection() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-arts-green text-arts-navy font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-arts-lime transition-all duration-300 cursor-pointer"
+                  className="w-full bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer"
                 >
                   <span className="font-text-important">
                     {t("contact.form.send")}

@@ -19,7 +19,7 @@ export function FloatingPaths({ position }: { position: number }) {
     return (
         <div className="absolute inset-0 pointer-events-none">
             <svg
-                className="w-full h-full text-arts-light"
+                className="w-full h-full text-secondary"
                 viewBox="0 0 696 316"
                 fill="none"
             >

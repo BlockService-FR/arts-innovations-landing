@@ -31,7 +31,7 @@ export default function Navigation({
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-arts-navy/95 backdrop-blur-md border-b border-arts-green/20' : 'bg-transparent'
+        isScrolled ? 'bg-primary/95 backdrop-blur-md border-b border-accent/20' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +58,7 @@ export default function Navigation({
                 key={item.key}
                 href={item.href}
                 whileHover={{ y: -2 }}
-                className="text-gray-200 hover:text-arts-green transition-colors duration-200 font-menu-text"
+                className="text-secondary hover:text-accent transition-colors duration-200 font-menu-text"
               >
                 {t(`navigation.${item.key}`)}
               </motion.a>
@@ -71,7 +71,7 @@ export default function Navigation({
             {/* <LanguageSwitcher /> */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-arts-green transition-colors duration-200"
+              className="text-primary hover:text-accent transition-colors duration-200"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -83,13 +83,13 @@ export default function Navigation({
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden bg-arts-navy/95 backdrop-blur-md rounded-lg mt-2 p-4 border border-arts-green/20"
+            className="md:hidden bg-primary/95 backdrop-blur-md rounded-lg mt-2 p-4 border border-accent/20"
           >
             {navItems.map((item) => (
               <a
                 key={item.key}
                 href={item.href}
-                className="block py-2 text-gray-200 hover:text-arts-green transition-colors duration-200 font-menu-text"
+                className="block py-2 text-secondary hover:text-accent transition-colors duration-200 font-menu-text"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t(`navigation.${item.key}`)}

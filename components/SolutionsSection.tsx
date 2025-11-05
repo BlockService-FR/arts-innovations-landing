@@ -84,13 +84,13 @@ export default function SolutionsSection() {
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
-        <h2 className="mb-2 text-arts-light text-balance font-title">
+        <h2 className="mb-2 text-secondary text-balance font-title">
           {t("solutions.title")}
         </h2>
-        <h2 className="mb-4 text-arts-light text-balance font-title">
+        <h2 className="mb-4 text-secondary text-balance font-title">
           {t("solutions.subtitle")}
         </h2>
-        <p className="text-arts-light mx-auto text-balance font-subtitle">
+        <p className="text-secondary mx-auto text-balance font-subtitle">
           {t("solutions.description")}
         </p>
       </motion.div>
@@ -107,10 +107,11 @@ export default function SolutionsSection() {
                     duration: 0.3,
                   },
                 }}
-                className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light hover:border-arts-green transition-all duration-300 overflow-hidden h-full"
+                className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300 overflow-hidden h-full flex flex-col"
               >
-                {/* Phase 1: Initial Content - Image and Subtitle */}
-                <motion.div>
+                <div className="flex-grow">
+                  {/* Phase 1: Initial Content - Image and Subtitle */}
+                  <motion.div>
                   <div className="w-full h-auto mb-6 lg:mb-8 max-w-xs items-start">
                     <Image
                       src={solution.image}
@@ -127,7 +128,7 @@ export default function SolutionsSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-arts-light font-subtitle-alt">
+                    <p className="text-secondary font-subtitle-alt">
                       {t(solution.subtitleKey)}
                     </p>
                   </div>
@@ -137,14 +138,14 @@ export default function SolutionsSection() {
                 <motion.div className="space-y-4">
                   {/* Description */}
                   <motion.div className="mt-4 lg:mt-6">
-                    <p className="text-arts-light leading-relaxed font-text">
+                    <p className="text-secondary leading-relaxed font-text">
                       {t(solution.descriptionKey)}
                     </p>
                   </motion.div>
 
                   {/* Features Section */}
                   <motion.div>
-                    <h4 className="text-arts-light mb-2 lg:mb-4 font-text-important">
+                    <h4 className="text-secondary mb-2 lg:mb-4 font-text-important">
                       {t("solutions.keyFeatures")}
                     </h4>
 
@@ -154,8 +155,8 @@ export default function SolutionsSection() {
                           key={benefitIndex}
                           className="flex items-center space-x-3"
                         >
-                          <motion.div className="w-2 h-2 bg-arts-light rounded-full flex-shrink-0" />
-                          <span className="text-arts-light">
+                          <motion.div className="w-2 h-2 bg-neutral-50 rounded-full shrink-0" />
+                          <span className="text-secondary">
                             {t(benefitKey)}
                           </span>
                         </motion.li>
@@ -163,14 +164,25 @@ export default function SolutionsSection() {
                     </motion.ul>
                   </motion.div>
                 </motion.div>
-                <div className="border-t border-slate-700 my-8" />
-                <div className="flex items-start gap-4">
-                  {/* Icon Container */}
-                  <div className="flex items-center justify-center">
-                    <LighningIcon className="w-6 h-6 fill-lime-400 mt-0.5 mr-2" />
-                    <p className="text-lime-400 font-semibold text-sm sm:text-base leading-relaxed pt-1">
-                      {t(solution.calloutKey)}
-                    </p>
+                </div>
+
+                {/* Bottom Callout Section - Always at bottom */}
+                <div className="mt-auto pt-8">
+                  <div
+                    className="h-px mb-8"
+                    style={{
+                      background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.12) 0%, var(--color-brand-accent) 49%, transparent 100%)',
+                      opacity: 1
+                    }}
+                  />
+                  <div className="flex items-start gap-4">
+                    {/* Icon Container */}
+                    <div className="flex items-center justify-center">
+                      <LighningIcon className="w-6 h-6 fill-icon-bright mt-0.5 mr-2" />
+                      <p className="text-brand-accent-bright font-semibold text-sm sm:text-base leading-relaxed pt-1">
+                        {t(solution.calloutKey)}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
