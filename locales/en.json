@@ -149,10 +149,11 @@
     }
   },
   "technology": {
-    "title": "The dual engine behind our innovation",
-    "subtitle": "AI for insight, Blockchain for trust - engineered for aerospace.",
+    "title": "Faster. Smarter. Safer.",
+    "subtitle": "AI-driven insights and blockchain-backed security for the entire aerospace lifecycle.",
     "metraBackbone": "ARTS INNOVATIONS BACKBONE",
     "metraDescription": "Sovereign blockchain designed to bring security, traceability, and regulatory trust to aerospace asset management",
+    "cta": "Find out more",
     "labels": {
       "aiAnalytics": "AI Analytics",
       "blockchain": "Blockchain",
