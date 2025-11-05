@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import LighningIcon from "@/public/lighning.svg";
 
 export default function SolutionsSection() {
   const { t } = useTranslation();
@@ -26,6 +26,7 @@ export default function SolutionsSection() {
       titleKey: "solutions.metrafleet.title",
       subtitleKey: "solutions.metrafleet.subtitle",
       descriptionKey: "solutions.metrafleet.description",
+      calloutKey: "solutions.metrafleet.callout",
       featuresKeys: [
         "solutions.metrafleet.features.lifecycle",
         "solutions.metrafleet.features.compliance",
@@ -39,6 +40,7 @@ export default function SolutionsSection() {
       titleKey: "solutions.metrasign.title",
       subtitleKey: "solutions.metrasign.subtitle",
       descriptionKey: "solutions.metrasign.description",
+      calloutKey: "solutions.metrasign.callout",
       featuresKeys: [
         "solutions.metrasign.features.immutable",
         "solutions.metrasign.features.certification",
@@ -52,6 +54,7 @@ export default function SolutionsSection() {
       titleKey: "solutions.metraseal.title",
       subtitleKey: "solutions.metraseal.subtitle",
       descriptionKey: "solutions.metraseal.description",
+      calloutKey: "solutions.metraseal.callout",
       featuresKeys: [
         "solutions.metraseal.features.nfc",
         "solutions.metraseal.features.identity",
@@ -65,6 +68,7 @@ export default function SolutionsSection() {
       titleKey: "solutions.metrafield.title",
       subtitleKey: "solutions.metrafield.subtitle",
       descriptionKey: "solutions.metrafield.description",
+      calloutKey: "solutions.metrafield.callout",
       featuresKeys: [
         "solutions.metrafield.features.mobile",
         "solutions.metrafield.features.reports",
@@ -80,15 +84,18 @@ export default function SolutionsSection() {
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
-        <h2 className="mb-4 text-arts-light text-balance font-title">
+        <h2 className="mb-2 text-arts-light text-balance font-title">
           {t("solutions.title")}
         </h2>
-        <p className="text-arts-light max-w-3xl mx-auto text-balance font-subtitle">
+        <h2 className="mb-4 text-arts-light text-balance font-title">
           {t("solutions.subtitle")}
+        </h2>
+        <p className="text-arts-light mx-auto text-balance font-subtitle">
+          {t("solutions.description")}
         </p>
       </motion.div>
       <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 h-full w-full">
           {solutions.map((solution, index) => {
             return (
               <motion.div
@@ -97,7 +104,7 @@ export default function SolutionsSection() {
                   scale: prefersReducedMotion ? 1 : 1.02,
                   y: prefersReducedMotion ? 0 : -5,
                   transition: {
-                    duration: 0.3
+                    duration: 0.3,
                   },
                 }}
                 className="bg-arts-teal/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light hover:border-arts-green transition-all duration-300 overflow-hidden h-full"
@@ -147,34 +154,30 @@ export default function SolutionsSection() {
                           key={benefitIndex}
                           className="flex items-center space-x-3"
                         >
-                          <motion.div className="w-2 h-2 bg-arts-green rounded-full flex-shrink-0" />
-                          <span className="text-arts-light">{t(benefitKey)}</span>
+                          <motion.div className="w-2 h-2 bg-arts-light rounded-full flex-shrink-0" />
+                          <span className="text-arts-light">
+                            {t(benefitKey)}
+                          </span>
                         </motion.li>
                       ))}
                     </motion.ul>
                   </motion.div>
                 </motion.div>
+                <div className="border-t border-slate-700 my-8" />
+                <div className="flex items-start gap-4">
+                  {/* Icon Container */}
+                  <div className="flex items-center justify-center">
+                    <LighningIcon className="w-6 h-6 fill-lime-400 mt-0.5 mr-2" />
+                    <p className="text-lime-400 font-semibold text-sm sm:text-base leading-relaxed pt-1">
+                      {t(solution.calloutKey)}
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             );
           })}
         </div>
       </div>
-      {/* CTA Button - Positioned at bottom of section */}
-      {/* <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="absolute bottom-0 z-10 flex justify-center items-center"
-      >
-        <motion.button
-          onClick={scrollToNextSection}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="text-arts-lime px-8 py-10 font-semibold flex items-center space-x-2 text-lg hover:shadow-lg transition-all duration-300 cursor-pointer"
-        >
-          <ChevronDown size={40} />
-        </motion.button>
-      </motion.div> */}
     </section>
   );
 }

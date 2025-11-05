@@ -3,32 +3,13 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Award, Users, Globe, Zap } from "lucide-react";
+import Image from "next/image";
+import LogoIcon from "@/public/logo-white.svg";
 
 export default function AboutSection() {
   const { t } = useTranslation();
 
-  const milestones = [
-    {
-      year: "2010",
-      eventKey: "about.timeline.2000.event",
-      descriptionKey: "about.timeline.2000.description",
-    },
-    {
-      year: "2020",
-      eventKey: "about.timeline.2020.event",
-      descriptionKey: "about.timeline.2020.description",
-    },
-    {
-      year: "2024",
-      eventKey: "about.timeline.2024.event",
-      descriptionKey: "about.timeline.2024.description",
-    },
-    {
-      year: "2025",
-      eventKey: "about.timeline.2025.event",
-      descriptionKey: "about.timeline.2025.description",
-    },
-  ];
+  
 
   const aboutStats = [
     {
@@ -54,72 +35,59 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden">
+    <section
+      id="about"
+      className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
+    >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <motion.div
-              className="text-start mb-10"
-            >
-              <h2 className="mb-6 text-arts-light text-balance font-title">
+        <div
+          className="bg-slate-950 rounded-2xl border-2 border-lime-400 shadow-lg"
+          style={{
+            boxShadow:
+              "0 0 30px rgba(164, 255, 43, 0.3), inset 0 0 30px rgba(164, 255, 43, 0.05)",
+          }}
+        >
+          <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            {/* Left Content Section */}
+            <div className="flex-1">
+              {/* Main Heading */}
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight font-sans">
                 {t("about.title")}
               </h2>
-              <p className="text-arts-light mr-auto mt-10 font-subtitle">
-                {t("about.subtitle")}
-              </p>
-            </motion.div>
-            {/* Content */}
-            <motion.div>
-              <p
-                className="text-arts-light mb-8 font-text"
-                style={{ whiteSpace: "pre-wrap" }}
-              >
+
+              {/* Descriptive Text - Italicized */}
+              <p className="text-base md:text-lg text-gray-300 mb-8 italic font-sans leading-relaxed">
                 {t("about.description")}
               </p>
 
-              <motion.ul className="space-y-3 font-text">
-                {aboutStats.map((item, index) => (
-                  <motion.li
-                    key={index}
-                    className="flex items-center space-x-3"
-                  >
-                    <motion.div
-                      className="w-2 h-2 bg-arts-green rounded-full"
-                    />
-                    <span className="text-arts-light">
-                      {t(item.labelKey)} {t(item.sublabelKey)}
+              {/* Stats with Checkmarks */}
+              <div className="space-y-2">
+                {aboutStats.map((stat, index) => (
+                  <div key={index} className="flex items-center gap-4">
+                    <div className="text-lime-400 text-xl font-bold">✓</div>
+                    <span className="text-white text-base font-sans">
+                      {t(stat.labelKey)} {t(stat.sublabelKey)}
                     </span>
-                  </motion.li>
+                  </div>
                 ))}
-              </motion.ul>
-            </motion.div>
-          </div>
-
-          {/* Timeline */}
-          <motion.div
-            className="relative mx-auto"
-          >
-            <div className="space-y-16 pt-6 lg:pt-8 z-10">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center space-x-6"
-                >
-                  <div className="w-20 h-20 bg-arts-teal/50 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-arts-green text-arts-light font-subtitle-alt">
-                    {milestone.year}
-                  </div>
-                  <div>
-                     <h3 className="text-arts-light mb-2 font-text-important">
-                        {t(milestone.eventKey)}
-                      </h3>
-                      <p className="text-arts-light font-text">
-                        {t(milestone.descriptionKey)}
-                      </p>
-                  </div>
-                </motion.div>
-              ))}
+              </div>
             </div>
-          </motion.div>
+
+            {/* Right Branding Section */}
+            <div className="flex flex-col items-center justify-center md:ml-8">
+              <LogoIcon className="mb-2"/>
+
+              {/* ARTS GROUP Text */}
+              <div className="text-center">
+                <p className="text-3xl md:text-4xl font-bold text-white font-sans tracking-wide">
+                  ARTS
+                </p>
+                <p className="text-lg md:text-xl text-gray-400 font-sans tracking-widest">
+                  GROUP
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

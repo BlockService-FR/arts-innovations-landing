@@ -36,7 +36,7 @@ export default function Home() {
 
         <SolutionsSection />
 
-        <ImpactSection />
+        {/* <ImpactSection /> */}
 
         <AboutSection />
 

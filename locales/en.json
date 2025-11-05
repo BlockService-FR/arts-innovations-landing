@@ -47,14 +47,15 @@
     }
   },
   "solutions": {
-    "title": "Complete Aerospace Ecosystem",
-    "subtitle": "METRA Platform Solutions",
-    "description": "Security, traceability, and regulatory trust for aerospace asset management",
+    "title": "One Ecosystem.",
+    "subtitle": "Four Powerful Solutions.",
+    "description": "Manage, certify, authenticate, and inspect with a unified suite of blockchain-enabled products designed to enhance efficiency, compliance, and asset value.",
     "keyFeatures": "Features:",
     "metrafleet": {
       "title": "MetraFleet",
       "subtitle": "Real-time Asset Management",
-      "description": "Preserve asset value via lifecycle-wide data control and active compliance",
+      "description": "Stay in control of your fleet, every second.",
+      "callout": "Protect asset value with full lifecycle traceability",
       "features": {
         "lifecycle": "Lifecycle tracking",
         "compliance": "Active compliance",
@@ -76,7 +77,8 @@
     "metrasign": {
       "title": "MetraSign",
       "subtitle": "Blockchain Document Certification",
-      "description": "Trusted, tamper-proof and auditable documentation for records & contracts",
+      "description": "Turn every record into a trusted source.",
+      "callout": "Eliminate fraud, accelerate audits, build trust.",
       "features": {
         "immutable": "Immutable records",
         "certification": "Digital certification",
@@ -86,8 +88,9 @@
     },
     "metraseal": {
       "title": "MetraSeal",
-      "subtitle": "Digital Component Authentication",
+      "subtitle": "From transport to installation, trust is sealed.",
       "description": "NFC/QR seal linked to on-chain digital identity for high-value components",
+      "callout": "Guarantee part authenticity and stop counterfeit risks",
       "features": {
         "nfc": "NFC/QR integration",
         "identity": "Digital identity",
@@ -98,7 +101,8 @@
     "metrafield": {
       "title": "MetraField",
       "subtitle": "Mobile Inspection Platform",
-      "description": "Mobile-App for PPI, mid-lease and end-of-lease inspections with instant reports",
+      "description": "Inspect faster. Report better. Trust more.",
+      "callout": "Cut inspection time by 50% and ensure compliance",
       "features": {
         "mobile": "Mobile inspections",
         "reports": "Instant reports",
@@ -251,7 +255,7 @@
     }
   },
   "about": {
-    "title": "Heritage Meets Innovation",
+    "title": "Empowering aviation with expertise and innovation",
     "subtitle": "25 years of industrial heritage. A vision turned towards the future.",
     "description": "ARTS Innovations was born of a strong conviction: aeronautics deserves the best technologies of its time. Backed by the expertise of ARTS, a benchmark player for over 25 years, our mission is clear: to lead the industry into a new era.",
     "stats": {
@@ -292,9 +296,9 @@
     }
   },
   "faq": {
-    "title": "FAQ",
-    "description": "Here are some of our most frequently asked questions. If you don't find yours here, feel free to",
-    "cta": "contact us",
+    "title": "We’ve got the answers you’re looking for",
+    "description": "Find answers to common queries about our product, features, and services. If you need more information, we’re here to",
+    "cta": "help",
     "ecosystem": {
       "question": "What is ARTS Innovations and how is your ecosystem unique for the aerospace industry?",
       "answer": "ARTS Innovations is a technological ecosystem that combines artificial intelligence and blockchain to meet the critical challenges of traceability, compliance and asset management in the aerospace industry. \nWe have developed a sovereign infrastructure, the METRA blockchain, dedicated to securing sensitive data (technical documents, maintenance histories, inspections, spare parts), while automating high value-added processes thanks to AI. This ecosystem is designed to integrate with industry regulatory and operational standards."

@@ -89,26 +89,22 @@ export default function FAQSection() {
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
-          {/* Left side - Title and description */}
-          <div className="lg:col-span-3">
-            <motion.div>
-              <h2 className="mb-6 text-arts-light font-title">FAQ</h2>
-              <p className="text-arts-light font-text">
-                {t("faq.description")}{" "}
+        <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <h2 className="mb-2 text-arts-light text-balance font-title">
+          {t("faq.title")}
+        </h2>
+        <p className="text-arts-light mx-auto text-balance font-subtitle">
+          {t("faq.description")}{" "}
                 <a
                   href="#contact"
                   className="text-arts-green hover:text-arts-lime transition-colors font-text-important"
                 >
                   {t("faq.cta")}
-                </a>
-                .
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Right side - FAQ Items */}
-          <div className="lg:col-span-9">
+                </a>!
+        </p>
+      </motion.div>
+        <div className="grid grid-cols-1 gap-10 lg:gap-20">
+          <div>
             <motion.div className="space-y-3">
               {faqItems.map((item, index) => (
                 <motion.div
