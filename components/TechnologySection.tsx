@@ -80,6 +80,45 @@ export default function TechnologySection() {
   const leftY = useTransform(scrollYProgress, [0, 1], [-100, maxY]);
 
   // Animation variants for the split-reveal effect
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  }
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
 
   return (
     <motion.section
@@ -89,13 +128,12 @@ export default function TechnologySection() {
       initial="hidden"
       whileInView="visible"
       exit="exit"
-      viewport={{ amount: 0.3 }}
+      viewport={{ amount: 0.2, once: false }}
     >
       <div className="grid gap-0 lg:grid-cols-2 lg:gap-16">
         <motion.div
           ref={leftRef}
-          initial={{ opacity: 0, y: 0 }}
-          whileInView={{ opacity: 1 }}
+          variants={titleVariants}
           style={{ y: isLargeScreen ? leftY : 0 }}
           className="flex flex-col text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10 lg:self-start"
         >
@@ -107,7 +145,13 @@ export default function TechnologySection() {
           </p>
           <motion.button
             type="submit"
-            whileHover={{ scale: 1.02 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.2 },
+            }}
             whileTap={{ scale: 0.98 }}
             onClick={scrollToNextSection}
             className="mt-4 bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer self-center lg:self-start hidden lg:block"
@@ -115,17 +159,28 @@ export default function TechnologySection() {
             <span className="font-text-important">{t("technology.cta")}</span>
           </motion.button>
         </motion.div>
-        <div ref={rightRef} className="p-4 sm:px-6 lg:px-8 items-center flex flex-col gap-6 ">
+        <motion.div
+          ref={rightRef}
+          variants={containerVariants}
+          className="p-4 sm:px-6 lg:px-8 items-center flex flex-col gap-6 "
+        >
           {/* Blockchain Technology Card */}
           <motion.div
+            variants={cardVariants}
             whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
+              scale: 1.03,
+              y: -8,
+              transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
             }}
             className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300"
           >
             <motion.div>
-              <motion.div className="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center mb-4">
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center mb-4"
+              >
                 <Image
                   src="/blockchain.svg"
                   alt="Blockchain Technology"
@@ -153,15 +208,21 @@ export default function TechnologySection() {
 
           {/* AI Technology Card */}
           <motion.div
-            custom={0}
+            variants={cardVariants}
             whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.2 },
+              scale: 1.03,
+              y: -8,
+              transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
             }}
             className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300"
           >
             <motion.div>
-              <motion.div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+              >
                 <Image
                   src="/ai.svg"
                   alt="Artificial Intelligence"
@@ -183,7 +244,7 @@ export default function TechnologySection() {
               </motion.p>
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

@@ -35,12 +35,59 @@ export default function ImpactSection() {
     }
   ]
 
+  // Animation variants
+  const titleVariants = {
+    hidden: { opacity: 0, x: 30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 40,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
   return (
-<section id="impact" className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden">
+<motion.section
+      id="impact"
+      className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1, once: false }}
+    >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
 
         <motion.div
-
+          variants={titleVariants}
           className="mb-10 lg:order-2 text-center lg:text-end"
         >
           <h2 className="mb-6 text-secondary text-balance font-title">
@@ -53,17 +100,31 @@ export default function ImpactSection() {
             {t('impact.description')}
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 lg:order-1">
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 gap-20 lg:order-1"
+        >
           {impactStats.map((stat, index) => {
             const Icon = stat.icon
             return (
               <motion.div
                 key={index}
+                variants={cardVariants}
+                whileHover={{
+                  scale: 1.05,
+                  y: -8,
+                  transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
+                }}
                 className="text-center p-6 bg-card backdrop-blur-sm rounded-2xl border border-default hover:border-accent transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: index * 0.1 + 0.3, duration: 0.4 }}
+                  className="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4"
+                >
                   <Icon size={32} className="text-inverse" />
-                </div>
+                </motion.div>
                 <motion.div
                   className="text-accent mb-2 font-content-title"
                 >
@@ -75,9 +136,9 @@ export default function ImpactSection() {
               </motion.div>
             )
           })}
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

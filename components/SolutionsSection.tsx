@@ -78,12 +78,59 @@ export default function SolutionsSection() {
     },
   ];
 
+  // Animation variants for stagger effects
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  }
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
   return (
-    <section
+    <motion.section
       id="solutions"
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1, once: false }}
     >
-      <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+      <motion.div
+        variants={titleVariants}
+        className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10"
+      >
         <h2 className="mb-2 text-secondary text-balance font-title">
           {t("solutions.title")}
         </h2>
@@ -95,16 +142,21 @@ export default function SolutionsSection() {
         </p>
       </motion.div>
       <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 h-full w-full">
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 h-full w-full"
+        >
           {solutions.map((solution, index) => {
             return (
               <motion.div
                 key={solution.id}
+                variants={cardVariants}
                 whileHover={{
-                  scale: prefersReducedMotion ? 1 : 1.02,
-                  y: prefersReducedMotion ? 0 : -5,
+                  scale: prefersReducedMotion ? 1 : 1.03,
+                  y: prefersReducedMotion ? 0 : -8,
                   transition: {
                     duration: 0.3,
+                    ease: [0.25, 0.1, 0.25, 1],
                   },
                 }}
                 className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300 overflow-hidden h-full flex flex-col"
@@ -112,7 +164,12 @@ export default function SolutionsSection() {
                 <div className="flex-grow">
                   {/* Phase 1: Initial Content - Image and Subtitle */}
                   <motion.div>
-                  <div className="w-full h-auto mb-6 lg:mb-8 max-w-xs items-start">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
+                    className="w-full h-auto mb-6 lg:mb-8 max-w-xs items-start"
+                  >
                     <Image
                       src={solution.image}
                       alt={t(solution.titleKey)}
@@ -125,7 +182,7 @@ export default function SolutionsSection() {
                         height: "100%",
                       }}
                     />
-                  </div>
+                  </motion.div>
 
                   <div className="space-y-2">
                     <p className="text-secondary font-subtitle-alt">
@@ -188,8 +245,8 @@ export default function SolutionsSection() {
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

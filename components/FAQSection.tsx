@@ -83,13 +83,60 @@ export default function FAQSection() {
     },
   };
 
+  // Animation variants for stagger effects
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const itemCardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.98,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const titleSectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
   return (
-    <section
+    <motion.section
       id="faq"
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1, once: false }}
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
-        <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <motion.div
+          variants={titleSectionVariants}
+          className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10"
+        >
         <h2 className="mb-2 text-secondary text-balance font-title">
           {t("faq.title")}
         </h2>
@@ -105,10 +152,15 @@ export default function FAQSection() {
       </motion.div>
         <div className="grid grid-cols-1 gap-10 lg:gap-20">
           <div>
-            <motion.div className="space-y-3">
+            <motion.div variants={containerVariants} className="space-y-3">
               {faqItems.map((item, index) => (
                 <motion.div
                   key={item.id}
+                  variants={itemCardVariants}
+                  whileHover={{
+                    scale: 1.01,
+                    transition: { duration: 0.2 },
+                  }}
                   className="bg-card backdrop-blur-sm rounded-2xl border border-default hover:border-accent transition-all duration-300 cursor-pointer"
                 >
                   {/* Question header */}
@@ -163,6 +215,6 @@ export default function FAQSection() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -34,13 +34,70 @@ export default function AboutSection() {
     },
   ];
 
+  // Animation variants
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const contentVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const logoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
   return (
-    <section
+    <motion.section
       id="about"
       className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: false }}
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
-        <div
+        <motion.div
+          variants={cardVariants}
           className="bg-elevated rounded-2xl border-2 border-brand-accent-bright shadow-lg"
           style={{
             boxShadow:
@@ -49,32 +106,45 @@ export default function AboutSection() {
         >
           <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             {/* Left Content Section */}
-            <div className="flex-1">
+            <motion.div variants={contentVariants} className="flex-1">
               {/* Main Heading */}
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight font-sans">
+              <motion.h2
+                variants={itemVariants}
+                className="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight font-sans"
+              >
                 {t("about.title")}
-              </h2>
+              </motion.h2>
 
               {/* Descriptive Text - Italicized */}
-              <p className="text-base md:text-lg text-muted mb-8 italic font-sans leading-relaxed">
+              <motion.p
+                variants={itemVariants}
+                className="text-base md:text-lg text-muted mb-8 italic font-sans leading-relaxed"
+              >
                 {t("about.description")}
-              </p>
+              </motion.p>
 
               {/* Stats with Checkmarks */}
-              <div className="space-y-2">
+              <motion.div variants={contentVariants} className="space-y-2">
                 {aboutStats.map((stat, index) => (
-                  <div key={index} className="flex items-center gap-4">
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="flex items-center gap-4"
+                  >
                     <div className="text-brand-accent-bright text-xl font-bold">✓</div>
                     <span className="text-primary text-base font-sans">
                       {t(stat.labelKey)} {t(stat.sublabelKey)}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Right Branding Section */}
-            <div className="flex flex-col items-center justify-center md:m-10 mx-auto">
+            <motion.div
+              variants={logoVariants}
+              className="flex flex-col items-center justify-center md:m-10 mx-auto"
+            >
               <LogoIcon className="mb-2"/>
 
               {/* ARTS GROUP Text */}
@@ -86,10 +156,10 @@ export default function AboutSection() {
                   GROUP
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

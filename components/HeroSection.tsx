@@ -45,6 +45,30 @@ export default function HeroSection() {
     }
   }
 
+  // Animation variants for stagger effects
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
   return (
     <motion.section
       ref={heroRef}
@@ -61,9 +85,15 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center flex-grow flex flex-col justify-center">
         {/* Logo */}
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            delay: 0.1,
+            duration: 0.7,
+            type: "spring",
+            stiffness: 180,
+            damping: 15,
+          }}
           style={{ y: heroLogoY }}
           className="flex justify-center mt-8 md:mt-0 md:mb-8"
         >
@@ -81,54 +111,80 @@ export default function HeroSection() {
 
         <motion.div style={{ y: heroContentY }}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
           >
             <h1 className="mb-6 pb-2 bg-gradient-to-r text-secondary bg-clip-text font-hero-title">
               {t("hero.title.before")}{" "}
               <WordRotate className="text-arts-lime" words={heroWords} />{" "}
               {t("hero.title.after")}
             </h1>
-            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="text-secondary mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle"
+            >
               {t("hero.subtitle")}
-            </p>
+            </motion.p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
             className="flex flex-wrap justify-center items-center gap-8 text-sm text-secondary font-hero-text"
           >
-            <div className="flex items-center space-x-2">
+            <motion.div variants={itemVariants} className="flex items-center space-x-2">
               <Shield size={16} className="text-brand-accent" />
               <span>{t("hero.trustIndicators.sovereign")}</span>
-            </div>
-            <div className="flex items-center space-x-2">
+            </motion.div>
+            <motion.div variants={itemVariants} className="flex items-center space-x-2">
               <Zap size={16} className="text-accent" />
               <span>{t("hero.trustIndicators.compliant")}</span>
-            </div>
-            <div className="flex items-center space-x-2">
+            </motion.div>
+            <motion.div variants={itemVariants} className="flex items-center space-x-2">
               <Globe size={16} className="text-brand-accent" />
               <span>{t("hero.trustIndicators.immutable")}</span>
-            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
 
       {/* CTA Button - Positioned at bottom of section */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        transition={{
+          duration: 0.6,
+          delay: 1.2,
+          ease: [0.25, 0.1, 0.25, 1],
+        }}
         style={{ opacity: ctaOpacity }}
         className="z-10 justify-center items-center hidden lg:flex relative"
       >
         <motion.button
           onClick={scrollToTechnology}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.2 },
+          }}
           whileTap={{ scale: 0.95 }}
+          animate={{
+            y: [0, -8, 0],
+          }}
+          transition={{
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+          }}
           className="text-accent px-8 py-10 flex items-center space-x-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
         >
           <ChevronDown size={40} />

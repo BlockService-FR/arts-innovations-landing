@@ -28,13 +28,75 @@ export default function ContactSection() {
     });
   };
 
+  // Animation variants for stagger effects
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
+  const fieldVariants = {
+    hidden: {
+      opacity: 0,
+      x: -20,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const titleVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
+  const formVariants = {
+    hidden: {
+      opacity: 0,
+      x: 40,
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  }
+
   return (
-    <section
+    <motion.section
       id="contact"
       className="p-16 lg:p-20 relative flex flex-col justify-start items-center overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.1, once: false }}
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6">
-        <motion.div className="text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <motion.div
+          variants={titleVariants}
+          className="text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10"
+        >
           <h2 className="mb-4 lg:mb-6 text-secondary text-balance font-title">
             {t("contact.title")}
           </h2>
@@ -46,13 +108,16 @@ export default function ContactSection() {
           <div className="flex items-center">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              variants={formVariants}
               className="w-full lg:max-w-[600px] bg-card backdrop-blur-sm border border-default hover:border-accent rounded-2xl p-8 shadow-lg mx-auto"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <motion.form
+                onSubmit={handleSubmit}
+                variants={containerVariants}
+                className="space-y-6"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                  <motion.div variants={fieldVariants}>
                     <label
                       htmlFor="name"
                       className="block text-secondary mb-2 font-text-important"
@@ -66,11 +131,11 @@ export default function ContactSection() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder transition-all duration-200"
                       placeholder={t("contact.form.namePlaceholder")}
                     />
-                  </div>
-                  <div>
+                  </motion.div>
+                  <motion.div variants={fieldVariants}>
                     <label
                       htmlFor="email"
                       className="block text-secondary mb-2 font-text-important"
@@ -84,13 +149,13 @@ export default function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder transition-all duration-200"
                       placeholder={t("contact.form.emailPlaceholder")}
                     />
-                  </div>
+                  </motion.div>
                 </div>
 
-                <div>
+                <motion.div variants={fieldVariants}>
                   <label
                     htmlFor="company"
                     className="block text-secondary mb-2 font-text-important"
@@ -103,12 +168,12 @@ export default function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
+                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder transition-all duration-200"
                     placeholder={t("contact.form.companyPlaceholder")}
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div variants={fieldVariants}>
                   <label
                     htmlFor="message"
                     className="block text-secondary mb-2 font-text-important"
@@ -122,14 +187,18 @@ export default function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder resize-none"
+                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder resize-none transition-all duration-200"
                     placeholder={t("contact.form.messagePlaceholder")}
                   />
-                </div>
+                </motion.div>
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
+                  variants={fieldVariants}
+                  whileHover={{
+                    scale: 1.02,
+                    transition: { duration: 0.2 },
+                  }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer"
                 >
@@ -138,11 +207,11 @@ export default function ContactSection() {
                   </span>
                   <Send size={20} />
                 </motion.button>
-              </form>
+              </motion.form>
             </motion.div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
