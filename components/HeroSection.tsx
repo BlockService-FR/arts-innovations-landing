@@ -38,7 +38,7 @@ export default function HeroSection() {
   const ctaOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.8])
 
   const scrollToTechnology = () => {
-    const technologySection = document.getElementById("technology")
+    const technologySection = document.getElementById("intro")
     if (technologySection) {
       technologySection.scrollIntoView({
         behavior: "smooth",

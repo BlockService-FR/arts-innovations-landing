@@ -19,7 +19,7 @@ export default function Navigation({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navItems = [
-    { key: 'technology', href: '#technology' },
+    { key: 'technology', href: '#intro' },
     { key: 'solutions', href: '#solutions' },
     { key: 'about', href: '#about' },
     { key: 'faq', href: '#faq' },
