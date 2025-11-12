@@ -95,7 +95,7 @@ export default function HeroSection() {
             <p className="text-secondary mb-2 max-w-4xl mx-auto text-balance font-hero-subtitle">
               {t("hero.subtitle")}
             </p>
-            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle">
+            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance">
               {t("hero.description")}
             </p>
           </motion.div>
