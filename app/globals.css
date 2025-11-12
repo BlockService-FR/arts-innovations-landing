@@ -137,13 +137,16 @@
   /* ========================================
      LEGACY ALIASES (Backward Compatibility)
      ======================================== */
-  --color-arts-navy: var(--color-brand-navy);
-  --color-arts-teal: var(--color-brand-teal);
-  --color-arts-green: var(--color-brand-accent);
   --color-arts-lime: var(--color-brand-accent-bright);
+  --color-arts-dark: var(--color-neutral-0);
+
+
+
   --color-arts-light: var(--color-text-secondary);
   --color-arts-gray: var(--color-neutral-200);
-  --color-arts-dark: var(--color-neutral-0);
+  --color-arts-green: var(--color-brand-accent);
+  --color-arts-navy: var(--color-brand-navy);
+  --color-arts-teal: var(--color-brand-teal);
 
   /* Custom Spacing */
   --spacing-18: 4.5rem;
@@ -204,11 +207,11 @@
 }
 
 @utility arts-gradient {
-  background: linear-gradient(135deg, #9aff00, #c0ff7e);
+  background: linear-gradient(135deg, #0b1928, #273543);
 }
 
 @utility navy-gradient {
-  background: linear-gradient(135deg, #273543, #0b1928);
+  background: linear-gradient(135deg,  #0b1928, #273543);
 }
 
 @utility perspective-1000 {
@@ -260,6 +263,24 @@
     }
   }
 
+  .font-hero-description {
+    font-family: var(--font-montserrat);
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .font-hero-description {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .font-hero-description {
+      font-size: 18px;
+    }
+  }
+
   .font-hero-text {
     font-family: var(--font-montserrat);
     font-weight: 400;
@@ -275,12 +296,12 @@
   .font-menu-text {
     font-family: var(--font-montserrat);
     font-weight: 400;
-    font-size: 11px;
+    font-size: 13px;
   }
 
   @media (min-width: 768px) {
     .font-menu-text {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 

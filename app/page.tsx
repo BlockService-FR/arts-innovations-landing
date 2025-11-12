@@ -12,6 +12,7 @@ import TechnologySection from "@/components/TechnologySection";
 import SolutionsSection from "@/components/SolutionsSection";
 import FAQSection from "@/components/FAQSection";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import IntroSection from "@/components/IntroSection";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -26,10 +27,10 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="bg-gradient-to-br from-arts-dark/90 via-arts-navy/85 to-arts-teal/80 text-white overflow-x-hidden">
+    <main className="bg-gradient-to-br from-arts-navy to-arts-teal text-arts-light overflow-x-hidden">
       <Navigation isScrolled={isScrolled} />
         <HeroSection />
-
+        <IntroSection />
         <TechnologySection />
 
         <SolutionsSection />

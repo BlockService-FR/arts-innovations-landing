@@ -89,7 +89,7 @@ export default function FAQSection() {
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
-        <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <motion.div className="text-center mb-4 lg:mb-10">
         <h2 className="mb-2 text-secondary text-balance font-title">
           {t("faq.title")}
         </h2>
@@ -97,7 +97,7 @@ export default function FAQSection() {
           {t("faq.description")}{" "}
                 <a
                   href="#contact"
-                  className="text-accent hover:text-hover-accent transition-colors font-text-important"
+                  className="text-accent hover:text-arts-green transition-colors font-text-important"
                 >
                   {t("faq.cta")}
                 </a>!
@@ -109,7 +109,7 @@ export default function FAQSection() {
               {faqItems.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  className="bg-card backdrop-blur-sm rounded-2xl border border-default hover:border-accent transition-all duration-300 cursor-pointer"
+                  className="bg-card backdrop-blur-sm max-w-6xl mx-auto rounded-2xl border border-arts-light/70 transition-all duration-300 cursor-pointer"
                 >
                   {/* Question header */}
                   <button
@@ -130,9 +130,9 @@ export default function FAQSection() {
                       className="text-accent"
                     >
                       {openItemId === item.id ? (
-                        <ChevronUp size={20} className="text-brand-accent"/>
+                        <ChevronUp size={20} className="text-arts-green"/>
                       ) : (
-                        <ChevronDown size={20} className="text-brand-accent"/>
+                        <ChevronDown size={20} className="text-arts-green"/>
                       )}
                     </motion.div>
                   </button>

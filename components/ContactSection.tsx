@@ -34,7 +34,7 @@ export default function ContactSection() {
       className="p-16 lg:p-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6">
-        <motion.div className="text-center lg:text-left mb-4 mt-4 lg:mb-10 lg:mt-10">
+        <motion.div className="text-center lg:text-left mb-4 lg:mb-10">
           <h2 className="mb-4 lg:mb-6 text-secondary text-balance font-title">
             {t("contact.title")}
           </h2>
@@ -48,7 +48,7 @@ export default function ContactSection() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="w-full lg:max-w-[600px] bg-card backdrop-blur-sm border border-default hover:border-accent rounded-2xl p-8 shadow-lg mx-auto"
+              className="w-full lg:max-w-[600px] bg-card backdrop-blur-sm border border-arts-light/70 rounded-2xl p-8 shadow-lg mx-auto"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

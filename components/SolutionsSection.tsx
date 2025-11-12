@@ -83,14 +83,14 @@ export default function SolutionsSection() {
       id="solutions"
       className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
-      <motion.div className="text-center mb-4 mt-4 lg:mb-10 lg:mt-10">
+      <motion.div className="text-center mb-4 lg:mb-10">
         <h2 className="mb-2 text-secondary text-balance font-title">
           {t("solutions.title")}
         </h2>
         <h2 className="mb-4 text-secondary text-balance font-title">
           {t("solutions.subtitle")}
         </h2>
-        <p className="text-secondary mx-auto text-balance font-subtitle">
+        <p className="text-secondary mx-auto max-w-4xl text-balance font-subtitle">
           {t("solutions.description")}
         </p>
       </motion.div>
@@ -107,7 +107,7 @@ export default function SolutionsSection() {
                     duration: 0.3,
                   },
                 }}
-                className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300 overflow-hidden h-full flex flex-col"
+                className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light/70 transition-all duration-300 overflow-hidden h-full flex flex-col"
               >
                 <div className="flex-grow">
                   {/* Phase 1: Initial Content - Image and Subtitle */}
@@ -178,8 +178,8 @@ export default function SolutionsSection() {
                   <div className="flex items-start gap-4">
                     {/* Icon Container */}
                     <div className="flex items-center justify-center">
-                      <LighningIcon className="w-6 h-6 fill-icon-bright mt-0.5 mr-2" />
-                      <p className="text-brand-accent-bright font-semibold text-sm sm:text-base leading-relaxed pt-1">
+                      <LighningIcon className="w-6 h-6 fill-arts-green mt-0.5 mr-2" />
+                      <p className="text-arts-green font-semibold text-sm sm:text-base leading-relaxed pt-1">
                         {t(solution.calloutKey)}
                       </p>
                     </div>

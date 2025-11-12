@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useRef, useState, useEffect } from "react";
-import { Lock, Brain, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export default function TechnologySection() {
@@ -85,7 +84,7 @@ export default function TechnologySection() {
     <motion.section
       id="technology"
       ref={sectionRef}
-      className="w-full 2xl:max-w-[80vw] mx-auto pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden py-12 sm:px-6 lg:px-8"
+      className="w-full 2xl:max-w-[80vw] mx-auto pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden pb-2 sm:px-6 lg:px-8"
       initial="hidden"
       whileInView="visible"
       exit="exit"
@@ -102,7 +101,7 @@ export default function TechnologySection() {
           <h2 className="mb-4 lg:mb-6 text-secondary text-balance font-title">
             {t("technology.title")}
           </h2>
-          <p className="text-secondary max-w-3xl text-balance font-subtitle">
+          <p className="text-secondary text-balance font-subtitle">
             {t("technology.subtitle")}
           </p>
           <motion.button
@@ -115,14 +114,14 @@ export default function TechnologySection() {
             <span className="font-text-important">{t("technology.cta")}</span>
           </motion.button>
         </motion.div>
-        <div ref={rightRef} className="p-4 sm:px-6 lg:px-8 items-center flex flex-col gap-6 ">
+        <div ref={rightRef} className="sm:px-6 lg:px-8 items-center flex flex-col gap-6 ">
           {/* Blockchain Technology Card */}
           <motion.div
             whileHover={{
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300"
+            className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light/70 transition-all duration-300"
           >
             <motion.div>
               <motion.div className="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center mb-4">
@@ -158,7 +157,7 @@ export default function TechnologySection() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-default hover:border-accent transition-all duration-300"
+            className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light/70 transition-all duration-300"
           >
             <motion.div>
               <motion.div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4">

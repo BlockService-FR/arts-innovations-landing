@@ -59,7 +59,7 @@ export default function ImpactSection() {
             return (
               <motion.div
                 key={index}
-                className="text-center p-6 bg-card backdrop-blur-sm rounded-2xl border border-default hover:border-accent transition-all duration-300"
+                className="text-center p-6 bg-card backdrop-blur-sm rounded-2xl border border-arts-light/70 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon size={32} className="text-inverse" />

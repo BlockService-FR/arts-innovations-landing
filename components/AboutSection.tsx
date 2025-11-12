@@ -5,6 +5,9 @@ import { useTranslation } from "react-i18next";
 import { Award, Users, Globe, Zap } from "lucide-react";
 import Image from "next/image";
 import LogoIcon from "@/public/logo-white.svg";
+import CheckboxIcon from "@/public/checkbox.svg";
+import LogoGroup from "@/public/logo-group.svg";
+
 
 export default function AboutSection() {
   const { t } = useTranslation();
@@ -41,11 +44,7 @@ export default function AboutSection() {
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="bg-elevated rounded-2xl border-2 border-brand-accent-bright shadow-lg"
-          style={{
-            boxShadow:
-              "0 0 30px rgb(from var(--color-brand-accent-bright) r g b / 0.3), inset 0 0 30px rgb(from var(--color-brand-accent-bright) r g b / 0.05)",
-          }}
+          className="bg-elevated rounded-2xl border border-arts-green/70 shadow-md"
         >
           <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             {/* Left Content Section */}
@@ -56,7 +55,7 @@ export default function AboutSection() {
               </h2>
 
               {/* Descriptive Text - Italicized */}
-              <p className="text-base md:text-lg text-muted mb-8 italic font-sans leading-relaxed">
+              <p className="text-base md:text-lg text-muted mb-8 italic max-w-6xl font-sans leading-relaxed">
                 {t("about.description")}
               </p>
 
@@ -64,7 +63,7 @@ export default function AboutSection() {
               <div className="space-y-2">
                 {aboutStats.map((stat, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <div className="text-brand-accent-bright text-xl font-bold">✓</div>
+                    <CheckboxIcon size={16} className="fill-arts-green" />
                     <span className="text-primary text-base font-sans">
                       {t(stat.labelKey)} {t(stat.sublabelKey)}
                     </span>
@@ -75,17 +74,13 @@ export default function AboutSection() {
 
             {/* Right Branding Section */}
             <div className="flex flex-col items-center justify-center md:m-10 mx-auto">
-              <LogoIcon className="mb-2"/>
-
-              {/* ARTS GROUP Text */}
-              <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary font-sans tracking-wide">
-                  ARTS
-                </p>
-                <p className="text-lg md:text-xl text-disabled font-sans tracking-widest">
-                  GROUP
-                </p>
-              </div>
+              <Image
+                                  src="/logo-group.svg"
+                                  alt="ARTS Group Logo"
+                                  height={270}
+                                  width={180}
+                                  className="m-2"
+                                />
             </div>
           </div>
         </div>

@@ -15,13 +15,18 @@
       "after": "Aviation Ecosystem",
       "words": { "0": "Safer", "1": "Smarter", "2": "Sharper", "3": "Clearer" }
     },
-    "subtitle": "Trusted data and intelligent infrastructure, redefining standards in compliance, traceability, and predictive performance",
+    "subtitle": "Building the digital backbone of aerospace trust",
+    "description": "A sovereign, interoperable blockchain infrastructure designed to secure traceability, compliance, and collaboration across the aerospace and space industry.",
     "cta": "Discover our solutions",
     "trustIndicators": {
-      "sovereign": "Private Blockchain",
-      "compliant": "EASA & FAA Compliant",
-      "immutable": "Certified Documentation"
+      "sovereign": "Sovereign Blockchain",
+      "compliant": "Certified Compliance",
+      "immutable": "Interoperable Ecosystem"
     }
+  },
+  "intro": {
+    "title": "Aerospace is entering the era of trusted data.",
+    "description": "Powered by METRA, our sovereign blockchain connects every layer of aerospace operations. Combined with our suite of AI-driven SaaS solutions, it transforms data into trust, automating compliance, enhancing visibility, and driving a new standard of digital collaboration across the industry."
   },
   "valueProposition": {
     "title": "Why Choose ARTS Innovations?",
@@ -153,8 +158,8 @@
     }
   },
   "technology": {
-    "title": "Faster. Smarter. Safer.",
-    "subtitle": "AI-driven insights and blockchain-backed security for the entire aerospace lifecycle.",
+    "title": "The power behind aerospace trust.",
+    "subtitle": "Where blockchain infrastructure and collective intelligence redefine transparency, compliance, and collaboration across the aerospace industry.",
     "metraBackbone": "ARTS INNOVATIONS BACKBONE",
     "metraDescription": "Sovereign blockchain designed to bring security, traceability, and regulatory trust to aerospace asset management",
     "cta": "Find out more",
@@ -168,45 +173,17 @@
       "description": "Transforming aerospace through trusted data and intelligent infrastructure, redefining standards in compliance, traceability, and predictive performance."
     },
     "blockchain": {
-      "title": "Blockchain Security",
-      "subtitle": "Trust though transparency and tamper-proof infrastructure",
+      "title": "The METRA Blockchain",
+      "subtitle": "Trust through transparency and sovereign architecture.",
       "description": {
         "before" : "Built on ",
-        "after" : ", our proprietary sovereign blockchain, this foundation delivers uncompromised security, verifiable compliance, and end-to-end traceability across the entire aerospace asset lifecycle by combining decentralization, automation, and cryptographic protection."
-      },
-      "features": {
-        "ledger": {
-          "title": "Distributed Ledger: ",
-          "description": "Ensures synchronized, secure and decentralized records"
-        },
-        "contracts": {
-          "title": "Smart Contracts: ",
-          "description": "Automates compliance and asset-related workflows."
-        },
-        "security": {
-          "title": "Cryptographic Security: ",
-          "description": "Guarantees data integrity and auditability at every step."
-        }
+        "after" : ", our private aerospace blockchain, this network ensures end-to-end traceability and verifiable compliance across the entire lifecycle of aircraft assets. Each transaction is immutable and auditable, combining decentralization, automation, and cryptographic security to deliver a trusted digital foundation for the industry."
       }
     },
     "ai": {
-      "title": "AI-Powered Analytics",
-      "subtitle": "From data to foresight: unlocking operational intelligence.",
-      "description": "Our AI model transforms complex datasets into actionable insights. By learning continuously from historical and real-time data, it powers smarter operations, enables predictive maintenance, and supports data-driven decision-making across the asset lifecycle.",
-      "features": {
-        "learning": {
-          "title": "Machine Learning: ",
-          "description": "Continuously trains on aircraft behavior to refine models."
-        },
-        "recognition": {
-          "title": "Pattern Recognition: ",
-          "description": "Detects anomalies, recurring issues, and usage trends."
-        },
-        "analytics": {
-          "title": "Predictive Analytics: ",
-          "description": "Anticipates failures, optimizes maintenancescheduling, and reduces downtime."
-        }
-      }
+      "title": "The Metra Trust Alliance",
+      "subtitle": "A collaborative ecosystem for digital trust.",
+      "description": "The Metra Trust Alliance unites OEMs, lessors, MROs, operators, and authorities under a shared governance model. Each member operates a validation node, ensuring network neutrality, data sovereignty, and collective control over standards and evolution — building the future of secure, interoperable aerospace data together."
     },
     "realtime": {
       "title": "Real-Time Processing",

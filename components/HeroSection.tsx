@@ -5,9 +5,11 @@ import { useTranslation } from "react-i18next"
 import { ArrowRight, Shield, Zap, Globe, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { WordRotate } from "@/components/ui/WordRotate";
-import { FloatingPaths } from "@/components/ui/FloatingPaths";
 import { useMemo, useRef } from "react"
-import { Particles } from "@/components/ui/shadcn-io/particles"
+import { Particles } from "@/components/ui/shadcn-io/particles";
+import BlockchainIcon from "@/public/blockchain.svg";
+import ComplianceIcon from "@/public/compliance.svg";
+import EcosystemIcon from "@/public/ecosystem.svg";
 
 export default function HeroSection() {
   const { t } = useTranslation()
@@ -85,13 +87,16 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="mb-6 pb-2 bg-gradient-to-r text-secondary bg-clip-text font-hero-title">
+            <h1 className="mb-6 pb-2 bg-linear-to-r text-secondary bg-clip-text font-hero-title">
               {t("hero.title.before")}{" "}
-              <WordRotate className="text-arts-lime" words={heroWords} />{" "}
+              <WordRotate className="text-arts-green" words={heroWords} />{" "}
               {t("hero.title.after")}
             </h1>
-            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle">
+            <p className="text-secondary mb-2 max-w-4xl mx-auto text-balance font-hero-subtitle">
               {t("hero.subtitle")}
+            </p>
+            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance font-hero-subtitle">
+              {t("hero.description")}
             </p>
           </motion.div>
 
@@ -102,15 +107,15 @@ export default function HeroSection() {
             className="flex flex-wrap justify-center items-center gap-8 text-sm text-secondary font-hero-text"
           >
             <div className="flex items-center space-x-2">
-              <Shield size={16} className="text-brand-accent" />
+              <BlockchainIcon size={16} className="fill-arts-green" />
               <span>{t("hero.trustIndicators.sovereign")}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Zap size={16} className="text-accent" />
+              <ComplianceIcon size={16} className="fill-arts-green" />
               <span>{t("hero.trustIndicators.compliant")}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Globe size={16} className="text-brand-accent" />
+              <EcosystemIcon size={16} className="fill-arts-green" />
               <span>{t("hero.trustIndicators.immutable")}</span>
             </div>
           </motion.div>
@@ -131,7 +136,7 @@ export default function HeroSection() {
           whileTap={{ scale: 0.95 }}
           className="text-accent px-8 py-10 flex items-center space-x-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
         >
-          <ChevronDown size={40} />
+          <ChevronDown size={40} className="text-arts-green"/>
         </motion.button>
       </motion.div>
       {/* Interactive particles */}
