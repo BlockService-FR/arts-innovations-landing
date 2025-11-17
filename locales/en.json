@@ -62,10 +62,10 @@
       "description": "Stay in control of your fleet, every second.",
       "callout": "Protect asset value with full lifecycle traceability",
       "features": {
-        "lifecycle": "Lifecycle tracking",
-        "compliance": "Active compliance",
-        "preservation": "Asset preservation",
-        "monitoring": "Real-time monitoring"
+        "lifecycle": "Digital twin",
+        "compliance": "Lifecycle tracking",
+        "preservation": "IA management",
+        "monitoring": "Asset preservation"
       }
     },
     "metrablockchain": {
@@ -85,10 +85,10 @@
       "description": "Turn every record into a trusted source.",
       "callout": "Eliminate fraud, accelerate audits, build trust.",
       "features": {
-        "immutable": "Immutable records",
-        "certification": "Digital certification",
-        "audit": "Audit trails",
-        "security": "Contract security"
+        "immutable": "Instant verification",
+        "certification": "Blockchain certification",
+        "audit": "Electronic signature",
+        "security": "Digital passeport"
       }
     },
     "metraseal": {
@@ -97,9 +97,9 @@
       "description": "NFC/QR seal linked to on-chain digital identity for high-value components",
       "callout": "Guarantee part authenticity and stop counterfeit risks",
       "features": {
-        "nfc": "NFC/QR integration",
+        "nfc": "Physical-to-digital link",
         "identity": "Digital identity",
-        "security": "Component security",
+        "security": "Physical security",
         "antiCounterfeiting": "Anti-counterfeiting"
       }
     },
@@ -109,10 +109,11 @@
       "description": "Inspect faster. Report better. Trust more.",
       "callout": "Cut inspection time by 50% and ensure compliance",
       "features": {
-        "mobile": "Mobile inspections",
+        "mobile": "Aircraft inspections",
         "reports": "Instant reports",
-        "blockchain": "Blockchain registration",
-        "inspections": "PPI/lease inspections"
+        "blockchain": "Blockchain recording",
+        "inspections": "PPI / Mid-lease / EOL",
+        "custom": "Customizable"
       }
     },
     "learnMore": "Learn More",

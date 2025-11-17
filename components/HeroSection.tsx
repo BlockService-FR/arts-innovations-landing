@@ -60,7 +60,7 @@ export default function HeroSection() {
       </div> */}
 
       {/* Main Hero Content */}
-      <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center flex-grow flex flex-col justify-center">
+      <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center flex grow flex-col justify-center">
         {/* Logo */}
         <motion.div
           initial={{ scale: 0 }}
@@ -87,15 +87,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="mb-6 pb-2 bg-linear-to-r text-secondary bg-clip-text font-hero-title">
-              {t("hero.title.before")}{" "}
-              <WordRotate className="text-arts-green" words={heroWords} />{" "}
-              {t("hero.title.after")}
+            <h1 className="mb-6 pb-2 bg-linear-to-r text-secondary bg-clip-text font-hero-title max-w-3xl justify-center mx-auto text-balance text">
+              {t("hero.subtitle")}
             </h1>
             <p className="text-secondary mb-2 max-w-4xl mx-auto text-balance font-hero-subtitle">
-              {t("hero.subtitle")}
-            </p>
-            <p className="text-secondary mb-8 max-w-4xl mx-auto text-balance">
               {t("hero.description")}
             </p>
           </motion.div>
@@ -128,13 +123,13 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         style={{ opacity: ctaOpacity }}
-        className="z-10 justify-center items-center hidden lg:flex relative"
+        className="z-10 justify-center items-center hidden lg:flex relative mb-10"
       >
         <motion.button
           onClick={scrollToTechnology}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="text-accent px-8 py-10 flex items-center space-x-2 hover:shadow-lg transition-all duration-300 cursor-pointer"
+          className="text-accent px-8 py-10 flex items-center space-x-2  transition-all duration-300 cursor-pointer"
         >
           <ChevronDown size={40} className="text-arts-green"/>
         </motion.button>

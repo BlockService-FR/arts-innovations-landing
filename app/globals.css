@@ -296,12 +296,12 @@
   .font-menu-text {
     font-family: var(--font-montserrat);
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   @media (min-width: 768px) {
     .font-menu-text {
-      font-size: 13px;
+      font-size: 15px;
     }
   }
 

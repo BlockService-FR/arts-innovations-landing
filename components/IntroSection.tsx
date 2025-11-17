@@ -9,7 +9,7 @@ export default function IntroSection() {
   return (
     <section
       id="intro"
-      className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="pt-16 lg:pt-20 pl-10 pr-10 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center">
         <h2 className="mb-2 text-secondary text-balance font-title">

@@ -40,17 +40,17 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="pt-16 lg:pt-20 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
+      className="pt-40 lg:pt-48 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="bg-elevated rounded-2xl border border-arts-green/70 shadow-md"
+          className="bg-elevated rounded-2xl border border-arts-light/70 shadow-md"
         >
           <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             {/* Left Content Section */}
             <div className="flex-1">
               {/* Main Heading */}
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight font-sans">
+              <h2 className="font-title">
                 {t("about.title")}
               </h2>
 
