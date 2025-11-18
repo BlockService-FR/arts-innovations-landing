@@ -109,7 +109,11 @@ export default function FAQSection() {
               {faqItems.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  className="bg-card backdrop-blur-sm max-w-6xl mx-auto rounded-2xl border border-arts-light/70 transition-all duration-300 cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ delay: index * 0.1 }}
+                  className="glass-card rounded-2xl border border-white/5 transition-all duration-300 cursor-pointer hover:border-arts-green/30 hover:shadow-lg hover:shadow-arts-green/5 group"
                 >
                   {/* Question header */}
                   <button
@@ -118,7 +122,7 @@ export default function FAQSection() {
                     aria-expanded={openItemId === item.id}
                   >
                     <div className="flex items-center">
-                      <span className="text-secondary font-text-important">
+                      <span className="text-secondary font-text-important group-hover:text-arts-green transition-colors duration-300">
                         {t(item.questionKey)}
                       </span>
                     </div>

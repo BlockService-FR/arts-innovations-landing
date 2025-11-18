@@ -69,13 +69,13 @@ export default function HeroSection() {
           style={{ y: heroLogoY }}
           className="flex justify-center mt-8 md:mt-0 md:mb-8"
         >
-          <div className="w-40 h-40 rounded-lg flex items-center justify-center p-2">
+          <div className="w-40 h-40 rounded-2xl flex items-center justify-center p-4">
             <Image
               src="/logo-green.svg"
               alt="ARTS Innovations Logo"
               width={160}
               height={160}
-              className="w-24 h-24 md:w-40 md:h-40 object-contain"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
               priority
             />
           </div>
@@ -87,31 +87,31 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="mb-6 pb-2 bg-linear-to-r text-secondary bg-clip-text font-hero-title max-w-3xl justify-center mx-auto text-balance text">
+            <h1 className="mb-8 pb-2 bg-linear-to-r text-secondary bg-clip-text font-hero-title max-w-4xl justify-center mx-auto text-balance text drop-shadow-lg">
               {t("hero.subtitle")}
             </h1>
-            <p className="text-secondary mb-2 max-w-4xl mx-auto text-balance font-hero-subtitle">
+            <p className="text-secondary/90 mb-8 max-w-3xl mx-auto text-balance font-hero-subtitle leading-relaxed">
               {t("hero.description")}
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap justify-center items-center gap-8 text-sm text-secondary font-hero-text"
+            className="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm text-secondary/80 font-hero-text mt-8"
           >
-            <div className="flex items-center space-x-2">
-              <BlockchainIcon size={16} className="fill-arts-green" />
-              <span>{t("hero.trustIndicators.sovereign")}</span>
+            <div className="flex items-center space-x-3 px-4 py-2 rounded-full glass-card hover:bg-white/5 transition-colors duration-300">
+              <BlockchainIcon size={18} className="fill-arts-green" />
+              <span className="tracking-wide">{t("hero.trustIndicators.sovereign")}</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <ComplianceIcon size={16} className="fill-arts-green" />
-              <span>{t("hero.trustIndicators.compliant")}</span>
+            <div className="flex items-center space-x-3 px-4 py-2 rounded-full glass-card hover:bg-white/5 transition-colors duration-300">
+              <ComplianceIcon size={18} className="fill-arts-green" />
+              <span className="tracking-wide">{t("hero.trustIndicators.compliant")}</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <EcosystemIcon size={16} className="fill-arts-green" />
-              <span>{t("hero.trustIndicators.immutable")}</span>
+            <div className="flex items-center space-x-3 px-4 py-2 rounded-full glass-card hover:bg-white/5 transition-colors duration-300">
+              <EcosystemIcon size={18} className="fill-arts-green" />
+              <span className="tracking-wide">{t("hero.trustIndicators.immutable")}</span>
             </div>
           </motion.div>
         </motion.div>

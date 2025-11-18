@@ -30,8 +30,8 @@ export default function Navigation({
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-primary/95 backdrop-blur-md border-b border-accent/20' : 'bg-transparent'
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-fluid ${
+        isScrolled ? 'glass shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

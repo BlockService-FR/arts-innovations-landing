@@ -48,7 +48,8 @@ export default function ContactSection() {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="w-full lg:max-w-[600px] bg-card backdrop-blur-sm border border-arts-light/70 rounded-2xl p-8 shadow-lg mx-auto"
+              viewport={{ once: true }}
+              className="w-full lg:max-w-[600px] glass-card rounded-2xl p-8 shadow-2xl hover:border-arts-green/50 mx-auto"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -59,16 +60,16 @@ export default function ContactSection() {
                     >
                       {t("contact.form.name")} {t("contact.form.required")}
                     </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
-                      placeholder={t("contact.form.namePlaceholder")}
-                    />
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-secondary placeholder-white/30 transition-all duration-300 hover:bg-white/10"
+                        placeholder={t("contact.form.namePlaceholder")}
+                      />
                   </div>
                   <div>
                     <label
@@ -77,16 +78,16 @@ export default function ContactSection() {
                     >
                       {t("contact.form.email")} {t("contact.form.required")}
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
-                      placeholder={t("contact.form.emailPlaceholder")}
-                    />
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-secondary placeholder-white/30 transition-all duration-300 hover:bg-white/10"
+                        placeholder={t("contact.form.emailPlaceholder")}
+                      />
                   </div>
                 </div>
 
@@ -103,7 +104,7 @@ export default function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-secondary placeholder-white/30 transition-all duration-300 hover:bg-white/10"
                     placeholder={t("contact.form.companyPlaceholder")}
                   />
                 </div>
@@ -122,7 +123,7 @@ export default function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-focus-ring focus:border-transparent text-secondary placeholder-input-placeholder resize-none"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-arts-green focus:border-transparent text-secondary placeholder-white/30 resize-none transition-all duration-300 hover:bg-white/10"
                     placeholder={t("contact.form.messagePlaceholder")}
                   />
                 </div>

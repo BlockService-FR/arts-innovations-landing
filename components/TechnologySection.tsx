@@ -121,10 +121,10 @@ export default function TechnologySection() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light/70 transition-all duration-300"
+            className="glass-card rounded-2xl p-6 lg:p-8 hover:border-arts-green/50 transition-all duration-500 group"
           >
             <motion.div>
-              <motion.div className="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center mb-4">
+              <motion.div className="w-12 h-12 rounded-2xl bg-brand-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Image
                   src="/blockchain.svg"
                   alt="Blockchain Technology"
@@ -157,10 +157,10 @@ export default function TechnologySection() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light/70 transition-all duration-300"
+            className="glass-card rounded-2xl p-6 lg:p-8 hover:border-arts-green/50 transition-all duration-500 group"
           >
             <motion.div>
-              <motion.div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+              <motion.div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Image
                   src="/ai.svg"
                   alt="Artificial Intelligence"

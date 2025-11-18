@@ -107,7 +107,7 @@ export default function SolutionsSection() {
                     duration: 0.3,
                   },
                 }}
-                className="bg-card backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-arts-light/70 transition-all duration-300 overflow-hidden h-full flex flex-col"
+                className="glass-card rounded-2xl p-6 lg:p-8 hover:border-arts-green/30 transition-all duration-500 overflow-hidden h-full flex flex-col group hover:shadow-2xl hover:shadow-arts-green/5"
               >
                 <div className="flex-grow">
                   {/* Phase 1: Initial Content - Image and Subtitle */}

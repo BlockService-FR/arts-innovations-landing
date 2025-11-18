@@ -44,7 +44,7 @@ export default function AboutSection() {
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="bg-elevated rounded-2xl border border-arts-light/70 shadow-md"
+          className="glass-card rounded-2xl border border-white/10 shadow-2xl shadow-arts-green/5"
         >
           <div className="p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             {/* Left Content Section */}
@@ -55,7 +55,7 @@ export default function AboutSection() {
               </h2>
 
               {/* Descriptive Text - Italicized */}
-              <p className="text-base md:text-lg text-muted mb-8 italic max-w-6xl font-sans leading-relaxed">
+              <p className="text-base md:text-lg text-secondary/90 mb-8 italic max-w-6xl font-sans leading-relaxed">
                 {t("about.description")}
               </p>
 
@@ -79,7 +79,7 @@ export default function AboutSection() {
                                   alt="ARTS Group Logo"
                                   height={270}
                                   width={180}
-                                  className="m-2"
+                                  className="m-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                                 />
             </div>
           </div>
