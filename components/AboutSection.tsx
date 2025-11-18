@@ -40,7 +40,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="pt-40 lg:pt-48 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-40 lg:py-44 relative flex flex-col gap-16 justify-start items-center overflow-hidden"
     >
       <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
         <div

@@ -86,9 +86,9 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
-      <div className="w-full 2xl:max-w-[80vw] mx-auto my-auto px-4 sm:px-6 lg:px-8">
+      <div className="my-auto">
         <motion.div className="text-center mb-4 lg:mb-10">
         <h2 className="mb-2 text-secondary text-balance font-title">
           {t("faq.title")}

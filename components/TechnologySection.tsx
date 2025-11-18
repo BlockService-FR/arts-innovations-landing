@@ -84,7 +84,7 @@ export default function TechnologySection() {
     <motion.section
       id="technology"
       ref={sectionRef}
-      className="w-full 2xl:max-w-[80vw] mx-auto pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden pb-2 sm:px-6 lg:px-8"
+      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
       exit="exit"

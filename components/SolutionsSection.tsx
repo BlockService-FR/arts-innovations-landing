@@ -81,7 +81,7 @@ export default function SolutionsSection() {
   return (
     <section
       id="solutions"
-      className="pt-16 lg:pt-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center mb-4 lg:mb-10">
         <h2 className="mb-2 text-secondary text-balance font-title">
@@ -94,7 +94,7 @@ export default function SolutionsSection() {
           {t("solutions.description")}
         </p>
       </motion.div>
-      <div className="w-full 2xl:max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8 flex-grow items-center flex">
+      <div className="flex-grow items-center flex">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 h-full w-full">
           {solutions.map((solution, index) => {
             return (
