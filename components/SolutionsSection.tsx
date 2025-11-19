@@ -81,7 +81,7 @@ export default function SolutionsSection() {
   return (
     <section
       id="solutions"
-      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div className="text-center mb-4 lg:mb-10">
         <h2 className="mb-2 text-secondary text-balance font-title">

@@ -31,7 +31,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <div className="grid lg:grid-cols-2 gap-6">
         <motion.div className="text-center lg:text-left mb-4 lg:mb-10">

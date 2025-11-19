@@ -84,7 +84,7 @@ export default function TechnologySection() {
     <motion.section
       id="technology"
       ref={sectionRef}
-      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
       exit="exit"
@@ -109,7 +109,7 @@ export default function TechnologySection() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={scrollToNextSection}
-            className="mt-4 bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer self-center lg:self-start hidden lg:block"
+            className="mt-4 bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg space-x-2 transition-all duration-300 cursor-pointer self-center lg:self-start hidden lg:block"
           >
             <span className="font-text-important">{t("technology.cta")}</span>
           </motion.button>

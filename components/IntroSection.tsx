@@ -9,7 +9,7 @@ export default function IntroSection() {
   return (
     <section
       id="intro"
-      className="w-full 2xl:max-w-[80vw] mx-auto sm:px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
+      className="w-full 2xl:max-w-[80vw] mx-auto px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
       <motion.div 
         initial={{ opacity: 0, y: 40 }}
