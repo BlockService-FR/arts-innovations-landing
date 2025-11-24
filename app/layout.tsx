@@ -19,6 +19,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://arts-innovations.com'),
   title: 'ARTS Innovations - Revolutionizing Aviation with Blockchain & AI',
   description: 'Advanced software solutions for aircraft industry using blockchain and AI technologies powered by METRA platform',
   openGraph: {
