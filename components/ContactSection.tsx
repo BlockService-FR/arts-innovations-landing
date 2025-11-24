@@ -13,10 +13,100 @@ export default function ContactSection() {
     company: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const validateForm = () => {
+    const errors: string[] = [];
+
+    if (!formData.name.trim()) {
+      errors.push(t("contact.form.validation.nameRequired"));
+    }
+
+    if (!formData.email.trim()) {
+      errors.push(t("contact.form.validation.emailRequired"));
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push(t("contact.form.validation.emailInvalid"));
+    }
+
+    if (!formData.message.trim()) {
+      errors.push(t("contact.form.validation.messageRequired"));
+    } else if (formData.message.trim().length < 10) {
+      errors.push(t("contact.form.validation.messageMinLength"));
+    }
+
+    return errors;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setSubmitStatus({ type: null, message: "" });
+
+    // Client-side validation
+    const validationErrors = validateForm();
+    if (validationErrors.length > 0) {
+      setSubmitStatus({
+        type: "error",
+        message: validationErrors.join(" "),
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: t("contact.form.successMessage"),
+        });
+        // Clear form on success
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        const errorData = await response.json();
+        let errorMessage = t("contact.form.errorMessage");
+
+        // Parse specific validation errors from API
+        if (errorData.details && Array.isArray(errorData.details)) {
+          const apiErrors = errorData.details
+            .map((issue: { message: string }) => issue.message)
+            .join(" ");
+          errorMessage = `${apiErrors} ${t("contact.form.errorFallback")}`;
+        } else {
+          errorMessage = `${errorMessage} ${t("contact.form.errorFallback")}`;
+        }
+
+        setSubmitStatus({
+          type: "error",
+          message: errorMessage,
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: `${t("contact.form.errorMessage")} ${t(
+          "contact.form.errorFallback"
+        )}`,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -130,15 +220,33 @@ export default function ContactSection() {
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer"
+                  disabled={isSubmitting}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                  className="w-full bg-button-primary text-button-text font-semibold py-4 px-6 rounded-lg flex items-center justify-center space-x-2 hover:bg-button-primary-hover transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span className="font-text-important">
-                    {t("contact.form.send")}
+                    {isSubmitting
+                      ? t("contact.form.sending")
+                      : t("contact.form.send")}
                   </span>
                   <Send size={20} />
                 </motion.button>
+
+                {/* Success/Error Message */}
+                {submitStatus.type && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`p-4 rounded-lg ${
+                      submitStatus.type === "success"
+                        ? "bg-green-500/10 border border-green-500/30 text-green-400"
+                        : "bg-red-500/10 border border-red-500/30 text-red-400"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </motion.div>
+                )}
               </form>
             </motion.div>
           </div>

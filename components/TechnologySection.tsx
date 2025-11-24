@@ -124,12 +124,12 @@ export default function TechnologySection() {
             className="glass-card rounded-2xl p-6 lg:p-8 hover:border-arts-green/50 transition-all duration-500 group"
           >
             <motion.div>
-              <motion.div className="w-12 h-12 rounded-2xl bg-brand-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <motion.div className="w-12 h-12 rounded-xl p2 bg-brand-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Image
-                  src="/blockchain.svg"
+                  src="/metra-blockchain.svg"
                   alt="Blockchain Technology"
-                  width={32}
-                  height={32}
+                  width={10}
+                  height={10}
                   className="w-full h-full object-contain"
                 />
               </motion.div>
@@ -160,12 +160,12 @@ export default function TechnologySection() {
             className="glass-card rounded-2xl p-6 lg:p-8 hover:border-arts-green/50 transition-all duration-500 group"
           >
             <motion.div>
-              <motion.div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <motion.div className="w-12 h-12 p2 rounded-xl bg-brand-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Image
-                  src="/ai.svg"
+                  src="/metra-alliance.svg"
                   alt="Artificial Intelligence"
-                  width={32}
-                  height={32}
+                  width={10}
+                  height={10}
                   className="w-full h-full object-contain"
                 />
               </motion.div>

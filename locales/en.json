@@ -238,7 +238,7 @@
     "description": "ARTS Innovations was born of a strong conviction: aeronautics deserves the best technologies of its time. Backed by the expertise of ARTS, a benchmark player for over 25 years, our mission is clear: to lead the industry into a new era.",
     "stats": {
       "experience": {
-        "label": "20+ Years",
+        "label": "25+ Years",
         "sublabel": "Aerospace Experience"
       },
       "clients": {
@@ -260,24 +260,24 @@
     "description": "Find answers to common queries about our product, features, and services. If you need more information, we’re here to",
     "cta": "help",
     "ecosystem": {
-      "question": "What is ARTS Innovations and how is your ecosystem unique for the aerospace industry?",
-      "answer": "ARTS Innovations is a technological ecosystem that combines artificial intelligence and blockchain to meet the critical challenges of traceability, compliance and asset management in the aerospace industry. \nWe have developed a sovereign infrastructure, the METRA blockchain, dedicated to securing sensitive data (technical documents, maintenance histories, inspections, spare parts), while automating high value-added processes thanks to AI. This ecosystem is designed to integrate with industry regulatory and operational standards."
+      "question": "What is ARTS Innovations and what makes your ecosystem unique for the aerospace industry?",
+      "answer": "ARTS Innovations is a technology ecosystem that combines AI and blockchain to tackle the aerospace sector’s challenges in traceability, compliance, and asset management. Built around our sovereign METRA blockchain, it secures critical operational data such as technical records, maintenance histories, inspections, and spare parts while automating high-value processes with AI. The ecosystem is designed to integrate seamlessly with industry standards and regulatory frameworks."
     },
     "documents": {
-      "question": "What does blockchain certification actually enable for my aeronautical documents?",
-      "answer": "Blockchain certification via our METRASign solution guarantees that every document (certificate, report, logbook, etc.) is authentic, forgery-proof and time-stamped.It provides verifiable proof of origin and integrity at all times, permanent traceability for audits or asset transitions, and a reduction in disputes linked to incomplete or modified documents.\nOur solutions integrate into your existing processes, and are simple to use both in the field and remotely."
+      "question": "What is METRA and why is it essential for the aerospace industry ?",
+      "answer": "METRA is the sovereign private blockchain at the core of our ecosystem. It creates tamper-proof, time-stamped and audit-ready records for documents, inspections, part movements, and maintenance events. In a sector where safety and asset value rely on trustworthy data, METRA provides cryptographic proof and data integrity far beyond traditional information systems."
     },
     "ai": {
-      "question": "How does artificial intelligence improve document and technical management?",
-      "answer": "Our artificial intelligence, integrated into the MetraFleet platform, automatically recognizes imported documents, classifies them according to a standardized tree structure (IATA/CAMO), extracts key data (references, hours, cycles, replacements), and checks their regulatory compliance.\nIt detects inconsistencies, learns to reason like a CAMO, and automatically updates asset statuses. The result: considerable time savings, fewer human errors, and continuous, auditable compliance."
+      "question": "How does METRA ensure cybersecurity and compliance with C2PA & EASA Part-IS?",
+      "answer": "METRA combines C2PA digital provenance, integrated through Kalicertif, with alignment to EASA Part-IS information-security requirements. C2PA ensures each document, image, or record carries verifiable proof of origin, instantly detecting any alteration. EASA Part-IS secures and controls data flows across the aircraft lifecycle.\nTogether, they deliver a tamper-proof, regulator-ready and cyber-resilient infrastructure."
     },
     "clients": {
-      "question": "Who can benefit from your solutions? Are they reserved for large groups?",
-      "answer": "Our solutions are designed to be modular, scalable and accessible to all players in the sector:\nLessors and asset managers: to digitize transitions, reinforce documentary value and automate airworthiness monitoring.\nMROs and airlines: to make certificates more reliable, digitize inspections, and implement predictive maintenance.\nPart-21 and Part-145 workshops: to certify their documents securely and meet regulatory requirements.\nOur SaaS model enables rapid deployment with personalized support, on site or remotely."
+      "question": "Who benefits from joining the METRA Trust Alliance ?",
+      "answer": "The METRA Trust Alliance brings together OEMs, lessors, operators, CAMOs, regulators and MROs within a shared framework of trust. Members benefit from sovereign data governance, seamless interoperability, unified certification practices, and access to secure blockchain nodes, APIs and integrated SaaS tools within an infrastructure designed to support AI, digital twins, and future regulatory evolution."
     },
     "data": {
-      "question": "Is my data protected? Doesn't blockchain mean making everything public?",
-      "answer": "No. Our METRA blockchain is private, sovereign and RGPD-compliant.\nOnly the cryptographic fingerprints (hashes) of the documents are written to the blockchain. The documents themselves remain stored in a secure environment that you control, whether in your internal system or in a secure cloud.\nThis model guarantees data confidentiality, while ensuring total traceability, integrity and auditability."
+      "question": "Are your solutions suitable for all types of companies in the industry ?",
+      "answer": "Yes, our solutions are modular and scalable, making them accessible to all aerospace stakeholders. Lessors and asset managers can digitize transitions and strengthen documentation integrity, while MROs and airlines enhance inspection reliability and predictive maintenance. Part-21 and Part-145 organizations can secure and certify their records with full regulatory alignment. Our SaaS model enables fast deployment with tailored support, on-site or remote."
     }
   },
   "contact": {
@@ -295,11 +295,22 @@
       "companyPlaceholder": "Your company",
       "messagePlaceholder": "Tell us about your project...",
       "required": "*",
-      "send": "Send Message"
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you for contacting us! We'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again later.",
+      "errorFallback": "If the issue persists, please contact us directly at pierre.puissegur@arts-innovations.com",
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "emailRequired": "Please enter your email address.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageRequired": "Please enter a message.",
+        "messageMinLength": "Your message must be at least 10 characters long."
+      }
     }
   },
   "footer": {
-    "description": "Revolutionizing aviation operations through cutting-edge blockchain and AI technology, backed by over 20 years of aerospace expertise.",
+    "description": "Revolutionizing aviation operations through cutting-edge blockchain and AI technology, backed by over 25 years of aerospace expertise.",
     "sections": {
       "solutions": {
         "title": "Solutions",

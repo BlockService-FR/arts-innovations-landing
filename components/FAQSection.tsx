@@ -88,31 +88,24 @@ export default function FAQSection() {
       id="faq"
       className="w-full 2xl:max-w-[80vw] mx-auto px-8 lg:px-10 py-16 lg:py-20 relative flex flex-col justify-start items-center overflow-hidden"
     >
-      <div className="my-auto">
-        <motion.div className="text-center mb-4 lg:mb-10">
+      <motion.div className="text-center mb-4 lg:mb-10">
         <h2 className="mb-2 text-secondary text-balance font-title">
           {t("faq.title")}
         </h2>
-        <p className="text-secondary mx-auto text-balance font-subtitle">
+        <p className="text-secondary mx-auto max-w-4xl text-balance font-subtitle">
           {t("faq.description")}{" "}
-                <a
-                  href="#contact"
-                  className="text-accent hover:text-arts-green transition-colors font-text-important"
-                >
-                  {t("faq.cta")}
-                </a>!
+          <a
+            href="#contact"
+            className="text-accent hover:text-arts-green transition-colors font-text-important"
+          >
+            {t("faq.cta")}
+          </a>!
         </p>
       </motion.div>
-        <div className="grid grid-cols-1 gap-10 lg:gap-20">
-          <div>
-            <motion.div className="space-y-3">
+      <motion.div className="space-y-3 w-full">
               {faqItems.map((item, index) => (
                 <motion.div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ delay: index * 0.1 }}
                   className="glass-card rounded-2xl border border-white/5 transition-all duration-300 cursor-pointer hover:border-arts-green/30 hover:shadow-lg hover:shadow-arts-green/5 group"
                 >
                   {/* Question header */}
@@ -121,7 +114,7 @@ export default function FAQSection() {
                     className="w-full flex items-center justify-between p-4 sm:p-6 text-left focus:outline-none cursor-pointer"
                     aria-expanded={openItemId === item.id}
                   >
-                    <div className="flex items-center">
+                    <div className="flex items-center flex-1 min-w-0">
                       <span className="text-secondary font-text-important group-hover:text-arts-green transition-colors duration-300">
                         {t(item.questionKey)}
                       </span>
@@ -131,7 +124,7 @@ export default function FAQSection() {
                       initial="closed"
                       animate={openItemId === item.id ? "open" : "closed"}
                       transition={{ duration: 0.3, ease: [0.3, 0, 0, 1] }}
-                      className="text-accent"
+                      className="text-accent shrink-0 ml-4"
                     >
                       {openItemId === item.id ? (
                         <ChevronUp size={20} className="text-arts-green"/>
@@ -152,21 +145,18 @@ export default function FAQSection() {
                         exit="closed"
                         className="overflow-hidden"
                       >
-                        <div
+                        <p
                           className="px-4 sm:px-6 pb-6 pt-0 text-secondary font-text"
-                          style={{ whiteSpace: "pre-wrap" }}
+                          style={{ whiteSpace: "normal", wordBreak: "normal", overflowWrap: "break-word" }}
                         >
                           {t(item.answerKey)}
-                        </div>
+                        </p>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
